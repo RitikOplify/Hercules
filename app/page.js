@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import History from "@/components/History";
 import ImageCarousel from "@/components/ImageCarousel";
 import WatchLandingPage from "@/components/LandingPage";
@@ -15,7 +14,6 @@ export default function Home() {
       <WhoWeAre />
       <ShopGallery />
       <ImageCarousel />
-      <Footer />
     </>
   );
 }

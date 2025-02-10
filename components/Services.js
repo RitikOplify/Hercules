@@ -1,0 +1,161 @@
+import React from "react";
+
+function Services() {
+  return (
+    <div>
+      <div className="max-w-[1440px] mx-auto bg-white text-black px-5 sm:px-10 py-10">
+        {/* Text Section */}
+        <div className="flex flex-col-reverse sm:flex-row w-full">
+          <div className=" w-full sm:w-1/2 my-auto">
+            <h2 className="text-2xl font-bold mb-4">
+              DLC Watch De-Coating and Restoration
+            </h2>
+            <p className="text-gray-700 mb-4">
+              Welcome to one of the leading DLC de-coating specialists. If you
+              have a worn and damaged DLC coated watch, Hercules Watch Co are
+              able to both restore the watch to the original finish or, if
+              required, de-coat the watch and then re-coat it.
+            </p>
+            <p className="text-gray-700 mb-4">
+              The process is very specialised and can take several months
+              depending upon the original coating and damage to the watch. Our
+              prices, however, are very competitive.
+            </p>
+            <ol className="list-decimal list-inside text-gray-700 space-y-2">
+              <li>The watch is stripped</li>
+              <li>
+                All the individual links, case parts, bracelet parts and pins
+                de-coated
+              </li>
+              <li>
+                Knocks, dents and damaged parts of the watch can be restored to
+                original finish
+              </li>
+              <li>
+                Bezels can be restored (specialists in Rolex Daytona bezel
+                restoration)
+              </li>
+              <li>The watch case and bracelet is then reassembled</li>
+            </ol>
+          </div>
+
+          {/* Image Section */}
+          <div className="flex w-full mb-10 sm:mb-0 sm:w-1/2 justify-center">
+            <img
+              src="/Images/watch5.png"
+              alt="DLC Watch Restoration"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-[1440px] mx-auto bg-black text-white py-12 px-6 md:px-16 grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+        {/* Left Section - Image */}
+        <div className="flex justify-center">
+          <img
+            src="/Images/watch5.png"
+            // Replace with actual image path
+            alt="Watch Service"
+            className="max-w-full h-auto"
+          />
+        </div>
+
+        {/* Right Section - Text */}
+        <div>
+          <p className="text-lg leading-relaxed mb-4">
+            Hercules Watch Co have some of the finest watch technicians in the
+            UK today. We are able to offer a complete service to almost all
+            brands of watches by our qualified technicians.
+          </p>
+
+          <p className="font-semibold mb-2">As part of our watch service:</p>
+
+          <ol className="list-decimal list-inside space-y-2">
+            <li>We strip the watch movement completely.</li>
+            <li>
+              All the parts are then cleaned of oil and dirt using the latest
+              technology.
+            </li>
+            <li>
+              The movement is then reassembled, lubricated, and regulated.
+            </li>
+            <li>The case and bracelet are refurbished when requested.</li>
+            <li>
+              The movement is then re-cased, the watch reassembled, and water
+              pressure tested (where necessary).
+            </li>
+            <li>Then final 72-hour timekeeping test.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div className="max-w-[1440px] mx-auto flex flex-col-reverse md:flex-row text-white items-center md:items-start p-6 md:p-12 gap-8">
+        <div className="md:w-1/2 space-y-6 my-auto">
+          <div>
+            <h2 className="text-xl font-semibold">Dial restoration:</h2>
+            <p className="text-white mt-2">
+              As custom watch specialists, HWC are able to offer a comprehensive
+              dial restoration service. We are able to remove the dial and
+              restore to as close to the original as possible. We are also able
+              to customise the dial, the date wheel and the hands to the colour
+              and design of your request – please see the dials on our watches.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold">Bracelet repairs:</h2>
+            <p className="text-white mt-2">
+              Our technicians and industry partners are able to repair, restore
+              and also supply new links/bracelets for many types of watches.
+              Please contact us for a quote.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold">Movements:</h2>
+            <p className="text-white mt-2">
+              We are able to source new movements for many of the industry's
+              finest watches, if we find a watch is beyond repair.
+            </p>
+          </div>
+        </div>
+
+        <div className="md:w-1/2">
+          <img
+            src="/Images/watch5.png"
+            alt="Watch Dial Restoration"
+            className="w-full h-auto object-cover rounded-lg shadow-lg"
+          />
+        </div>
+      </div>
+
+      <div className="max-w-[1440px] mx-auto flex gap-10 sm:gap-0 flex-col-reverse relative md:flex-row bg-black text-white px-5 sm:px-10 md:p-12">
+        <div className=" bg-white h-36 w-full absolute top-0 left-0"></div>
+        <div className="md:w-1/2 my-auto">
+          <h2 className="text-2xl font-semibold mb-4">
+            Engraving and Hand engraving
+          </h2>
+          <p className="text-gray-300">
+            We have a passion for creating the unique. Our engravers are able to
+            both engrave by hand and also we use the latest technology to create
+            exceptionally detailed machine engraved images. The processes are
+            complicated and time consuming, averaging about 4 months for a
+            unique time piece. But it is worth the wait. Bring us your thoughts
+            and designs and let us make your dreams come true.
+          </p>
+        </div>
+
+        <div className="md:w-1/2 z-10">
+          <img
+            src="/Images/watch5.png"
+            alt="Engraving and Hand Engraving"
+            className="w-full h-auto object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Services;

@@ -12,7 +12,7 @@ function Nav() {
     { name: "ABOUT US", href: "/about-us" },
     { name: "COLLECTION", href: "/collection" },
     { name: "SERVICES", href: "/services" },
-    { name: "CONTACT", href: "/contact" },
+    { name: "CONTACT", href: "/contact-us" },
   ];
 
   return (

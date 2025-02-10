@@ -16,24 +16,23 @@ function Nav() {
   ];
 
   return (
-    <nav className="bg-black">
-      <div className="sm:flex hidden justify-between max-w-[1440px] px-5 sm:px-10 mx-auto items-center py-5">
+    <nav className="bg-black border-b border-white">
+      <div className="sm:flex hidden justify-between max-w-[1440px] px-5 sm:px-10 mx-auto items-center py-[18px]">
         <img
           src="/Images/Logo.jpg"
           alt="Logo"
           className="mb-4 h-6 object-center"
         />
-        <ul className="flex space-x-6 text-white">
+        <ul className="flex space-x-6 text-[#fff]">
           {navItems.map((item) => (
             <li key={item.name}>
-              <Link href={item.href}>
-                <span
-                  className={`${
-                    pathname === item.href ? "border-b-2 border-white pb-1" : ""
-                  }`}
-                >
-                  {item.name}
-                </span>
+              <Link
+                href={item.href}
+                className={`${
+                  pathname === item.href ? "border-b-2 border-white pb-1" : ""
+                } text-xs py-4`}
+              >
+                {item.name}
               </Link>
             </li>
           ))}

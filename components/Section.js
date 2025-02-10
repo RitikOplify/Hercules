@@ -1,5 +1,5 @@
 import React from "react";
-
+import { FaAngleRight } from "react-icons/fa6";
 const SectionBlock = ({ title, description, imgSrc, reverse, className }) => {
   return (
     <div
@@ -7,14 +7,14 @@ const SectionBlock = ({ title, description, imgSrc, reverse, className }) => {
         reverse ? "sm:flex-row-reverse" : "sm:flex-row"
       } sm:h-[600px]`}
     >
-      <div className="w-full sm:w-1/2 bg-white flex flex-col justify-center items-start px-5 py-10 sm:p-10">
-        <h1 className="text-3xl font-bold mb-4 text-black">{title}</h1>
-        <p className="text-gray-500 mb-6">{description}</p>
+      <div className="w-full sm:w-1/2 bg-white flex flex-col gap-6 justify-center items-start px-5 py-10 sm:p-10">
+        <h1 className="text-2xl font-medium text-black">{title}</h1>
+        <p className="text-[#808080] text-base font-normal">{description}</p>
         <button
-          className="flex items-center text-black font-semibold hover:underline"
+          className="flex gap-2 items-center text-black text-[13px] font-normal hover:underline"
           aria-label={`Explore more about ${title}`}
         >
-          <span className="mr-1">&#8250;</span> EXPLORE MORE
+          <FaAngleRight /> EXPLORE MORE
         </button>
       </div>
       <div

@@ -8,10 +8,11 @@ const WatchLandingPage = () => {
               Custom DLC <br className=" hidden sm:visible" /> build to last
             </h1>
             <p className="mt-4 text-gray-400">
-              Bespoke timepieces to suit the individual. <br className="hidden sm:visible"/> For those who
-              prefer to be different.
+              Bespoke timepieces to suit the individual.{" "}
+              <br className="hidden sm:visible" /> For those who prefer to be
+              different.
             </p>
-            <button className="mt-6 w-fit px-3 sm:px-6 py-3 bg-white text-black font-semibold rounded-lg shadow-lg">
+            <button className="mt-6 w-fit px-3 sm:px-6 py-3 bg-white text-black font-semibold rounded-lg shadow-[0_5px_20px_rgba(255,255,255,0.6)]">
               DISCOVER →
             </button>
           </div>

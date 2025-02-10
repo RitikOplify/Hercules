@@ -1,7 +1,23 @@
 "use client";
-import React, { useState } from "react";
 
-function ImageCarousel() {
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { Navigation } from "swiper/modules";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { FaAngleRight, FaAngleLeft } from "react-icons/fa6";
+import { useRef } from "react";
+
+export default function ResponsiveCarousel() {
+  const leftBtnRef = useRef(null);
+  const rightBtnRef = useRef(null);
+  const rightClick = () => {
+    rightBtnRef.current.click();
+  };
+
+  const leftClick = () => {
+    leftBtnRef.current.click();
+  };
   const images = [
     "/Images/watch1.jpg",
     "/Images/watch7.png",
@@ -9,59 +25,68 @@ function ImageCarousel() {
     "/Images/watch5.png",
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleImages = 3;
-  const nextSlide = () => {
-    if (currentIndex < images.length - visibleImages) {
-      setCurrentIndex(currentIndex + 1);
-    }
-  };
-
-  const prevSlide = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
-  };
-
   return (
-    <div className=" bg-white">
-      <div className="max-w-[1440px] mx-auto flex flex-col items-center justify-center py-10 bg-white">
-        <div className="flex justify-end w-full pr-10 space-x-4 text-lg">
+    <div className=" bg-white pb-[120px]">
+      <div className=" max-w-[1440px] mx-auto relative px-5 sm:px-10 ">
+        <div className=" flex justify-end items-center gap-5 py-5">
           <button
-            onClick={prevSlide}
-            className="bg-black text-white px-4 py-1 rounded-sm shadow-md hover:shadow-lg transition"
-            disabled={currentIndex === 0}
+            className=" bg-black flex items-center justify-center text-white h-14 w-14 rounded-xl"
+            onClick={rightClick}
           >
-            &#8249;
+            <FaAngleLeft />
           </button>
           <button
-            onClick={nextSlide}
-            className="bg-black text-white px-4 py-1 rounded-sm shadow-md hover:shadow-lg transition"
-            disabled={currentIndex >= images.length - visibleImages}
+            className="bg-black flex items-center justify-center text-white h-14 w-14 rounded-xl"
+            onClick={leftClick}
           >
-            &#8250;
+            <FaAngleRight />
           </button>
         </div>
+        <Swiper
+          modules={[Navigation]}
+          slidesPerView={3}
+          spaceBetween={20}
+          navigation={{
+            nextEl: "#slider-button-right",
+            prevEl: "#slider-button-left",
+          }}
+          breakpoints={{
+            0: {
+              slidesPerView: 1, // Mobile
+            },
+            640: {
+              slidesPerView: 2, // Tablet
+            },
+            1024: {
+              slidesPerView: 3, // Desktop
+            },
+          }}
+          className="multiple-slide-carousel"
+        >
+          {images.map((slide, i) => (
+            <SwiperSlide key={slide}>
+              <div className="bg-indigo-50 h-96 flex justify-center items-center">
+                <img src={slide} alt={`img-${i}`} />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-        <div className="overflow-hidden w-[960px]">
-          {/* Adjusted width for 3 images */}
-          <div
-            className="flex transition-transform duration-500 ease-in-out space-x-4"
-            style={{ transform: `translateX(-${currentIndex * (320 + 16)}px)` }}
-          >
-            {images.map((image, index) => (
-              <img
-                key={index}
-                src={image}
-                alt={`Watch ${index}`}
-                className="h-80 w-72 object-cover"
-              />
-            ))}
-          </div>
+        {/* Navigation Buttons */}
+        <div className="flex space-x-4">
+          <button
+            ref={rightBtnRef}
+            id="slider-button-left"
+            className="swiper-button-prev group  !hidden !p-2 justify-center items-center border border-solid border-indigo-600 !w-12 !h-12 transition-all duration-500 rounded-full hover:bg-indigo-600"
+          ></button>
+
+          <button
+            ref={leftBtnRef}
+            id="slider-button-right"
+            className="swiper-button-next group !hidden  !p-2  justify-center items-center border border-solid border-indigo-600 !w-12 !h-12 transition-all duration-500 rounded-full hover:bg-indigo-600"
+          ></button>
         </div>
       </div>
     </div>
   );
 }
-
-export default ImageCarousel;

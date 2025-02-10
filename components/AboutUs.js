@@ -14,7 +14,7 @@ function AboutUs() {
 
       <div className=" bg-white text-black max-w-[1440px] mx-auto">
         <div className=" py-14 flex justify-center px-5 sm:px-10">
-          <p className=" max-w-[590px] text-center">
+          <p className=" max-w-[590px] text-start sm:text-center">
             Hercules Watch Co are an independent company that bring together
             over 100 years in watch making expertise. Our teams of expert watch
             technicians, engravers, watch dial artisans coupled with unrivalled

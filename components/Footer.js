@@ -6,11 +6,11 @@ import { FaXTwitter } from "react-icons/fa6";
 function Footer() {
   return (
     <footer className="bg-black text-white py-10">
-      <div className=" max-w-[1440px] mx-auto container px-6">
+      <div className=" max-w-[1440px] mx-auto px-5 sm:px-10">
         <div className="flex flex-col items-center mb-6">
           <img src="/Images/Logo.jpg" alt="Logo" className="mb-4 h-20 w-auto" />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+        <div className=" flex gap-10 justify-between flex-wrap">
           <div>
             <h4 className="text-lg font-semibold mb-2">ADDRESS</h4>
             <p className="text-gray-400">
@@ -41,7 +41,7 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="text-center text-gray-500 mt-6">
+        <div className="text-gray-500 mt-6 text-start">
           <p>Copyright © 2025 Hercules Watch Co | Terms & Condition</p>
         </div>
       </div>

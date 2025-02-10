@@ -8,20 +8,20 @@ function ShopGallery() {
           SHOP GALLERY
         </h2>
 
-        <div className="flex justify-center space-x-14">
+        <div className="flex flex-wrap justify-center gap-10">
           {[
             {
-              name: "ROLEX GMT-MASTER II, DLC<br>COATED STEEL, 18 CT YELLOW GOLD 116713LN",
+              name: "ROLEX GMT-MASTER II, DLC COATED STEEL, 18 CT YELLOW GOLD 116713LN",
               price: "£18,499.00",
               image: "/Images/watch1.jpg",
             },
             {
-              name: "ROLEX YACHTMASTER, DLC<br>COATED STEEL, 18 CT EVEROSE GOLD 116621",
+              name: "ROLEX YACHTMASTER, DLC COATED STEEL, 18 CT EVEROSE GOLD 116621",
               price: "£18,499.00",
               image: "/Images/watch4.jpg",
             },
             {
-              name: "ROLEX YACHTMASTER, DLC<br>COATED STEEL AND STEEL WITH PLATINUM BEZEL 116622",
+              name: "ROLEX YACHTMASTER, DLC COATED STEEL AND STEEL WITH PLATINUM BEZEL 116622",
               price: "£13,995.00",
               image: "/Images/watch5.png",
             },
@@ -33,10 +33,9 @@ function ShopGallery() {
                 className="mx-auto mb-4 h-[220px] w-[220px] object-contain"
               />
 
-              <h2
-                dangerouslySetInnerHTML={{ __html: watch.name }}
-                className="font-medium text-sm mb-2 uppercase tracking-wide leading-5"
-              />
+              <h2 className=" w-[90%] text-center font-medium text-sm mb-2 uppercase tracking-wide leading-5">
+                {watch.name}
+              </h2>
               <p className="text-gray-600 font-medium text-lg">{watch.price}</p>
             </div>
           ))}

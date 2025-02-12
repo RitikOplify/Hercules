@@ -7,10 +7,18 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa6";
 import { useRef } from "react";
+import useGsap from "@/useGsap";
 
 export default function ResponsiveCarousel() {
   const leftBtnRef = useRef(null);
   const rightBtnRef = useRef(null);
+
+  const btnsRef = useRef();
+  const imageRef = useRef([]);
+  useGsap(btnsRef);
+  useGsap(imageRef, {
+    stagger: true,
+  });
   const rightClick = () => {
     rightBtnRef.current.click();
   };
@@ -28,7 +36,10 @@ export default function ResponsiveCarousel() {
   return (
     <div className=" bg-white pb-[120px]">
       <div className=" max-w-[1440px] mx-auto relative px-5 sm:px-10 ">
-        <div className=" flex justify-end items-center gap-5 py-5">
+        <div
+          ref={btnsRef}
+          className=" flex justify-end items-center gap-5 py-5"
+        >
           <button
             className=" bg-black flex items-center justify-center text-white h-14 w-14 rounded-xl"
             onClick={rightClick}
@@ -65,7 +76,10 @@ export default function ResponsiveCarousel() {
         >
           {images.map((slide, i) => (
             <SwiperSlide key={slide}>
-              <div className="bg-indigo-50 h-96 flex justify-center items-center">
+              <div
+                ref={(el) => (imageRef.current[i] = el)}
+                className="bg-indigo-50 h-96 flex justify-center items-center"
+              >
                 <img src={slide} alt={`img-${i}`} />
               </div>
             </SwiperSlide>

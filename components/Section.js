@@ -1,6 +1,11 @@
-import React from "react";
+"use client";
+import useGsap from "@/useGsap";
+import React, { useRef } from "react";
 import { FaAngleRight } from "react-icons/fa6";
+
 const SectionBlock = ({ title, description, imgSrc, reverse, className }) => {
+  const sectionRef = useRef([]);
+  useGsap(sectionRef);
   return (
     <div
       className={`flex flex-col ${
@@ -8,9 +13,20 @@ const SectionBlock = ({ title, description, imgSrc, reverse, className }) => {
       } sm:h-[600px]`}
     >
       <div className="w-full sm:w-1/2 bg-white flex flex-col gap-6 justify-center items-start px-5 py-10 sm:p-10">
-        <h1 className="text-2xl font-medium text-black">{title}</h1>
-        <p className="text-[#808080] text-base font-normal">{description}</p>
+        <h1
+          ref={(el) => (sectionRef.current[0] = el)}
+          className="text-2xl font-medium text-black"
+        >
+          {title}
+        </h1>
+        <p
+          ref={(el) => (sectionRef.current[1] = el)}
+          className="text-[#808080] text-base font-normal"
+        >
+          {description}
+        </p>
         <button
+          ref={(el) => (sectionRef.current[3] = el)}
           className="flex gap-2 items-center text-black text-[13px] font-normal hover:underline"
           aria-label={`Explore more about ${title}`}
         >
@@ -18,9 +34,11 @@ const SectionBlock = ({ title, description, imgSrc, reverse, className }) => {
         </button>
       </div>
       <div
-        className={`${className} w-full sm:w-1/2 bg-black flex justify-center items-center py-5`}
+       
+        className={`${className} w-full sm:w-1/2 overflow-hidden bg-black flex justify-center items-center py-5`}
       >
         <img
+          ref={(el) => (sectionRef.current[4] = el)}
           src={imgSrc}
           alt={`${title} Watch`}
           className="object-cover max-h-full"

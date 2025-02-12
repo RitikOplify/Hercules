@@ -1,11 +1,14 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import { useForm } from "react-hook-form";
 import { FaAngleRight } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { IoCallOutline } from "react-icons/io5";
 import { HiOutlineLocationMarker } from "react-icons/hi";
+import useGsap from "@/useGsap";
 const ContactForm = () => {
+  const contactRef = useRef([]);
+  useGsap(contactRef);
   const {
     register,
     handleSubmit,
@@ -22,6 +25,7 @@ const ContactForm = () => {
         <div className=" max-w-[1440px] mx-auto h-[650px] flex flex-col sm:flex-row">
           <div className="w-full sm:w-2/5 py-10 sm:py-0">
             <img
+              ref={(el) => (contactRef.current[0] = el)}
               src="/Images/watch7.png"
               alt="Luxury Watch"
               className=" w-full h-full object-contain"
@@ -29,16 +33,26 @@ const ContactForm = () => {
           </div>
           <div className=" w-full sm:w-3/5 px-5 sm:px-10 h-full flex items-center justify-center text-white">
             <div className=" flex flex-col gap-1">
-              <p>Have a question about TAG Heuer products or services?</p>
-              <p>We're here to help!</p>
-              <button className="flex items-center mt-5 text-white font-semibold hover:underline">
+              <p ref={(el) => (contactRef.current[1] = el)}>
+                Have a question about TAG Heuer products or services?
+              </p>
+              <p ref={(el) => (contactRef.current[2] = el)}>
+                We're here to help!
+              </p>
+              <button
+                ref={(el) => (contactRef.current[3] = el)}
+                className="flex items-center mt-5 text-white font-semibold hover:underline"
+              >
                 <span className="mr-1">&#8250;</span> EXPLORE MORE
               </button>
             </div>
           </div>
         </div>
       </div>
-      <div className=" max-w-[1440px] mx-auto bg-white p-5 sm:px-10 py-[120px] grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div
+        ref={(el) => (contactRef.current[4] = el)}
+        className=" max-w-[1440px] mx-auto bg-white p-5 sm:px-10 py-[120px] grid grid-cols-1 md:grid-cols-2 gap-8"
+      >
         {/* Left Section - Contact Info */}
         <div>
           <h2 className="text-2xl font-medium text-black tracking-[8%] mb-6  inline-block">
@@ -46,15 +60,21 @@ const ContactForm = () => {
           </h2>
           <div className="space-y-4 text-black text-base font-medium tracking-[8%]">
             <div className="flex items-center gap-3">
-              <span className="text-black text-xl"><MdOutlineEmail /></span>
+              <span className="text-black text-xl">
+                <MdOutlineEmail />
+              </span>
               <span>hello@herculeswatch.com</span>
             </div>
             <div className="flex items-center gap-3">
-              <span className="text-black text-xl"><IoCallOutline /></span>
+              <span className="text-black text-xl">
+                <IoCallOutline />
+              </span>
               <span>+44-796-960-6568</span>
             </div>
             <div className="flex items-start gap-3">
-              <span className="text-black text-xl"><HiOutlineLocationMarker /></span>
+              <span className="text-black text-xl">
+                <HiOutlineLocationMarker />
+              </span>
               <address className="not-italic">
                 Hercules Watch Co Ltd,
                 <br />
@@ -145,14 +165,12 @@ const ContactForm = () => {
               )}
             </div>
 
-          
-              <button
-                type="submit"
-                className="mt-6 bg-black flex items-center gap-3 text-base text-[#fff] font-normal rounded-xl py-3 px-6"
-              >
-                SEND MY MESSAGE <FaAngleRight />
-              </button>
-            
+            <button
+              type="submit"
+              className="mt-6 bg-black flex items-center gap-3 text-base text-[#fff] font-normal rounded-xl py-3 px-6"
+            >
+              SEND MY MESSAGE <FaAngleRight />
+            </button>
           </form>
         </div>
       </div>

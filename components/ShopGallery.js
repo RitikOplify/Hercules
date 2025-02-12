@@ -5,12 +5,18 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { FaAngleRight } from "react-icons/fa";
+import useGsap from "@/useGsap";
 
 export default function App() {
   const swiperRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [totalBullets, setTotalBullets] = useState(0);
-
+  const shopGalleryGallaryRef = useRef([]);
+  const btnRef = useRef(null);
+  useGsap(btnRef);
+  useGsap(shopGalleryGallaryRef, {
+    stagger: true,
+  });
   const data = [
     {
       name: "ROLEX GMT-MASTER II, DLC COATED STEEL, 18 CT YELLOW GOLD 116713LN",
@@ -98,7 +104,10 @@ export default function App() {
         >
           {data.map((slide, i) => (
             <SwiperSlide key={i}>
-              <div className="text-center flex flex-col gap-6">
+              <div
+                ref={(el) => (shopGalleryGallaryRef.current[i] = el)}
+                className="text-center flex flex-col gap-6"
+              >
                 <img
                   src={slide.image}
                   alt="Watch"
@@ -135,7 +144,10 @@ export default function App() {
       </div>
 
       <div className="flex justify-center mt-[60px]">
-        <button className="mt-6 bg-black flex items-center gap-3 text-base text-[#fff] font-normal rounded-xl py-3 px-6">
+        <button
+          ref={btnRef}
+          className="mt-6 bg-black flex items-center gap-3 text-base text-[#fff] font-normal rounded-xl py-3 px-6"
+        >
           DISCOVER <FaAngleRight />
         </button>
       </div>

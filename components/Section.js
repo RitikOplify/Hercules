@@ -34,7 +34,6 @@ const SectionBlock = ({ title, description, imgSrc, reverse, className }) => {
         </button>
       </div>
       <div
-       
         className={`${className} w-full sm:w-1/2 overflow-hidden bg-black flex justify-center items-center py-5`}
       >
         <img
@@ -54,14 +53,14 @@ const Section = () => {
       title: "CUSTOM",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a felis fermentum, congue mi ut, sodales turpis.",
-      imgSrc: "/Images/watch1.jpg",
+      imgSrc: "/Watch/i9.png",
       reverse: false,
     },
     {
       title: "PRESTIGE",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a felis fermentum, congue mi ut, sodales turpis.",
-      imgSrc: "/Images/watch2.jpg",
+      imgSrc: "/Watch/Prestige_04.jpg",
       reverse: true,
       className: "p-0",
     },
@@ -69,7 +68,7 @@ const Section = () => {
       title: "CONCEPT",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a felis fermentum, congue mi ut, sodales turpis.",
-      imgSrc: "/Images/watch6.png",
+      imgSrc: "/Watch/Concept.png",
       reverse: false,
     },
     {

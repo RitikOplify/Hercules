@@ -11,8 +11,9 @@ const WhoWeAre = () => {
         <div className=" w-full sm:w-1/2 flex justify-center items-center">
           <img
             ref={(el) => (whoWeAreRef.current[0] = el)}
-            src="/Images/watch1.jpg"
+            src="/Watch/who-we-are.png"
             alt="Watch"
+          
           />
         </div>
 

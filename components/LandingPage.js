@@ -1,6 +1,7 @@
 "use client";
 import useGsap from "@/useGsap";
 import { useRef } from "react";
+import { FaAngleRight } from "react-icons/fa";
 
 const WatchLandingPage = () => {
   const landingPageRef = useRef([]);
@@ -21,15 +22,15 @@ const WatchLandingPage = () => {
               ref={(el) => (landingPageRef.current[1] = el)}
               className="mt-4 text-gray-400"
             >
-              Bespoke timepieces to suit the individual.{" "}
+              Bespoke timepieces to suit the individual.
               <br className="hidden sm:visible" /> For those who prefer to be
               different.
             </p>
             <button
               ref={(el) => (landingPageRef.current[2] = el)}
-              className="mt-6 w-fit px-3 sm:px-6 py-3 bg-white text-black font-semibold rounded-lg shadow-[0_5px_20px_rgba(255,255,255,0.6)]"
+              className="mt-6 flex font-medium items-center gap-3 text-base text-black bg-white text-blackfont-normal rounded-xl py-3 px-6 shadow-[0_5px_20px_rgba(255,255,255,0.6)]"
             >
-              DISCOVER →
+              DISCOVER <FaAngleRight />
             </button>
           </div>
         </div>

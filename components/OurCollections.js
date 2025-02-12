@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import ProductCard from "./ProductCard";
 
 const OurCollection = () => {
   const products = [
@@ -29,30 +30,18 @@ const OurCollection = () => {
         alt="banner"
         layout="responsive"
       />
-      <div className=" max-w-[1440px] mx-auto px-5 sm:px-10 bg-white py-10 text-black flex flex-col items-center">
-        <h1 className="text-3xl font-bold mb-8">OUR FULL COLLECTION</h1>
-        <div className="w-full grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div className=" max-w-[1440px] mx-auto px-5 sm:px-10 bg-white py-[120px] text-black flex flex-col items-center">
+        <h1 className="text-2xl tracking-[8%] text-[#000] font-medium mb-[60px]">
+          OUR FULL COLLECTION
+        </h1>
+        <div className="w-full grid sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-[60px]">
           {Array(3)
             .fill(products)
             .flat()
-            .map((product, index) => (
-              <div key={index} className="flex flex-col items-start">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full bg-gray-100"
-                />
-                <h2 className="text-lg font-semibold mt-4 text-start">
-                  {product.name}
-                </h2>
-                <p className="text-gray-600 mt-1">{product.price}</p>
-              </div>
+            .map((product,_) => (
+              <ProductCard product={product} />
             ))}
         </div>
-
-        <button className="mt-6 bg-black text-white py-2 px-6 rounded-xl shadow hover:bg-gray-800 transition">
-          DISCOVER ➔
-        </button>
       </div>
     </>
   );

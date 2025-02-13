@@ -9,7 +9,7 @@ function Section2() {
   return (
     <div className="relative w-full flex justify-center">
       <div className="w-full h-full flex-col flex sm:flex-row">
-        <div className="w-full sm:w-1/2 h-screen flex items-center bg-black">
+        <div className="w-full sm:w-1/2 h-[50vh] sm:h-screen flex items-center bg-black">
           <img
             ref={(el) => (sectionRef.current[4] = el)}
             src="/Watch/Prestige_04.jpg"

@@ -1,22 +1,11 @@
 "use client";
-import React, { useRef, useState, useEffect } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-import { FaAngleRight } from "react-icons/fa";
-import useGsap from "@/useGsap";
 
 export default function App() {
-  const swiperRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [totalBullets, setTotalBullets] = useState(0);
-  const shopGalleryGallaryRef = useRef([]);
-  const btnRef = useRef(null);
-  useGsap(btnRef);
-  useGsap(shopGalleryGallaryRef, {
-    stagger: true,
-  });
   const data = [
     {
       name: "ROLEX GMT-MASTER II, DLC COATED STEEL, 18 CT YELLOW GOLD 116713LN",
@@ -50,65 +39,28 @@ export default function App() {
     },
   ];
 
-  const calculateTotalBullets = (swiper) => {
-    const slidesPerView = swiper.params.slidesPerView;
-    const totalSlides = swiper.slides.length;
-    const totalBullets = Math.ceil(totalSlides / slidesPerView);
-    setTotalBullets(totalBullets);
-  };
-
-  const handleSlideChange = (swiper) => {
-    setActiveIndex(swiper.realIndex);
-  };
-
-  const handleSwiperInit = (swiper) => {
-    swiperRef.current = swiper;
-    calculateTotalBullets(swiper);
-  };
-
-  const goToSlide = (index) => {
-    if (swiperRef.current) {
-      swiperRef.current.slideTo(index * swiperRef.current.params.slidesPerView);
-    }
-  };
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (swiperRef.current) {
-        calculateTotalBullets(swiperRef.current);
-      }
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
-    <div className=" w-full bg-white">
-      <div className=" max-w-[1440px] mx-auto bg-[#fff] py-[120px] px-5 sm:px-10">
+    <div className=" bg-white">
+      <div className="max-w-[1440px] mx-auto bg-[#fff] py-[120px] px-5 sm:px-10">
         <h1 className=" text-center font-medium text-black text-2xl">
           SHOP GALARY
         </h1>
-
         <div className=" py-[80px]">
           <Swiper
-            modules={[Pagination]}
-            onSlideChange={handleSlideChange}
-            onSwiper={handleSwiperInit}
-            pagination={{ clickable: true }}
+            slidesPerView={3}
             spaceBetween={20}
+            pagination={{ clickable: true, el: ".custom-pagination" }}
             breakpoints={{
               0: { slidesPerView: 1 },
               640: { slidesPerView: 2 },
               1024: { slidesPerView: 3 },
             }}
-            className="mySwiper"
+            modules={[Pagination]}
+            className="w-full"
           >
             {data.map((slide, i) => (
               <SwiperSlide key={i}>
-                <div
-                  ref={(el) => (shopGalleryGallaryRef.current[i] = el)}
-                  className="text-center flex flex-col gap-6"
-                >
+                <div className="text-center flex flex-col gap-6">
                   <img
                     src={slide.image}
                     alt="Watch"
@@ -126,32 +78,28 @@ export default function App() {
           </Swiper>
         </div>
 
-        {/* Custom Pagination Buttons */}
-        <div className="flex justify-center mt-6 space-x-2">
-          {Array.from({ length: totalBullets }).map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-4 h-1 rounded-full transition-all duration-300 ${
-                activeIndex >=
-                  index * (swiperRef.current?.params.slidesPerView || 1) &&
-                activeIndex <
-                  (index + 1) * (swiperRef.current?.params.slidesPerView || 1)
-                  ? "bg-black w-6"
-                  : "bg-gray-300"
-              }`}
-            ></button>
-          ))}
-        </div>
+        {/* Custom Pagination Below */}
+        <div className="custom-pagination flex justify-center"></div>
 
-        <div className="flex justify-center mt-[60px]">
-          <button
-            ref={btnRef}
-            className="mt-6 bg-black flex items-center gap-3 text-base text-[#fff] font-normal rounded-xl py-3 px-6"
-          >
-            DISCOVER <FaAngleRight />
-          </button>
-        </div>
+        {/* Custom Pagination Styling */}
+        <style jsx global>{`
+          .custom-pagination {
+            display: flex;
+            gap: 8px;
+          }
+          .swiper-pagination-bullet {
+            width: 20px;
+            height: 4px;
+            background-color: black;
+            border-radius: 5px;
+            opacity: 0.5;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+          }
+          .swiper-pagination-bullet-active {
+            opacity: 1;
+            transform: scale(1.2);
+          }
+        `}</style>
       </div>
     </div>
   );

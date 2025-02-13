@@ -7,7 +7,7 @@ const WhoWeAre = () => {
   useGsap(whoWeAreRef);
   return (
     <div className="bg-[#121417] py-[120px]">
-      <div className="flex flex-col gap-6 sm:gap-0 sm:flex-row max-w-[1440px] mx-auto sm:h-[500px] text-white">
+      <div className="flex flex-col gap-10 sm:gap-0 sm:flex-row max-w-[1440px] mx-auto sm:h-[500px] text-white">
         <div className=" w-full sm:w-1/2 flex justify-center items-center">
           <img
             ref={(el) => (whoWeAreRef.current[0] = el)}

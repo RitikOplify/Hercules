@@ -1,11 +1,18 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
+import useGsap from "@/useGsap";
 
 export default function App() {
+  const shopRef = useRef([]);
+  const cardRef = useRef([]);
+  useGsap(cardRef, {
+    stagger: true,
+  });
+  useGsap(shopRef);
   const data = [
     {
       name: "ROLEX GMT-MASTER II, DLC COATED STEEL, 18 CT YELLOW GOLD 116713LN",
@@ -42,7 +49,10 @@ export default function App() {
   return (
     <div className=" bg-white">
       <div className="max-w-[1440px] mx-auto bg-[#fff] py-[120px] px-5 sm:px-10">
-        <h1 className=" text-center font-medium text-black text-2xl">
+        <h1
+          ref={(el) => (shopRef.current[0] = el)}
+          className=" text-center font-medium text-black text-2xl"
+        >
           SHOP GALARY
         </h1>
         <div className=" py-[80px]">
@@ -60,7 +70,10 @@ export default function App() {
           >
             {data.map((slide, i) => (
               <SwiperSlide key={i}>
-                <div className="text-center flex flex-col gap-6">
+                <div
+                  ref={(el) => (cardRef.current[i] = el)}
+                  className="text-center flex flex-col gap-6"
+                >
                   <img
                     src={slide.image}
                     alt="Watch"
@@ -79,7 +92,10 @@ export default function App() {
         </div>
 
         {/* Custom Pagination Below */}
-        <div className="custom-pagination flex justify-center"></div>
+        <div
+          ref={(el) => (shopRef.current[1] = el)}
+          className="custom-pagination flex justify-center"
+        ></div>
 
         {/* Custom Pagination Styling */}
         <style jsx global>{`

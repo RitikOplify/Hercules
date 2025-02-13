@@ -29,12 +29,18 @@ function AboutUs() {
             retail expertise, mean that every watch we make is totally unique.
           </p>
         </div>
-        <div className="flex flex-col sm:flex-row sm:h-[600px]">
-          <div className="w-full sm:w-[55%] py-5 bg-black flex justify-center items-center">
+        <div className="flex flex-col  sm:flex-row">
+          <div className="w-full sm:w-[55%] relative bg-white">
             <img
               ref={(el) => (aboutUsRef.current[1] = el)}
-              src="/Images/watch5.png"
+              src="/Watch/man-watch.jpg"
               alt="Rolex Watch"
+              className=" object-cover"
+            />
+            <img
+              src="/Watch/watch-close-look.jpg"
+              className=" absolute top-1/2 right-0 transform -translate-y-1/2"
+              alt=""
             />
           </div>
 

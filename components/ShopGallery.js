@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import useGsap from "@/useGsap";
+import { FaAngleRight } from "react-icons/fa";
 
 export default function App() {
   const shopRef = useRef([]);
@@ -96,6 +97,15 @@ export default function App() {
           ref={(el) => (shopRef.current[1] = el)}
           className="custom-pagination flex justify-center"
         ></div>
+
+        <div
+          ref={(el) => (shopRef.current[2] = el)}
+          className="flex justify-center mt-[60px]"
+        >
+          <button className="bg-black flex items-center gap-3 text-base text-[#fff] font-normal rounded-xl py-3 px-6 shadow-[0_5px_20px_rgba(134,134,134,0.6)]">
+            DISCOVER <FaAngleRight />
+          </button>
+        </div>
 
         {/* Custom Pagination Styling */}
         <style jsx global>{`

@@ -13,7 +13,7 @@ const WhoWeAre = () => {
             ref={(el) => (whoWeAreRef.current[0] = el)}
             src="/Watch/who-we-are.png"
             alt="Watch"
-          
+          className=" h-[70%]"
           />
         </div>
 

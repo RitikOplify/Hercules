@@ -44,8 +44,11 @@ function Nav() {
 
   return (
     <>
-      <nav ref={navRef} className="bg-black z-10 fixed w-full text-white ">
-        <div className="flex bg-black relative justify-between border-b max-w-[1440px] mx-auto items-center py-[18px]">
+      <nav
+        ref={navRef}
+        className="bg-black z-10 fixed w-full border-b text-white "
+      >
+        <div className="flex bg-black relative justify-between mx-auto items-center py-[18px]">
           <img
             src="/Images/Logo.jpg"
             alt="Logo"

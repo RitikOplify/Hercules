@@ -49,129 +49,132 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
-      <div
-        ref={(el) => (contactRef.current[4] = el)}
-        className=" max-w-[1440px] mx-auto bg-white p-5 sm:px-10 py-[120px] grid grid-cols-1 md:grid-cols-2 gap-8"
-      >
-        {/* Left Section - Contact Info */}
-        <div>
-          <h2 className="text-2xl font-medium text-black tracking-[8%] mb-6  inline-block">
-            <span className="border-b-2 border-black">GET IN</span> TOUCH
-          </h2>
-          <div className="space-y-4 text-black text-base font-medium tracking-[8%]">
-            <div className="flex items-center gap-3">
-              <span className="text-black text-xl">
-                <MdOutlineEmail />
-              </span>
-              <span>hello@herculeswatch.com</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <span className="text-black text-xl">
-                <IoCallOutline />
-              </span>
-              <span>+44-796-960-6568</span>
-            </div>
-            <div className="flex items-start gap-3">
-              <span className="text-black text-xl">
-                <HiOutlineLocationMarker />
-              </span>
-              <address className="not-italic">
-                Hercules Watch Co Ltd,
-                <br />
-                Hyde House, The Hyde,
-                <br />
-                Edgware Road, London, NW9 6LH
-              </address>
+      <div className=" bg-white">
+        <div
+          ref={(el) => (contactRef.current[4] = el)}
+          className=" max-w-[1440px] mx-auto bg-white p-5 sm:px-10 py-[120px] grid grid-cols-1 md:grid-cols-2 gap-8"
+        >
+          {/* Left Section - Contact Info */}
+          <div>
+            <h2 className="text-2xl font-medium text-black tracking-[8%] mb-6  inline-block">
+              <span className="border-b-2 border-black">GET IN</span> TOUCH
+            </h2>
+            <div className="space-y-4 text-black text-base font-medium tracking-[8%]">
+              <div className="flex items-center gap-3">
+                <span className="text-black text-xl">
+                  <MdOutlineEmail />
+                </span>
+                <span>hello@herculeswatch.com</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-black text-xl">
+                  <IoCallOutline />
+                </span>
+                <span>+44-796-960-6568</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-black text-xl">
+                  <HiOutlineLocationMarker />
+                </span>
+                <address className="not-italic">
+                  Hercules Watch Co Ltd,
+                  <br />
+                  Hyde House, The Hyde,
+                  <br />
+                  Edgware Road, London, NW9 6LH
+                </address>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Right Section - Contact Form */}
-        <div>
-          <h2 className="text-2xl font-medium text-black tracking-[8%] mb-6  inline-block">
-            <span className="border-b-2 border-black">LET US</span> CONTACT YOU
-          </h2>
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-            <div>
-              <label className="block text-[13px] text-black tracking-[8%] font-medium mb-1">
-                YOUR NAME <span className=" text-red-700 text-lg">*</span>
-              </label>
-              <input
-                type="text"
-                placeholder="Write your full name"
-                className="w-full border-b-[2px] border-gray-300 focus:border-black outline-none p-2 text-base leading-8 font-light text-[#ABABAB]"
-                {...register("name", { required: "Name is required" })}
-              />
-              {errors.name && (
-                <p className="text-red-500 text-sm mt-1">
-                  {errors.name.message}
-                </p>
-              )}
-            </div>
+          {/* Right Section - Contact Form */}
+          <div>
+            <h2 className="text-2xl font-medium text-black tracking-[8%] mb-6  inline-block">
+              <span className="border-b-2 border-black">LET US</span> CONTACT
+              YOU
+            </h2>
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+              <div>
+                <label className="block text-[13px] text-black tracking-[8%] font-medium mb-1">
+                  YOUR NAME <span className=" text-red-700 text-lg">*</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Write your full name"
+                  className="w-full border-b-[2px] border-gray-300 focus:border-black outline-none p-2 text-base leading-8 font-light text-[#ABABAB]"
+                  {...register("name", { required: "Name is required" })}
+                />
+                {errors.name && (
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.name.message}
+                  </p>
+                )}
+              </div>
 
-            <div>
-              <label className="block text-[13px] text-black tracking-[8%] font-medium mb-1">
-                YOUR EMAIL <span className=" text-red-700 text-lg">*</span>
-              </label>
-              <input
-                type="email"
-                placeholder="Write your email address"
-                className="w-full border-b-[2px] border-gray-300 focus:border-black outline-none p-2 text-base leading-8 font-light text-[#ABABAB]"
-                {...register("email", {
-                  required: "Email is required",
-                  pattern: {
-                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                    message: "Enter a valid email address",
-                  },
-                })}
-              />
-              {errors.email && (
-                <p className="text-red-500 text-sm mt-1">
-                  {errors.email.message}
-                </p>
-              )}
-            </div>
+              <div>
+                <label className="block text-[13px] text-black tracking-[8%] font-medium mb-1">
+                  YOUR EMAIL <span className=" text-red-700 text-lg">*</span>
+                </label>
+                <input
+                  type="email"
+                  placeholder="Write your email address"
+                  className="w-full border-b-[2px] border-gray-300 focus:border-black outline-none p-2 text-base leading-8 font-light text-[#ABABAB]"
+                  {...register("email", {
+                    required: "Email is required",
+                    pattern: {
+                      value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                      message: "Enter a valid email address",
+                    },
+                  })}
+                />
+                {errors.email && (
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.email.message}
+                  </p>
+                )}
+              </div>
 
-            <div>
-              <label className="block text-[13px] text-black tracking-[8%] font-medium mb-1">
-                SUBJECT <span className=" text-red-700 text-lg">*</span>
-              </label>
-              <input
-                type="text"
-                placeholder="Write subject"
-                className="w-full border-b-[2px] border-gray-300 focus:border-black outline-none p-2 text-base leading-8 font-light text-[#ABABAB]"
-                {...register("subject", { required: "Subject is required" })}
-              />
-              {errors.subject && (
-                <p className="text-red-500 text-sm mt-1">
-                  {errors.subject.message}
-                </p>
-              )}
-            </div>
+              <div>
+                <label className="block text-[13px] text-black tracking-[8%] font-medium mb-1">
+                  SUBJECT <span className=" text-red-700 text-lg">*</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Write subject"
+                  className="w-full border-b-[2px] border-gray-300 focus:border-black outline-none p-2 text-base leading-8 font-light text-[#ABABAB]"
+                  {...register("subject", { required: "Subject is required" })}
+                />
+                {errors.subject && (
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.subject.message}
+                  </p>
+                )}
+              </div>
 
-            <div>
-              <label className="block text-[13px] text-black tracking-[8%] font-medium mb-1">
-                MESSAGE <span className=" text-red-700 text-lg">*</span>
-              </label>
-              <textarea
-                placeholder="Type your message here"
-                className="w-full border-[2px] rounded-sm border-gray-300 focus:border-black outline-none p-2 h-32 resize-none text-base leading-8 font-light text-[#ABABAB]"
-                {...register("message", { required: "Message is required" })}
-              ></textarea>
-              {errors.message && (
-                <p className="text-red-500 text-sm mt-1">
-                  {errors.message.message}
-                </p>
-              )}
-            </div>
+              <div>
+                <label className="block text-[13px] text-black tracking-[8%] font-medium mb-1">
+                  MESSAGE <span className=" text-red-700 text-lg">*</span>
+                </label>
+                <textarea
+                  placeholder="Type your message here"
+                  className="w-full border-[2px] rounded-sm border-gray-300 focus:border-black outline-none p-2 h-32 resize-none text-base leading-8 font-light text-[#ABABAB]"
+                  {...register("message", { required: "Message is required" })}
+                ></textarea>
+                {errors.message && (
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.message.message}
+                  </p>
+                )}
+              </div>
 
-            <button
-              type="submit"
-              className="mt-6 bg-black flex items-center gap-3 text-base text-[#fff] font-normal rounded-xl py-3 px-6"
-            >
-              SEND MY MESSAGE <FaAngleRight />
-            </button>
-          </form>
+              <button
+                type="submit"
+                className="mt-6 bg-black flex items-center gap-3 text-base text-[#fff] font-normal rounded-xl py-3 px-6"
+              >
+                SEND MY MESSAGE <FaAngleRight />
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </>

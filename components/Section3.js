@@ -11,22 +11,22 @@ function Section3() {
       <div className="w-full h-full flex-col-reverse flex sm:flex-row">
         <div className=" w-full sm:w-1/2 flex justify-start 2xl:justify-center bg-white text-black">
           <div className="bg-white flex flex-col gap-6 2xl:gap-[1vw] justify-center items-start px-5 py-10 2xl:py-[1vw] sm:p-10">
-            <h1
+          <h1
               ref={(el) => (sectionRef.current[0] = el)}
-              className="text-2xl font-medium text-black 2xl:text-[1.5vw]"
+              className="text-2xl font-medium text-black 2xl:text-[2vw]"
             >
               CONCEPT
             </h1>
             <p
               ref={(el) => (sectionRef.current[1] = el)}
-              className="text-[#808080] text-base 2xl:leading-[1vw] 2xl:text-[0.8vw] font-normal"
+              className="text-[#808080] text-base 2xl:leading-[1.7vw] 2xl:text-[1.2vw] font-normal"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
               Suspendisse a felis fermentum, congue mi ut, sodales turpis.
             </p>
             <button
               ref={(el) => (sectionRef.current[3] = el)}
-              className="flex gap-2 items-center text-black text-[13px] 2xl:text-[1vw] font-normal hover:underline"
+              className="flex gap-2 items-center text-black text-[13px] 2xl:text-[1.3vw] font-normal hover:underline"
               aria-label={`Explore more about CUSTOM`}
             >
               <FaAngleRight /> EXPLORE MORE

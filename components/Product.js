@@ -29,8 +29,8 @@ const RolexProductCard = () => {
   ];
   return (
     <div>
-      <div className="max-w-[1440px] bg-black mx-auto">
-        <div className="w-full pt-[120px] pb-10 px-5 sm:px-10 grid md:grid-cols-2 gap-8 items-start">
+      <div className=" bg-black">
+        <div className="max-w-[1440px] mx-auto pt-[120px] pb-10 px-5 sm:px-10 grid md:grid-cols-2 gap-8 items-start">
           <div className="flex justify-start">
             <div className="flex flex-col items-center">
               <img
@@ -113,8 +113,10 @@ const RolexProductCard = () => {
             </div>
           </div>
         </div>
+      </div>
 
-        <div className=" flex flex-col py-[120px] bg-white gap-6">
+      <div className=" bg-white">
+        <div className=" max-w-[1440px] mx-auto flex flex-col px-5 sm:px-10 py-[120px] bg-white gap-6">
           <ProductCard products={products} />
 
           <div

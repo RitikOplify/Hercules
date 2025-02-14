@@ -17,7 +17,7 @@ function AboutUs() {
         layout="responsive"
       />
 
-      <div className=" bg-white text-black max-w-[1440px] mx-auto">
+      <div className=" bg-white text-black w-full mx-auto">
         <div className=" py-[120px] flex justify-center px-5 sm:px-10">
           <p
             ref={(el) => (aboutUsRef.current[0] = el)}
@@ -35,25 +35,26 @@ function AboutUs() {
               ref={(el) => (aboutUsRef.current[1] = el)}
               src="/Watch/man-watch.jpg"
               alt="Rolex Watch"
-              className=" object-cover"
+              className=" object-cover 2xl:h-screen 2xl:w-[90%]"
             />
             <img
+              ref={(el) => (aboutUsRef.current[2] = el)}
               src="/Watch/watch-close-look.jpg"
-              className=" absolute top-1/2 right-0 transform -translate-y-1/2"
+              className="absolute w-2/4 2xl:w-2/3 top-1/2 left-1/2 sm:left-auto sm:right-0 transform -translate-x-1/2 sm:translate-x-0 -translate-y-1/2"
               alt=""
             />
           </div>
 
-          <div className="w-full sm:w-[45%] bg-white flex flex-col justify-center items-start px-5 py-10 sm:p-10">
+          <div className="w-full sm:w-[45%] bg-white flex flex-col justify-center 2xl:gap-[1vw] items-start px-5 py-10 sm:p-10">
             <h1
-              ref={(el) => (aboutUsRef.current[2] = el)}
-              className="text-2xl tracking-[8%] font-medium mb-6 text-black"
+              ref={(el) => (aboutUsRef.current[3] = el)}
+              className="text-2xl tracking-[8%] font-medium mb-6 text-black 2xl:text-[2vw]"
             >
               WE GOT SOMETHING FOR EVERYONE
             </h1>
             <p
-              ref={(el) => (aboutUsRef.current[3] = el)}
-              className="text-base text-[#808080] font-normal"
+              ref={(el) => (aboutUsRef.current[4] = el)}
+              className="text-base text-[#808080] font-normal 2xl:leading-[1.7vw] 2xl:text-[1.2vw]"
             >
               We are the first company to be able to offer a selection of 2
               colour combination watches, unique to the industry. Our closely
@@ -62,45 +63,49 @@ function AboutUs() {
             </p>
 
             <button
-              ref={(el) => (aboutUsRef.current[4] = el)}
-              className="mt-10 bg-black flex items-center gap-3 text-base text-[#fff] font-normal rounded-xl py-3 px-6"
+              ref={(el) => (aboutUsRef.current[5] = el)}
+              className="mt-10 bg-black flex items-center gap-3 2xl:text-[1.3vw] 2xl:py-[0.8vw] 2xl:px-[1vw] text-base text-[#fff] font-normal rounded-xl py-3 px-6"
             >
               Contact us <FaAngleRight />
             </button>
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row sm:h-[600px] mt-20">
-          <div className="w-full sm:w-[45%] bg-white flex flex-col justify-center items-start px-5 py-10 sm:p-10">
-            <h1
-              ref={(el) => (aboutUsRef.current[5] = el)}
-              className="text-2xl tracking-[8%] font-medium mb-6 text-black"
-            >
-              WE GOT SOMETHING FOR EVERYONE
-            </h1>
-            <p
-              ref={(el) => (aboutUsRef.current[6] = el)}
-              className="text-base text-[#808080] font-normal"
-            >
-              We are the first company to be able to offer a selection of 2
-              colour combination watches, unique to the industry. Our closely
-              guarded production techniques allow us to create watches as
-              individual as you are.
-            </p>
+        <div className="relative w-full flex justify-center">
+          <div className="w-full h-full flex-col-reverse flex sm:flex-row">
+            <div className="w-full sm:w-[50%] bg-white flex flex-col justify-center 2xl:gap-[1vw] items-start px-5 py-10 sm:p-10">
+              <h1
+                ref={(el) => (aboutUsRef.current[6] = el)}
+                className="text-2xl tracking-[8%] font-medium mb-6 text-black 2xl:text-[2vw]"
+              >
+                WE GOT SOMETHING FOR EVERYONE
+              </h1>
+              <p
+                ref={(el) => (aboutUsRef.current[7] = el)}
+                className="text-base text-[#808080] font-normal 2xl:leading-[1.7vw] 2xl:text-[1.2vw]"
+              >
+                We are the first company to be able to offer a selection of 2
+                colour combination watches, unique to the industry. Our closely
+                guarded production techniques allow us to create watches as
+                individual as you are.
+              </p>
 
-            <button
-              ref={(el) => (aboutUsRef.current[7] = el)}
-              className="mt-10 bg-black flex items-center gap-3 text-base text-[#fff] font-normal rounded-xl py-3 px-6"
-            >
-              Contact us <FaAngleRight />
-            </button>
-          </div>
+              <button
+                ref={(el) => (aboutUsRef.current[8] = el)}
+                className="mt-10 bg-black flex items-center gap-3 2xl:text-[1.3vw] 2xl:py-[0.8vw] 2xl:px-[1vw] text-base text-[#fff] font-normal rounded-xl py-3 px-6"
+              >
+                Contact us <FaAngleRight />
+              </button>
+            </div>
 
-          <div
-            ref={(el) => (aboutUsRef.current[8] = el)}
-            className="w-full sm:w-[55%] py-5 bg-black flex justify-center items-center"
-          >
-            <img src="/Images/watch5.png" alt="Rolex Watch" />
+            <div className="w-full sm:w-1/2 h-[50vh] sm:h-screen flex items-center bg-black">
+              <img
+                ref={(el) => (aboutUsRef.current[9] = el)}
+                src="/Watch/i9.png"
+                alt="Watch"
+                className=" h-[70%] w-full object-contain"
+              />
+            </div>
           </div>
         </div>
       </div>

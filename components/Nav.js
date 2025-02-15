@@ -31,8 +31,8 @@ function Nav() {
           if (!menuOpen) {
             gsap.to(nav, {
               y: self.direction === 1 ? -100 : 0,
-              duration: 0.6,
-              ease: "power3.out",
+              duration: 0.2,
+              ease: "easeInOut",
             });
           }
         },

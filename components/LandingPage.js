@@ -9,9 +9,9 @@ const WatchLandingPage = () => {
 
   return (
     <section className=" bg-black">
-      <div className="max-w-[1440px] mx-auto flex-col-reverse flex sm:flex-row items-center sm:h-[650px]  justify-center px-5 sm:px-10 py-20 bg-black text-white">
-        <div className=" w-full sm:w-1/2 flex flex-col items-start sm:items-center">
-          <div className=" mt-10 sm:mt-0">
+      <div className="max-w-[1440px] mx-auto flex-col-reverse flex md:flex-row items-center md:h-[650px]  justify-center px-5 sm:px-10 py-20 bg-black text-white">
+        <div className=" w-full md:w-1/2 flex flex-col items-start md:items-center">
+          <div className=" mt-10 md:mt-0">
             <h1
               ref={(el) => (landingPageRef.current[0] = el)}
               className=" text-4xl sm:text-5xl font-bold"

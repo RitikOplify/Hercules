@@ -9,8 +9,8 @@ function Services() {
     <div>
       <div className="bg-white text-black px-5 sm:px-10">
         {/* Text Section */}
-        <div className=" max-w-[1440px] mx-auto flex flex-col-reverse sm:flex-row py-[120px] w-full">
-          <div className=" w-full sm:w-1/2 my-auto">
+        <div className=" max-w-[1440px] mx-auto gap-10 md:gap-0 flex flex-col-reverse md:flex-row py-[120px] w-full">
+          <div className=" w-full md:w-1/2 my-auto">
             <h2
               ref={(el) => (servicesRef.current[0] = el)}
               className="text-2xl font-medium text-black tracking-[8%] mb-6"
@@ -57,7 +57,7 @@ function Services() {
           </div>
 
           {/* Image Section */}
-          <div className="flex w-full  sm:w-1/2 items-center justify-center">
+          <div className="flex w-full  md:w-1/2 items-center justify-center">
             <img
               ref={(el) => (servicesRef.current[8] = el)}
               src="/Images/watch5.png"
@@ -69,7 +69,7 @@ function Services() {
       </div>
 
       <div className=" bg-black text-white">
-        <div className="max-w-[1440px] mx-auto px-5 py-[120px] sm:px-10 grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+        <div className="max-w-[1440px] mx-auto px-5 py-[120px] sm:px-10 grid grid-cols-1 md:grid-cols-2 items-center gap-10 md:gap-0">
           {/* Left Section - Image */}
           <div className="flex justify-center">
             <img
@@ -127,7 +127,7 @@ function Services() {
       </div>
 
       <div className=" bg-white">
-        <div className="max-w-[1440px] mx-auto flex flex-col-reverse md:flex-row items-center md:items-start p-6 md:p-12 gap-8">
+        <div className="max-w-[1440px] mx-auto flex flex-col-reverse md:flex-row items-center md:items-start gap-10 md:gap-0 px-5 sm:px-10 py-[120px]">
           <div className="md:w-1/2 space-y-6 my-auto">
             <div>
               <h2
@@ -196,7 +196,7 @@ function Services() {
 
       <div className=" relative">
         <div className=" bg-white h-36 w-full absolute top-0 left-0"></div>
-        <div className=" max-w-[1440px] mx-auto flex gap-10 sm:gap-0 flex-col-reverse relative md:flex-row bg-black text-white px-5 sm:px-10 py-12">
+        <div className=" max-w-[1440px] mx-auto flex gap-10 md:gap-0 flex-col-reverse relative md:flex-row bg-black text-white px-5 sm:px-10 pb-[120px]">
           <div className=" bg-white h-36 w-full absolute top-0 left-0"></div>
           <div className="md:w-1/2 my-auto ">
             <h2

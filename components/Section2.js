@@ -8,8 +8,8 @@ function Section2() {
   useGsap(sectionRef);
   return (
     <div className="relative w-full flex justify-center">
-      <div className="w-full h-full flex-col flex sm:flex-row">
-        <div className="w-full sm:w-1/2 h-[50vh] sm:h-screen flex items-center bg-black">
+      <div className="w-full h-full flex-col flex md:flex-row">
+        <div className="w-full md:w-1/2 h-[50vh] md:h-screen flex items-center bg-black">
           <img
             ref={(el) => (sectionRef.current[4] = el)}
             src="/Watch/Prestige_04.jpg"
@@ -17,7 +17,7 @@ function Section2() {
             className=" h-[70%] w-full object-contain"
           />
         </div>
-        <div className=" w-full sm:w-1/2 flex justify-start 2xl:justify-center bg-white text-black">
+        <div className=" w-full md:w-1/2 flex justify-start 2xl:justify-center bg-white text-black">
           <div className="bg-white flex flex-col gap-6 2xl:gap-[1vw] justify-center items-start px-5 py-10 2xl:py-[1vw] sm:p-10">
           <h1
               ref={(el) => (sectionRef.current[0] = el)}

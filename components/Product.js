@@ -30,16 +30,16 @@ const RolexProductCard = () => {
   return (
     <div>
       <div className=" bg-black">
-        <div className="max-w-[1440px] mx-auto pt-[120px] pb-10 px-5 sm:px-10 grid md:grid-cols-2 gap-8 items-start">
+        <div className="max-w-[1440px] mx-auto py-[120px] px-5 sm:px-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           <div className="flex justify-start">
-            <div className="flex flex-col items-center">
+            <div className="flex w-full flex-col items-center">
               <img
                 ref={(el) => (productRef.current[0] = el)}
                 src="/Images/watch6.png"
                 alt="Rolex GMT-Master II"
                 className="w-full max-w-sm rounded-2xl shadow-lg"
               />
-              <div className="grid grid-cols-4 gap-2 mt-10">
+              <div className=" grid grid-cols-4 gap-2 mt-10">
                 {[...Array(6)].map((_, index) => (
                   <div
                     key={index}
@@ -114,6 +114,7 @@ const RolexProductCard = () => {
           </div>
         </div>
       </div>
+
 
       <div className=" bg-white">
         <div className=" max-w-[1440px] mx-auto flex flex-col px-5 sm:px-10 py-[120px] bg-white gap-6">

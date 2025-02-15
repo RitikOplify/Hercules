@@ -7,8 +7,8 @@ const WhoWeAre = () => {
   useGsap(whoWeAreRef);
   return (
     <div className="bg-[#121417] py-[120px]">
-      <div className="flex flex-col gap-10 sm:gap-0 sm:flex-row max-w-[1440px] mx-auto sm:h-[500px] text-white">
-        <div className=" w-full sm:w-1/2 flex justify-center items-center">
+      <div className="flex flex-col gap-10 md:gap-0 md:flex-row max-w-[1440px] mx-auto text-white">
+        <div className=" w-full md:w-1/2 flex justify-center items-center">
           <img
             ref={(el) => (whoWeAreRef.current[0] = el)}
             src="/Watch/who-we-are.png"
@@ -17,7 +17,7 @@ const WhoWeAre = () => {
           />
         </div>
 
-        <div className=" w-full sm:w-1/2 flex flex-col justify-center gap-6 items-start px-5 sm:pr-10 text-[#fff]">
+        <div className=" w-full md:w-1/2 flex flex-col justify-center gap-6 items-start px-5 md:pr-10 text-[#fff]">
           <h1
             ref={(el) => (whoWeAreRef.current[1] = el)}
             className="text-2xl font-medium"

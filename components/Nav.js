@@ -46,7 +46,7 @@ function Nav() {
     <>
       <nav
         ref={navRef}
-        className="bg-black z-10 fixed w-full border-b text-white "
+        className="bg-black z-20 fixed w-full border-b-[2px] text-white "
       >
         <div className="flex bg-black relative justify-between mx-auto items-center py-[18px]">
           <Link href={"/"}>

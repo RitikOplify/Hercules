@@ -6,6 +6,7 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import useGsap from "@/useGsap";
 import { FaAngleRight } from "react-icons/fa";
+import collections from "@/collections";
 
 export default function App() {
   const shopRef = useRef([]);
@@ -14,6 +15,7 @@ export default function App() {
     stagger: true,
   });
   useGsap(shopRef);
+
   const data = [
     {
       name: "ROLEX GMT-MASTER II, DLC COATED STEEL, 18 CT YELLOW GOLD 116713LN",
@@ -69,8 +71,8 @@ export default function App() {
             modules={[Pagination]}
             className="w-full"
           >
-            {data.map((slide, i) => (
-              <SwiperSlide key={i}>
+            {collections.map((slide, i) => (
+              <SwiperSlide key={slide.id}>
                 <div
                   ref={(el) => (cardRef.current[i] = el)}
                   className="text-center flex flex-col gap-6"

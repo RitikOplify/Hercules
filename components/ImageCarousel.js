@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa6";
 import { useRef } from "react";
 import useGsap from "@/useGsap";
+import collections from "@/collections";
 
 export default function ResponsiveCarousel() {
   const leftBtnRef = useRef(null);
@@ -74,13 +75,13 @@ export default function ResponsiveCarousel() {
           }}
           className="multiple-slide-carousel"
         >
-          {images.map((slide, i) => (
-            <SwiperSlide key={slide}>
+          {collections.map((slide, i) => (
+            <SwiperSlide key={slide.image}>
               <div
                 ref={(el) => (imageRef.current[i] = el)}
                 className="bg-indigo-50 h-96 flex justify-center items-center"
               >
-                <img src={slide} alt={`img-${i}`} />
+                <img src={slide.image} alt={`img-${i}`} />
               </div>
             </SwiperSlide>
           ))}

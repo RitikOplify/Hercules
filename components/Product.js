@@ -3,8 +3,9 @@ import React, { useRef } from "react";
 import { FaAngleRight } from "react-icons/fa";
 import ProductCard from "./ProductCard";
 import useGsap from "@/useGsap";
+import Link from "next/link";
 
-const RolexProductCard = () => {
+const RolexProductCard = ({ product,collections }) => {
   const productRef = useRef([]);
 
   const sCardRef = useRef([]);
@@ -29,23 +30,29 @@ const RolexProductCard = () => {
   ];
   return (
     <div>
-      <div className=" bg-black">
+      <div className=" bg-white">
         <div className="max-w-[1440px] mx-auto py-[120px] px-5 sm:px-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           <div className="flex justify-start">
             <div className="flex w-full flex-col items-center">
               <img
                 ref={(el) => (productRef.current[0] = el)}
-                src="/Images/watch6.png"
-                alt="Rolex GMT-Master II"
-                className="w-full max-w-sm rounded-2xl shadow-lg"
+                src={product.image}
+                alt={product.name}
+                className="w-full max-w-sm"
               />
-              <div className=" grid grid-cols-4 gap-2 mt-10">
-                {[...Array(6)].map((_, index) => (
+              <div className="grid grid-cols-4 gap-2 mt-10">
+                {product.images.map((img, index) => (
                   <div
                     key={index}
                     ref={(el) => (sCardRef.current[index] = el)}
                     className="w-16 h-16 bg-gray-300 rounded"
-                  />
+                  >
+                    <img
+                      src={img}
+                      alt={`Product image ${index}`}
+                      className="w-full h-full object-cover rounded"
+                    />
+                  </div>
                 ))}
               </div>
             </div>
@@ -55,59 +62,55 @@ const RolexProductCard = () => {
             <div className=" space-y-9">
               <h1
                 ref={(el) => (productRef.current[1] = el)}
-                className="text-base font-medium tracking-[8%] text-[#fff]"
+                className="text-base font-medium tracking-[8%] text-black"
               >
-                ROLEX GMT-MASTER II, DLC COATED STEEL, 18 CT YELLOW GOLD
-                116713LN
+                {product.name}
               </h1>
               <p
                 ref={(el) => (productRef.current[2] = el)}
                 className="text-base font-medium text-[#808080]"
               >
-                £18,499.00
+                {product.price}
               </p>
               <p
                 ref={(el) => (productRef.current[3] = el)}
-                className=" text-[#fff] leading-6 text-base"
+                className=" text-black leading-6 text-base"
               >
-                Hercules Watch Co present a DLC and Yellow Gold Rolex GMT Master
-                II created to the highest standards. The case and bracelet have
-                been uniquely coated in scratch resistant DLC without
-                interfering with the aesthetic beauty of the gold. The dial and
-                date wheel have also been customised to blend beautifully with
-                the watch.
+                {product.desc}
               </p>
               <div ref={(el) => (productRef.current[4] = el)}>
-                <button className="bg-white w-fit text-black py-2 px-6 rounded-xl shadow hover:bg-gray-200 transition">
+                <Link
+                  href={product.link}
+                  className="bg-black w-fit text-white py-2 px-6 rounded-xl shadow hover:bg-gray-200 transition"
+                >
                   🛒 BUY PRODUCT
-                </button>
+                </Link>
               </div>
             </div>
 
             <div>
               <h2
                 ref={(el) => (productRef.current[5] = el)}
-                className=" mb-5 text-xl font-medium text-[#fff]"
+                className="mb-5 text-xl font-medium text-black"
               >
                 ADDITIONAL INFORMATION
               </h2>
               <div
                 ref={(el) => (productRef.current[6] = el)}
-                className="flex gap-5 text-[13px] text-[#fff]"
+                className="flex gap-5 text-[13px] text-black"
               >
-                <div className=" flex flex-col gap-3 font-normal ">
-                  <span>AGE:</span>
-                  <span>GENDER:</span>
-                  <span>BOX AND PAPERS:</span>
-                  <span>CASE SIZE:</span>
-                  <span>STRAP LENGTH:</span>
+                {/* Left Column (Keys) */}
+                <div className="flex flex-col gap-3 font-normal">
+                  {product.additional.map((item, index) => (
+                    <span key={index}>{Object.keys(item)[0]}:</span>
+                  ))}
                 </div>
-                <div className=" flex flex-col gap-3 font-light">
-                  <span>25th April 2018</span>
-                  <span>Mens</span>
-                  <span>Box, Manuals, Guarantee, Booklet, Swing Tag</span>
-                  <span>40 mm</span>
-                  <span>Adjustable up to 19 cm</span>
+
+                {/* Right Column (Values) */}
+                <div className="flex flex-col gap-3 font-light">
+                  {product.additional.map((item, index) => (
+                    <span key={index}>{Object.values(item)[0]}</span>
+                  ))}
                 </div>
               </div>
             </div>
@@ -115,10 +118,9 @@ const RolexProductCard = () => {
         </div>
       </div>
 
-
       <div className=" bg-white">
         <div className=" max-w-[1440px] mx-auto flex flex-col px-5 sm:px-10 py-[120px] bg-white gap-6">
-          <ProductCard products={products} />
+          <ProductCard products={collections} />
 
           <div
             ref={(el) => (productRef.current[7] = el)}

@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useRef } from "react";
 import ProductCard from "./ProductCard";
 import useGsap from "@/useGsap";
+import collections from "@/collections";
 
 const OurCollection = () => {
   const headingRef = useRef(null);
@@ -41,6 +42,7 @@ const OurCollection = () => {
     },
   ];
 
+
   return (
     <>
       <Image
@@ -58,7 +60,7 @@ const OurCollection = () => {
           >
             OUR FULL COLLECTION
           </h1>
-          <ProductCard products={products} />
+          <ProductCard products={collections} />
         </div>
       </div>
     </>

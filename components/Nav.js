@@ -75,7 +75,7 @@ function Nav() {
           </div>
 
           {menuOpen && (
-            <div className=" py-5 pl-5 sm:pl-10  md:hidden absolute w-screen bg-black top-[76px]">
+            <div className=" py-5 pl-5 sm:pl-10  md:hidden border-t-[2px] absolute w-screen bg-black top-[76px]">
               <div className="flex flex-col gap-4">
                 <ul className=" space-y-4">
                   {navItems.map((item) => (

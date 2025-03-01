@@ -5,29 +5,13 @@ import ProductCard from "./ProductCard";
 import useGsap from "@/useGsap";
 import Link from "next/link";
 
-const RolexProductCard = ({ product,collections }) => {
+const RolexProductCard = ({ product, collections }) => {
   const productRef = useRef([]);
 
   const sCardRef = useRef([]);
   useGsap(sCardRef, { stagger: true });
   useGsap(productRef);
-  const products = [
-    {
-      name: "ROLEX GMT-MASTER II, DLC COATED STEEL, 18 CT YELLOW GOLD 116713LN",
-      price: "£18,499.00",
-      image: "/Images/watch7.png",
-    },
-    {
-      name: "ROLEX YACHTMASTER, DLC COATED STEEL, 18 CT EVEROSE GOLD 116621",
-      price: "£18,499.00",
-      image: "/Images/watch7.png",
-    },
-    {
-      name: "ROLEX YACHTMASTER, DLC COATED STEEL AND STEEL WITH PLATINUM BEZEL 116622",
-      price: "£13,995.00",
-      image: "/Images/watch7.png",
-    },
-  ];
+
   return (
     <div>
       <div className=" bg-white">

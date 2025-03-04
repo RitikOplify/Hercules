@@ -65,6 +65,8 @@ const RolexProductCard = ({ product, collections }) => {
               <div ref={(el) => (productRef.current[4] = el)}>
                 <Link
                   href={product.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-black w-fit text-white py-2 px-6 rounded-xl shadow hover:bg-gray-200 transition"
                 >
                   🛒 BUY PRODUCT

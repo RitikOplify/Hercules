@@ -7,6 +7,7 @@ import { Pagination } from "swiper/modules";
 import useGsap from "@/useGsap";
 import { FaAngleRight } from "react-icons/fa";
 import collections from "@/collections";
+import Link from "next/link";
 
 export default function App() {
   const shopRef = useRef([]);
@@ -71,24 +72,25 @@ export default function App() {
             modules={[Pagination]}
             className="w-full"
           >
-            {collections.map((slide, i) => (
+            {collections.slice(0, 6).map((slide, i) => (
               <SwiperSlide key={slide.id}>
-                <div
+                <Link
+                  href={`collection/${slide.id}`}
                   ref={(el) => (cardRef.current[i] = el)}
-                  className="text-center flex flex-col gap-6"
+                  className="text-center flex flex-col justify-center gap-6"
                 >
                   <img
                     src={slide.image}
                     alt="Watch"
-                    className="mx-auto h-[220px] w-[220px] object-contain"
+                    className="mx-auto h-[350px] w-[350px] object-contain"
                   />
-                  <h2 className=" w-full sm:w-1/2 mx-auto text-center font-medium text-base text-[#000] uppercase tracking-wide leading-5">
+                  <h2 className=" w-full sm:w-[70%] mx-auto text-center font-medium text-base text-[#000] uppercase tracking-wide leading-5">
                     {slide.name}
                   </h2>
                   <p className="text-[#808080] font-medium text-xl">
                     {slide.price}
                   </p>
-                </div>
+                </Link>
               </SwiperSlide>
             ))}
           </Swiper>

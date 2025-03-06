@@ -1,11 +1,55 @@
 "use client";
-import useGsap from "@/useGsap";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { FaAngleRight } from "react-icons/fa";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Section1() {
   const sectionRef = useRef([]);
-  useGsap(sectionRef);
+
+  useEffect(() => {
+    if (!sectionRef.current) return;
+
+    let ctx = gsap.context(() => {
+      const elements = sectionRef.current;
+
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: elements[4], // Image triggers the animation sequence
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      })
+        .fromTo(
+          elements[4], // Image
+          { scale: 0.8, opacity: 0 },
+          { scale: 1, opacity: 1, duration: 0.8, ease: "power2.out" }
+        )
+        .fromTo(
+          elements[0], // Heading
+          { x: -50, opacity: 0 },
+          { x: 0, opacity: 1, duration: 0.6, ease: "power2.out" },
+          "-=0.4"
+        )
+        .fromTo(
+          elements[1], // Paragraph
+          { opacity: 0, y: 10 },
+          { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" },
+          "-=0.3"
+        )
+        .fromTo(
+          elements[3], // Explore More Button
+          { opacity: 0, y: 10 },
+          { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" },
+          "-=0.3"
+        );
+    });
+
+    return () => ctx.revert(); // Cleanup on unmount
+  }, []);
+
   return (
     <div className="relative w-full flex justify-center">
       <div className="w-full h-full flex-col-reverse flex md:flex-row">

@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import useGsap from "@/useGsap";
 import { FaAngleRight } from "react-icons/fa";
 import collections from "@/collections";
@@ -57,19 +57,25 @@ export default function App() {
           ref={(el) => (shopRef.current[0] = el)}
           className=" text-center font-medium text-black text-2xl"
         >
-          SHOP GALARY
+          SHOP GALLARY
         </h1>
         <div className=" py-[80px]">
           <Swiper
             slidesPerView={3}
             spaceBetween={20}
+            loop={true}
+            autoplay={{
+              delay: 3000, // Adjust timing (3s per slide)
+              disableOnInteraction: false, // Keeps autoplay running even after user interaction
+            }}
             pagination={{ clickable: true, el: ".custom-pagination" }}
             breakpoints={{
               0: { slidesPerView: 1 },
               640: { slidesPerView: 2 },
               1024: { slidesPerView: 3 },
             }}
-            modules={[Pagination]}
+            // modules={[Pagination]}
+            modules={[Autoplay, Pagination]} 
             className="w-full"
           >
             {collections.slice(0, 6).map((slide, i) => (

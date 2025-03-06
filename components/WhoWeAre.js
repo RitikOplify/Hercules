@@ -1,23 +1,74 @@
 "use client";
-import useGsap from "@/useGsap";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { FaAngleRight } from "react-icons/fa6";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const WhoWeAre = () => {
   const whoWeAreRef = useRef([]);
-  useGsap(whoWeAreRef);
+
+  useEffect(() => {
+    if (!whoWeAreRef.current) return;
+
+    let ctx = gsap.context(() => {
+      const elements = whoWeAreRef.current;
+
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: elements[0], // Image triggers animation
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      })
+        .fromTo(
+          elements[0], // Image
+          { opacity: 0, scale: 0.9 },
+          { opacity: 1, scale: 1, duration: 0.8, ease: "power2.out" }
+        )
+        .fromTo(
+          elements[1], // Heading
+          { opacity: 0, x: -50 },
+          { opacity: 1, x: 0, duration: 0.6, ease: "power2.out" },
+          "-=0.4"
+        )
+        .fromTo(
+          elements[2], // First paragraph
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" },
+          "-=0.3"
+        )
+        .fromTo(
+          elements[3], // Second paragraph
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" },
+          "-=0.3"
+        )
+        .fromTo(
+          elements[4], // Discover Button
+          { opacity: 0, scale: 0.8 },
+          { opacity: 1, scale: 1, duration: 0.5, ease: "power2.out" },
+          "-=0.3"
+        );
+    });
+
+    return () => ctx.revert(); // Cleanup on unmount
+  }, []);
+
   return (
     <div className="bg-[#121417] py-[120px]">
       <div className="flex flex-col gap-10 md:gap-0 md:flex-row max-w-[1440px] mx-auto text-white">
-        <div className=" w-full md:w-1/2 flex justify-center items-center">
+        <div className="w-full md:w-1/2 flex justify-center items-center">
           <img
             ref={(el) => (whoWeAreRef.current[0] = el)}
             src="/Watch/who-we-are.png"
             alt="Watch"
-          className=" h-[70%]"
+            className="h-[70%]"
           />
         </div>
 
-        <div className=" w-full md:w-1/2 flex flex-col justify-center gap-6 items-start px-5 md:pr-10 text-[#fff]">
+        <div className="w-full md:w-1/2 flex flex-col justify-center gap-6 items-start px-5 md:pr-10 text-[#fff]">
           <h1
             ref={(el) => (whoWeAreRef.current[1] = el)}
             className="text-2xl font-medium"

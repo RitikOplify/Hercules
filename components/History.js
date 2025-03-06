@@ -17,7 +17,7 @@ function History() {
       ease: "easeInOut",
       scrollTrigger: {
         trigger: historyRef.current[0],
-        start: "top 80%",
+        start: "top 90%",
       },
     });
   }, []);

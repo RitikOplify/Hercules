@@ -65,7 +65,7 @@ export default function App() {
             spaceBetween={20}
             loop={true}
             autoplay={{
-              delay: 3000, // Adjust timing (3s per slide)
+              delay: 4000, // Adjust timing (5s per slide)
               disableOnInteraction: false, // Keeps autoplay running even after user interaction
             }}
             pagination={{ clickable: true, el: ".custom-pagination" }}

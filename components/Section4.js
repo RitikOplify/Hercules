@@ -25,24 +25,24 @@ function Section4() {
         .fromTo(
           elements[4], // Image
           { scale: 0.8, opacity: 0 },
-          { scale: 1, opacity: 1, duration: 0.8, ease: "power2.out" }
+          { scale: 1, opacity: 1, duration: 0.8, ease: "easeInOut" }
         )
         .fromTo(
           elements[0], // Heading
-          { x: -50, opacity: 0 },
-          { x: 0, opacity: 1, duration: 0.6, ease: "power2.out" },
+          { y: 50, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.6, ease: "easeInOut" },
           "-=0.4"
         )
         .fromTo(
           elements[1], // Paragraph
-          { opacity: 0, y: 10 },
-          { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" },
+          { opacity: 0, y: 50 },
+          { opacity: 1, y: 0, duration: 0.6, ease: "easeInOut" },
           "-=0.3"
         )
         .fromTo(
           elements[3], // Explore More Button
-          { opacity: 0, y: 10 },
-          { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" },
+          { opacity: 0, y: 50 },
+          { opacity: 1, y: 0, duration: 0.5, ease: "easeInOut" },
           "-=0.3"
         );
     });

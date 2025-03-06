@@ -25,30 +25,30 @@ const WhoWeAre = () => {
         .fromTo(
           elements[0], // Image
           { opacity: 0, scale: 0.9 },
-          { opacity: 1, scale: 1, duration: 0.8, ease: "power2.out" }
+          { opacity: 1, scale: 1, duration: 0.8, ease: "easeInOut" }
         )
         .fromTo(
           elements[1], // Heading
-          { opacity: 0, x: -50 },
-          { opacity: 1, x: 0, duration: 0.6, ease: "power2.out" },
+          { opacity: 0, y: 50 },
+          { opacity: 1, y: 0, duration: 0.6, ease: "easeInOut" },
           "-=0.4"
         )
         .fromTo(
           elements[2], // First paragraph
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" },
+          { opacity: 0, y: 50 },
+          { opacity: 1, y: 0, duration: 0.6, ease: "easeInOut" },
           "-=0.3"
         )
         .fromTo(
           elements[3], // Second paragraph
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" },
+          { opacity: 0, y: 50 },
+          { opacity: 1, y: 0, duration: 0.6, ease: "easeInOut" },
           "-=0.3"
         )
         .fromTo(
           elements[4], // Discover Button
-          { opacity: 0, scale: 0.8 },
-          { opacity: 1, scale: 1, duration: 0.5, ease: "power2.out" },
+          { opacity: 0, y: 50 },
+          { opacity: 1, y: 0, duration: 0.5, ease: "easeInOut" },
           "-=0.3"
         );
     });

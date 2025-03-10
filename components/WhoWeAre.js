@@ -60,7 +60,7 @@ const WhoWeAre = () => {
   // 
   return (
     <div className="bg-black">
-      <div className="flex flex-col gap-10 md:gap-0 md:flex-row max-w-[1440px] mx-auto text-white">
+      <div className="flex flex-col gap-10 pb-[100px] lg:pb-0 md:gap-0 md:flex-row max-w-[1440px] mx-auto text-white">
         <div className="w-full md:w-1/2 flex justify-center items-center">
           <video
             ref={(el) => (whoWeAreRef.current[0] = el)}

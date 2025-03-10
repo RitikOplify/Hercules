@@ -57,7 +57,7 @@ function Section4() {
         <div className="w-full md:w-1/2 h-[50vh] md:h-screen flex items-center bg-black">
           <img
             ref={(el) => (sectionRef.current[4] = el)}
-            src="/Images/watch5.png"
+            src="/Images/engraved_art.png"
             alt="Watch"
             className="h-[70%] w-full object-contain"
           />

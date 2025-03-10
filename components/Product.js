@@ -209,7 +209,7 @@ const RolexProductCard = ({ product, collections }) => {
   return (
     <div>
       <div className="bg-white">
-        <div className="max-w-[1440px] mx-auto py-10 sm:py-[120px] px-5 sm:px-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <div className="max-w-[1440px] mx-auto py-10 sm:py-[120px] px-5 sm:px-10 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 items-start">
           <div className="flex justify-between relative">
             {/* Navigation Arrows for Main Swiper */}
             <button

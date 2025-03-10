@@ -196,16 +196,16 @@ function Services() {
       </div>
 
       <div className=" overflow-hidden">
-        <div className="flex flex-col md:flex-row max-w-[1440px] mx-auto text-white">
+        <div className="flex bg-black flex-col py-[60px] gap-10 md:gap-0 sm:py-[120px] md:flex-row max-w-[1440px] mx-auto text-white">
           <div className=" w-full md:w-1/2 flex justify-center items-center">
             <img
               ref={(el) => (servicesRef.current[25] = el)}
-              src="/Services/engrave_left.jpg"
+              src="/Services/engrave_left.png"
               alt="Watch"
             />
           </div>
 
-          <div className="bg-[#121417] w-full md:w-1/2 py-[120px] flex flex-col justify-center gap-6 items-start px-5 sm:px-10 text-[#fff]">
+          <div className="w-full md:w-1/2 flex flex-col justify-center gap-6 items-start px-5 sm:px-10 text-[#fff]">
             <h2
               ref={(el) => (servicesRef.current[26] = el)}
               className="text-2xl font-medium"

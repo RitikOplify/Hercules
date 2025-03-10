@@ -11,22 +11,21 @@ function ProductCard({ products }) {
   return (
     <div className="w-full grid sm:grid-cols-2 md:grid-cols-3 gap-y-[60px]">
       {products.map((product, i) => (
-        <Link href={`/collection/${product.id}`}
-          key={i}
+        <Link
+          key={product.id}
+          href={`collection/${product.id}`}
           ref={(el) => (cardsRef.current[i] = el)}
-          className="flex flex-col  items-center justify-center"
+          className="text-center flex flex-col justify-center gap-6"
         >
           <img
             src={product.image}
-            alt={product.name}
-            className="max-w-[350px] h-auto"
+            alt="Watch"
+            className="mx-auto h-[350px] w-[350px] object-contain"
           />
-          <h2 className="text-base tracking-[8%] mt-6 font-medium text-[#000]">
+          <h2 className=" w-full sm:w-[70%] mx-auto text-center font-medium text-base text-[#000] uppercase tracking-wide leading-5">
             {product.name}
           </h2>
-          <p className=" text-[#808080] tracking-[8%] mt-4 font-medium text-base">
-            {product.price}
-          </p>
+          <p className="text-[#808080] font-medium text-xl">{product.price}</p>
         </Link>
       ))}
     </div>

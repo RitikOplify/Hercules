@@ -49,13 +49,14 @@ function Nav() {
         className="bg-black z-20 fixed w-full border-b-[2px] text-white "
       >
         <div className="flex bg-black relative justify-between mx-auto items-center py-[18px]">
-          <Link href={"/"}>
+          {/* <Link href={"/"}>
             <img
               src="/Images/Logo.jpg"
               alt="Logo"
               className="mb-4 h-6 pl-5 sm:pl-10 object-center"
             />
-          </Link>
+          </Link> */}
+          <div></div>
           <ul className="hidden md:flex space-x-6 text-[#fff]">
             {navItems.map((item) => (
               <li key={item.name}>

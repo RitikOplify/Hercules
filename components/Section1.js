@@ -71,7 +71,7 @@ function Section1() {
             </p>
             <button
               ref={(el) => (sectionRef.current[3] = el)}
-              className="flex gap-2 items-center text-black text-[13px] font-normal hover:underline"
+              className="flex gap-2 items-center text-black text-[13px] font-semibold hover:underline"
               aria-label={`Explore more about CUSTOM`}
             >
               <FaAngleRight /> EXPLORE MORE

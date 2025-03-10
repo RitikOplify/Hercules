@@ -15,13 +15,14 @@ function Section4() {
     let ctx = gsap.context(() => {
       const elements = sectionRef.current;
 
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: elements[4], // Image triggers animation
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
-      })
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: elements[4], // Image triggers animation
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+        })
         .fromTo(
           elements[4], // Image
           { scale: 0.8, opacity: 0 },
@@ -65,20 +66,20 @@ function Section4() {
           <div className="bg-white flex flex-col gap-6 2xl:gap-[1vw] justify-center items-start px-5 py-10 2xl:py-[1vw] sm:p-10">
             <h1
               ref={(el) => (sectionRef.current[0] = el)}
-              className="text-2xl font-medium text-black 2xl:text-[2vw]"
+              className="text-2xl font-medium text-black"
             >
               ENGRAVED ART
             </h1>
             <p
               ref={(el) => (sectionRef.current[1] = el)}
-              className="text-[#808080] text-base 2xl:leading-[1.7vw] 2xl:text-[1.2vw] font-normal"
+              className="text-[#808080] text-base font-normal max-w-sm"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
               Suspendisse a felis fermentum, congue mi ut, sodales turpis.
             </p>
             <button
               ref={(el) => (sectionRef.current[3] = el)}
-              className="flex gap-2 items-center text-black text-[13px] 2xl:text-[1.3vw] font-normal hover:underline"
+              className="flex gap-2 items-center text-black text-[13px] font-semibold hover:underline"
               aria-label="Explore more about ENGRAVED ART"
             >
               <FaAngleRight /> EXPLORE MORE

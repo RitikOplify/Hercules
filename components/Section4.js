@@ -62,7 +62,7 @@ function Section4() {
             className="h-[70%] w-full object-contain"
           />
         </div>
-        <div className="w-full md:w-1/2 flex justify-start 2xl:justify-center bg-white text-black">
+        <div className="w-full md:w-1/2 flex justify-center 2xl:justify-center bg-white text-black">
           <div className="bg-white flex flex-col gap-6 2xl:gap-[1vw] justify-center items-start px-5 py-10 2xl:py-[1vw] sm:p-10">
             <h1
               ref={(el) => (sectionRef.current[0] = el)}
@@ -74,8 +74,11 @@ function Section4() {
               ref={(el) => (sectionRef.current[1] = el)}
               className="text-[#808080] text-base font-normal max-w-sm"
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
-              Suspendisse a felis fermentum, congue mi ut, sodales turpis.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse a felis fermentum, congue mi ut, sodales turpis. Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+              culpa quam nostrum fuga cum. Ad vitae obcaecati quis tempore earum
+              iure itaque sunt ratione repudiandae.
             </p>
             <button
               ref={(el) => (sectionRef.current[3] = el)}

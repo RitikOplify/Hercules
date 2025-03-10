@@ -18,7 +18,7 @@ export default function Home() {
       <Section3 />
       <Section4 />
       <WhoWeAre />
-      <ShopGallery />
+      <ShopGallery title={"SHOP GALLARY"} />
       <ImageCarousel />
     </>
   );

@@ -9,40 +9,6 @@ const OurCollection = () => {
   const headingRef = useRef(null);
   useGsap(headingRef);
 
-  const products = [
-    {
-      name: "ROLEX GMT-MASTER II, DLC COATED STEEL, 18 CT YELLOW GOLD 116713LN",
-      price: "£18,499.00",
-      image: "/Images/watch7.png",
-    },
-    {
-      name: "ROLEX YACHTMASTER, DLC COATED STEEL, 18 CT EVEROSE GOLD 116621",
-      price: "£18,499.00",
-      image: "/Images/watch7.png",
-    },
-    {
-      name: "ROLEX YACHTMASTER, DLC COATED STEEL AND STEEL WITH PLATINUM BEZEL 116622",
-      price: "£13,995.00",
-      image: "/Images/watch7.png",
-    },
-    {
-      name: "ROLEX GMT-MASTER II, DLC COATED STEEL, 18 CT YELLOW GOLD 116713LN",
-      price: "£18,499.00",
-      image: "/Images/watch7.png",
-    },
-    {
-      name: "ROLEX YACHTMASTER, DLC COATED STEEL, 18 CT EVEROSE GOLD 116621",
-      price: "£18,499.00",
-      image: "/Images/watch7.png",
-    },
-    {
-      name: "ROLEX YACHTMASTER, DLC COATED STEEL AND STEEL WITH PLATINUM BEZEL 116622",
-      price: "£13,995.00",
-      image: "/Images/watch7.png",
-    },
-  ];
-
-
   return (
     <>
       <Image
@@ -60,7 +26,11 @@ const OurCollection = () => {
           >
             OUR FULL COLLECTION
           </h1>
-          <ProductCard products={collections} />
+          <div className="w-full grid sm:grid-cols-2 md:grid-cols-3 gap-y-[60px]">
+            {collections.map((product, i) => (
+              <ProductCard product={product} key={i} ref={i} />
+            ))}
+          </div>
         </div>
       </div>
     </>

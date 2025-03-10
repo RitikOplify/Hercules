@@ -8,47 +8,15 @@ import useGsap from "@/useGsap";
 import { FaAngleRight } from "react-icons/fa";
 import collections from "@/collections";
 import Link from "next/link";
+import ProductCard from "./ProductCard";
 
-export default function App() {
+export default function ShopGallery({ title }) {
   const shopRef = useRef([]);
   const cardRef = useRef([]);
   useGsap(cardRef, {
     stagger: true,
   });
   useGsap(shopRef);
-
-  const data = [
-    {
-      name: "ROLEX GMT-MASTER II, DLC COATED STEEL, 18 CT YELLOW GOLD 116713LN",
-      price: "£18,499.00",
-      image: "/Images/watch1.jpg",
-    },
-    {
-      name: "ROLEX YACHTMASTER, DLC COATED STEEL, 18 CT EVEROSE GOLD 116621",
-      price: "£18,499.00",
-      image: "/Images/watch4.jpg",
-    },
-    {
-      name: "ROLEX YACHTMASTER, DLC COATED STEEL AND STEEL WITH PLATINUM BEZEL 116622",
-      price: "£13,995.00",
-      image: "/Images/watch5.png",
-    },
-    {
-      name: "ROLEX GMT-MASTER II, DLC COATED STEEL, 18 CT YELLOW GOLD 116713LN",
-      price: "£18,499.00",
-      image: "/Images/watch1.jpg",
-    },
-    {
-      name: "ROLEX YACHTMASTER, DLC COATED STEEL, 18 CT EVEROSE GOLD 116621",
-      price: "£18,499.00",
-      image: "/Images/watch4.jpg",
-    },
-    {
-      name: "ROLEX YACHTMASTER, DLC COATED STEEL AND STEEL WITH PLATINUM BEZEL 116622",
-      price: "£13,995.00",
-      image: "/Images/watch5.png",
-    },
-  ];
 
   return (
     <div className=" bg-white">
@@ -57,7 +25,7 @@ export default function App() {
           ref={(el) => (shopRef.current[0] = el)}
           className=" text-center font-medium text-black text-2xl"
         >
-          SHOP GALLARY
+          {title}
         </h1>
         <div className=" py-[80px]">
           <Swiper
@@ -75,28 +43,12 @@ export default function App() {
               1024: { slidesPerView: 3 },
             }}
             // modules={[Pagination]}
-            modules={[Autoplay, Pagination]} 
+            modules={[Autoplay, Pagination]}
             className="w-full"
           >
             {collections.slice(0, 6).map((slide, i) => (
               <SwiperSlide key={slide.id}>
-                <Link
-                  href={`collection/${slide.id}`}
-                  ref={(el) => (cardRef.current[i] = el)}
-                  className="text-center flex flex-col justify-center gap-6"
-                >
-                  <img
-                    src={slide.image}
-                    alt="Watch"
-                    className="mx-auto h-[350px] w-[350px] object-contain"
-                  />
-                  <h2 className=" w-full sm:w-[70%] mx-auto text-center font-medium text-base text-[#000] uppercase tracking-wide leading-5">
-                    {slide.name}
-                  </h2>
-                  <p className="text-[#808080] font-medium text-xl">
-                    {slide.price}
-                  </p>
-                </Link>
+                <ProductCard product={slide} key={i} ref={i} />
               </SwiperSlide>
             ))}
           </Swiper>
@@ -112,9 +64,12 @@ export default function App() {
           ref={(el) => (shopRef.current[2] = el)}
           className="flex justify-center mt-[60px]"
         >
-          <button className="bg-black flex items-center gap-3 text-base text-[#fff] font-normal rounded-xl py-3 px-6 shadow-[0_5px_20px_rgba(134,134,134,0.6)]">
+          <Link
+            href={"/collection"}
+            className="bg-black flex items-center gap-3 text-base text-[#fff] font-normal rounded-xl py-3 px-6 shadow-[0_5px_20px_rgba(134,134,134,0.6)]"
+          >
             DISCOVER <FaAngleRight />
-          </button>
+          </Link>
         </div>
 
         {/* Custom Pagination Styling */}

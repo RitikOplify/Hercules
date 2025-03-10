@@ -49,14 +49,21 @@ function Nav() {
         className="bg-black z-20 fixed w-full border-b-[2px] text-white "
       >
         <div className="flex bg-black relative justify-between mx-auto items-center py-[18px]">
-          {/* <Link href={"/"}>
+          <Link href={"/"}>
             <img
               src="/Images/Logo.jpg"
               alt="Logo"
               className="mb-4 h-6 pl-5 sm:pl-10 object-center"
             />
-          </Link> */}
-          <div></div>
+          </Link>
+          {/* <div></div> */}
+          {/* <div className=" flex items-center justify-center h-[100px] w-[100px] absolute top-[18px] left-5 sm:left-10 z-20 rounded-full bg-black">
+            <img
+              src="/Images/Logo.jpg"
+              alt="logo"
+              className=" h-20 w-20 object-contain"
+            />
+          </div> */}
           <ul className="hidden md:flex space-x-6 text-[#fff]">
             {navItems.map((item) => (
               <li key={item.name}>

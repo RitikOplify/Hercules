@@ -54,9 +54,7 @@ const WatchLandingPage = () => {
   return (
     <section className=" bg-black">
       <div className="max-w-[1440px] mx-auto flex-col-reverse flex md:flex-row items-center md:h-[650px] justify-center px-5 sm:px-10 py-20 bg-black text-white">
-        <div className=" flex items-center justify-center h-[100px] w-[100px] absolute top-[18px] left-5 sm:left-10 z-20 rounded-full bg-black">
-          <img src="/Images/Logo.jpg" alt="logo" className=" h-20 w-20 object-contain" />
-        </div>
+        
         <div className="w-full md:w-1/2 flex flex-col items-start md:items-center">
           <div className="mt-10 md:mt-0">
             <h1

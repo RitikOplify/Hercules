@@ -57,6 +57,7 @@ const WhoWeAre = () => {
     return () => ctx.revert(); // Cleanup on unmount
   }, []);
   // #121417
+  // 
   return (
     <div className="bg-black">
       <div className="flex flex-col gap-10 md:gap-0 md:flex-row max-w-[1440px] mx-auto text-white">

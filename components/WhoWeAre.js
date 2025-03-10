@@ -99,7 +99,7 @@ const WhoWeAre = () => {
 
           <button
             ref={(el) => (whoWeAreRef.current[4] = el)}
-            className="mt-6 bg-white w-fit flex items-center gap-3 text-base text-black font-normal rounded-xl py-3 px-6"
+            className="mt-6 bg-white w-fit flex items-center gap-3 text-base text-black font-normal rounded-xl py-3 px-6 shadow-[0_5px_20px_rgba(255,255,255,0.6)]"
           >
             DISCOVER <FaAngleRight />
           </button>

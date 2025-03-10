@@ -64,7 +64,7 @@ function AboutUs() {
 
           <button
             ref={(el) => (aboutUsRef.current[4] = el)}
-            className="mt-10 bg-black flex items-center gap-3 2xl:text-[1.3vw] 2xl:py-[0.8vw] 2xl:px-[1vw] text-base text-[#fff] font-normal rounded-xl py-3 px-6"
+            className="mt-10 bg-black flex items-center gap-3 2xl:text-[1.3vw] 2xl:py-[0.8vw] 2xl:px-[1vw] text-base text-[#fff] font-normal rounded-xl py-3 px-6 shadow-[0_5px_20px_rgba(134,134,134,0.6)]"
           >
             Contact us <FaAngleRight />
           </button>
@@ -92,7 +92,7 @@ function AboutUs() {
 
             <button
               ref={(el) => (aboutUsRef.current[7] = el)}
-              className="mt-10 bg-black flex items-center gap-3 2xl:text-[1.3vw] 2xl:py-[0.8vw] 2xl:px-[1vw] text-base text-[#fff] font-normal rounded-xl py-3 px-6"
+              className="mt-10 bg-black flex items-center gap-3 2xl:text-[1.3vw] 2xl:py-[0.8vw] 2xl:px-[1vw] text-base text-[#fff] font-normal rounded-xl py-3 px-6 shadow-[0_5px_20px_rgba(134,134,134,0.6)]"
             >
               Contact us <FaAngleRight />
             </button>

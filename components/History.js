@@ -50,7 +50,7 @@ function History() {
           ref={(el) => (historyRef.current[3] = el)}
           className=" w-full flex justify-center"
         >
-          <button className="mt-6 bg-black flex items-center gap-3 text-base text-[#fff] font-normal rounded-xl py-3 px-6">
+          <button className="mt-6 bg-black flex items-center gap-3 text-base text-[#fff] font-normal rounded-xl py-3 px-6 shadow-[0_5px_20px_rgba(134,134,134,0.6)]">
             DISCOVER <FaAngleRight />
           </button>
         </div>

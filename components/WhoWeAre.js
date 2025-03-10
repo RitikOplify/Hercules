@@ -15,13 +15,14 @@ const WhoWeAre = () => {
     let ctx = gsap.context(() => {
       const elements = whoWeAreRef.current;
 
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: elements[0], // Image triggers animation
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
-      })
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: elements[0], // Image triggers animation
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+        })
         .fromTo(
           elements[0], // Image
           { opacity: 0, scale: 0.9 },
@@ -55,16 +56,18 @@ const WhoWeAre = () => {
 
     return () => ctx.revert(); // Cleanup on unmount
   }, []);
-
+  // #121417
   return (
-    <div className="bg-[#121417] py-[120px]">
+    <div className="bg-black">
       <div className="flex flex-col gap-10 md:gap-0 md:flex-row max-w-[1440px] mx-auto text-white">
         <div className="w-full md:w-1/2 flex justify-center items-center">
-          <img
+          <video
             ref={(el) => (whoWeAreRef.current[0] = el)}
-            src="/Watch/who-we-are.png"
-            alt="Watch"
-            className="h-[70%]"
+            src="/video/video1.mp4"
+            autoPlay={true}
+            muted={true}
+            loop={true}
+            className=" w-1/2"
           />
         </div>
 

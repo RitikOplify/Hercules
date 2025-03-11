@@ -45,44 +45,17 @@ function AboutUs() {
           />
         </div>
 
-        <div className="w-full md:w-[45%] bg-white flex flex-col justify-center 2xl:gap-[1vw] items-start px-5 py-10 sm:p-10">
-          <h1
-            ref={(el) => (aboutUsRef.current[2] = el)}
-            className="text-2xl tracking-[8%] font-medium mb-6 text-black 2xl:text-[1.6rem] 2xl:leading-[1.5rem] 2xl:tracking-[1px]"
-          >
-            WE GOT SOMETHING FOR EVERYONE
-          </h1>
-          <p
-            ref={(el) => (aboutUsRef.current[3] = el)}
-            className="text-base text-[#808080] font-normal 2xl:leading-[1.4rem] 2xl:text-[1.2rem]"
-          >
-            We are the first company to be able to offer a selection of 2 colour
-            combination watches, unique to the industry. Our closely guarded
-            production techniques allow us to create watches as individual as
-            you are.
-          </p>
-
-          <button
-            ref={(el) => (aboutUsRef.current[4] = el)}
-            className="mt-10 bg-black flex items-center gap-3 2xl:text-[1.2rem] text-base text-[#fff] font-normal rounded-xl py-3 px-6 shadow-[0_5px_20px_rgba(134,134,134,0.6)]"
-          >
-            Contact us <FaAngleRight />
-          </button>
-        </div>
-      </div>
-
-      <div className="relative w-full flex justify-center">
-        <div className="w-full h-full flex-col-reverse flex md:flex-row">
-          <div className="w-full md:w-[50%] bg-white flex flex-col justify-center 2xl:gap-[1vw] items-start px-5 py-10 sm:p-10">
+        <div className="w-full md:w-[45%] bg-white flex flex-col justify-center gap-6 items-center px-5 py-10 sm:p-10">
+          <div>
             <h1
-              ref={(el) => (aboutUsRef.current[5] = el)}
+              ref={(el) => (aboutUsRef.current[2] = el)}
               className="text-2xl tracking-[8%] font-medium mb-6 text-black 2xl:text-[1.6rem] 2xl:leading-[1.5rem] 2xl:tracking-[1px]"
             >
               WE GOT SOMETHING FOR EVERYONE
             </h1>
             <p
-              ref={(el) => (aboutUsRef.current[6] = el)}
-              className="text-base text-[#808080] font-normal 2xl:leading-[1.4rem] 2xl:text-[1.2rem]"
+              ref={(el) => (aboutUsRef.current[3] = el)}
+              className="text-base text-[#808080] max-w-sm font-normal 2xl:leading-[1.4rem] 2xl:text-[1.2rem]"
             >
               We are the first company to be able to offer a selection of 2
               colour combination watches, unique to the industry. Our closely
@@ -91,11 +64,42 @@ function AboutUs() {
             </p>
 
             <button
-              ref={(el) => (aboutUsRef.current[7] = el)}
+              ref={(el) => (aboutUsRef.current[4] = el)}
               className="mt-10 bg-black flex items-center gap-3 2xl:text-[1.2rem] text-base text-[#fff] font-normal rounded-xl py-3 px-6 shadow-[0_5px_20px_rgba(134,134,134,0.6)]"
             >
               Contact us <FaAngleRight />
             </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="relative w-full flex justify-center">
+        <div className="w-full h-full flex-col-reverse flex md:flex-row">
+          <div className="w-full md:w-[50%] bg-white flex flex-col justify-center gap-6 items-center px-5 py-10 sm:p-10">
+            <div>
+              <h1
+                ref={(el) => (aboutUsRef.current[5] = el)}
+                className="text-2xl tracking-[8%] text-start font-medium mb-6 text-black 2xl:text-[1.6rem] 2xl:leading-[1.5rem] 2xl:tracking-[1px]"
+              >
+                WE GOT SOMETHING FOR EVERYONE
+              </h1>
+              <p
+                ref={(el) => (aboutUsRef.current[6] = el)}
+                className="text-base text-[#808080] font-normal 2xl:leading-[1.4rem] 2xl:text-[1.2rem] max-w-sm"
+              >
+                We are the first company to be able to offer a selection of 2
+                colour combination watches, unique to the industry. Our closely
+                guarded production techniques allow us to create watches as
+                individual as you are.
+              </p>
+
+              <button
+                ref={(el) => (aboutUsRef.current[7] = el)}
+                className="mt-10 bg-black flex items-center gap-3 2xl:leading-[1.4rem] 2xl:text-[1.2rem] text-base text-[#fff] font-normal rounded-xl py-3 px-6 shadow-[0_5px_20px_rgba(134,134,134,0.6)]"
+              >
+                Contact us <FaAngleRight />
+              </button>
+            </div>
           </div>
 
           <div className="w-full md:w-1/2 h-[50vh] md:h-screen flex items-center bg-black">

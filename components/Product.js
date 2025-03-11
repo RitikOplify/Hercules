@@ -29,7 +29,7 @@ const RolexProductCard = ({ product }) => {
   return (
     <div>
       <div className="bg-white">
-        <div className=" mx-auto pt-10 sm:pt-[120px] px-5 sm:px-10 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 items-start">
+        <div className=" h-auto 2xl:h-screen 2xl:content-center mx-auto pt-10 sm:pt-[120px] 2xl:pt-0 px-5 sm:px-10 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 items-start">
           <div className="flex gap-0 lg:gap-5 justify-between relative">
             {/* Navigation Arrows for Main Swiper */}
             <button
@@ -46,8 +46,11 @@ const RolexProductCard = ({ product }) => {
             </button>
 
             {/* Thumbnail Swiper (Hidden on Small Screens) */}
-            <div className="relative flex-col items-center h-[500px] hidden md:flex">
-              <button id="arrow-up" className="text-black text-3xl">
+            <div className="relative flex-col items-center justify-between h-[500px] 2xl:h-[732px] 2xl:gap-5 hidden md:flex">
+              <button
+                id="arrow-up"
+                className="text-black text-3xl 2xl:text-4xl"
+              >
                 <IoIosArrowUp />
               </button>
               <Swiper
@@ -62,24 +65,27 @@ const RolexProductCard = ({ product }) => {
                   nextEl: "#arrow-down",
                   prevEl: "#arrow-up",
                 }}
-                className="thumbSwiper h-[420px] w-[80px]"
+                className="thumbSwiper h-[420px] 2xl:h-[680px] w-[80px] 2xl:w-[120px]"
               >
                 {product?.images?.map((image, index) => (
                   <SwiperSlide
                     key={index}
-                    className="cursor-pointer max-h-[80px]"
+                    className="cursor-pointer max-h-[80px] 2xl:max-h-[120px]"
                   >
                     <Image
                       src={image}
                       alt={`Thumbnail ${index + 1}`}
                       width={80}
                       height={80}
-                      className="w-[80px] h-[80px] object-cover"
+                      className="w-[80px] h-[80px] 2xl:w-[120px] 2xl:h-[120px] object-cover"
                     />
                   </SwiperSlide>
                 ))}
               </Swiper>
-              <button id="arrow-down" className="text-black text-3xl">
+              <button
+                id="arrow-down"
+                className="text-black text-3xl 2xl:text-4xl"
+              >
                 <IoIosArrowDown />
               </button>
             </div>
@@ -92,7 +98,7 @@ const RolexProductCard = ({ product }) => {
                 nextEl: "#arrow-right",
                 prevEl: "#arrow-left",
               }}
-              className="mainSwiper w-[500px] h-[500px]"
+              className="mainSwiper w-[500px] h-[500px] 2xl:h-[732px]"
             >
               {product?.images?.map((image, index) => (
                 <SwiperSlide key={index}>

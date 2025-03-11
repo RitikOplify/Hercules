@@ -53,8 +53,7 @@ const WatchLandingPage = () => {
 
   return (
     <section className=" bg-black">
-      <div className="max-w-[1440px] mx-auto flex-col-reverse flex md:flex-row items-center md:h-[650px] justify-center px-5 sm:px-10 py-20 bg-black text-white">
-        
+      <div className="mx-auto flex-col-reverse flex md:flex-row items-center md:h-[650px] 2xl:h-screen justify-center px-5 sm:px-10 py-20 bg-black text-white">
         <div className="w-full md:w-1/2 flex flex-col items-start md:items-center">
           <div className="mt-10 md:mt-0">
             <h1
@@ -83,7 +82,7 @@ const WatchLandingPage = () => {
           ref={(el) => (landingPageRef.current[3] = el)}
           src="/Images/watch7.png"
           alt="Luxury Watch"
-          className="w-full sm:w-1/2 h-full object-contain opacity-0 scale-75"
+          className="w-full sm:w-1/2 h-[70%] object-contain opacity-0 scale-75"
         />
       </div>
     </section>

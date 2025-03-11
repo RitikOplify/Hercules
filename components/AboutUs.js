@@ -65,7 +65,7 @@ function AboutUs() {
 
             <button
               ref={(el) => (aboutUsRef.current[4] = el)}
-              className="mt-10 bg-black flex items-center gap-3 2xl:text-[1.2rem] text-base text-[#fff] font-normal rounded-xl py-3 px-6 shadow-[0_5px_20px_rgba(134,134,134,0.6)]"
+              className="mt-10 bg-black flex items-center gap-3 2xl:leading-[1.4] 2xl:text-[1.2rem] text-base text-[#fff] font-normal rounded-xl py-3 px-6 shadow-[0_5px_20px_rgba(134,134,134,0.6)]"
             >
               Contact us <FaAngleRight />
             </button>
@@ -79,13 +79,13 @@ function AboutUs() {
             <div>
               <h1
                 ref={(el) => (aboutUsRef.current[5] = el)}
-                className="text-2xl tracking-[8%] text-start font-medium mb-6 text-black 2xl:text-[1.6rem] 2xl:leading-[1.5rem] 2xl:tracking-[1px]"
+                className="text-2xl tracking-[8%] text-start font-medium mb-6 text-black 2xl:text-[1.6rem] 2xl:leading-[1.5] 2xl:tracking-[1px]"
               >
                 WE GOT SOMETHING FOR EVERYONE
               </h1>
               <p
                 ref={(el) => (aboutUsRef.current[6] = el)}
-                className="text-base text-[#808080] font-normal 2xl:leading-[1.4rem] 2xl:text-[1.2rem] max-w-sm"
+                className="text-base text-[#808080] font-normal 2xl:leading-[1.4] 2xl:text-[1.2rem] max-w-sm"
               >
                 We are the first company to be able to offer a selection of 2
                 colour combination watches, unique to the industry. Our closely
@@ -95,7 +95,7 @@ function AboutUs() {
 
               <button
                 ref={(el) => (aboutUsRef.current[7] = el)}
-                className="mt-10 bg-black flex items-center gap-3 2xl:leading-[1.4rem] 2xl:text-[1.2rem] text-base text-[#fff] font-normal rounded-xl py-3 px-6 shadow-[0_5px_20px_rgba(134,134,134,0.6)]"
+                className="mt-10 bg-black flex items-center gap-3 2xl:leading-[1.4] 2xl:text-[1rem] text-base text-[#fff] font-normal rounded-xl py-3 px-6 shadow-[0_5px_20px_rgba(134,134,134,0.6)]"
               >
                 Contact us <FaAngleRight />
               </button>

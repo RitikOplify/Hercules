@@ -66,13 +66,13 @@ function Section4() {
           <div className="bg-white flex flex-col gap-6 2xl:gap-[1vw] justify-center items-start px-5 py-10 2xl:py-[1vw] sm:p-10">
             <h1
               ref={(el) => (sectionRef.current[0] = el)}
-              className="text-2xl font-medium text-black 2xl:text-[1.6rem] 2xl:leading-[1.5rem] 2xl:tracking-[1px]"
+              className="text-2xl font-medium text-black 2xl:text-[1.6rem] 2xl:leading-[1.5] 2xl:tracking-[1px]"
             >
               ENGRAVED ART
             </h1>
             <p
               ref={(el) => (sectionRef.current[1] = el)}
-              className="text-[#808080] text-base font-normal max-w-sm 2xl:leading-[1.4rem] 2xl:text-[1.2rem]"
+              className="text-[#808080] text-base font-normal max-w-sm 2xl:leading-[1.4] 2xl:text-[1.2rem]"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse a felis fermentum, congue mi ut, sodales turpis. Lorem
@@ -82,7 +82,7 @@ function Section4() {
             </p>
             <button
               ref={(el) => (sectionRef.current[3] = el)}
-              className="flex gap-2 items-center text-black text-[13px] font-semibold 2xl:leading-[1.4rem] 2xl:text-[1.2rem] "
+              className="flex gap-2 items-center text-black text-[13px] font-semibold 2xl:leading-[1.4] 2xl:text-[1.2rem] "
               aria-label="Explore more about ENGRAVED ART"
             >
               <FaAngleRight /> EXPLORE MORE

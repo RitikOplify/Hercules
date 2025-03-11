@@ -29,7 +29,7 @@ const RolexProductCard = ({ product }) => {
   return (
     <div>
       <div className="bg-white">
-        <div className="max-w-[1440px] mx-auto pt-10 sm:pt-[120px] px-5 sm:px-10 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 items-start">
+        <div className=" mx-auto pt-10 sm:pt-[120px] px-5 sm:px-10 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 items-start">
           <div className="flex gap-0 lg:gap-5 justify-between relative">
             {/* Navigation Arrows for Main Swiper */}
             <button
@@ -125,7 +125,7 @@ const RolexProductCard = ({ product }) => {
               </p>
               <p
                 ref={(el) => (productRef.current[3] = el)}
-                className="text-black leading-6 text-base"
+                className="text-black leading-6 text-base max-w-3xl"
               >
                 {product.desc}
               </p>

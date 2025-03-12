@@ -48,7 +48,7 @@ const Product = ({ product }) => {
             </button>
 
             {/* Thumbnail Swiper (Hidden on Small Screens) */}
-            <div className="relative flex-col items-center justify-center gap-5 h-[500px] 2xl:h-[732px] 2xl:gap-5 hidden md:flex">
+            <div className="relative flex-col items-center justify-start gap-5 h-[500px] 2xl:h-[680px] 2xl:gap-5 hidden md:flex">
               <button
                 id="arrow-up"
                 className="text-black text-3xl 2xl:text-4xl"
@@ -84,10 +84,7 @@ const Product = ({ product }) => {
                   </SwiperSlide>
                 ))}
               </Swiper>
-              <button
-                id="arrow-down"
-                className="text-black text-3xl "
-              >
+              <button id="arrow-down" className="text-black text-3xl ">
                 <IoIosArrowDown />
               </button>
             </div>
@@ -100,7 +97,7 @@ const Product = ({ product }) => {
                 nextEl: "#arrow-right",
                 prevEl: "#arrow-left",
               }}
-              className="mainSwiper w-[500px] h-[500px] 2xl:h-[732px]"
+              className="mainSwiper w-[500px] h-[500px] 2xl:h-[680px]"
             >
               {product?.images?.map((image, index) => (
                 <SwiperSlide key={index}>

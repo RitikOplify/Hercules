@@ -48,7 +48,7 @@ const Product = ({ product }) => {
             </button>
 
             {/* Thumbnail Swiper (Hidden on Small Screens) */}
-            <div className="relative flex-col items-center justify-between h-[500px] 2xl:h-[732px] 2xl:gap-5 hidden md:flex">
+            <div className="relative flex-col items-center justify-center gap-5 h-[500px] 2xl:h-[732px] 2xl:gap-5 hidden md:flex">
               <button
                 id="arrow-up"
                 className="text-black text-3xl 2xl:text-4xl"
@@ -67,26 +67,26 @@ const Product = ({ product }) => {
                   nextEl: "#arrow-down",
                   prevEl: "#arrow-up",
                 }}
-                className="thumbSwiper h-[420px] 2xl:h-[680px] w-[80px] 2xl:w-[120px]"
+                className="thumbSwiper h-[420px] w-[80px] "
               >
                 {product?.images?.map((image, index) => (
                   <SwiperSlide
                     key={index}
-                    className="cursor-pointer max-h-[80px] 2xl:max-h-[120px]"
+                    className="cursor-pointer max-h-[80px] "
                   >
                     <Image
                       src={image}
                       alt={`Thumbnail ${index + 1}`}
                       width={80}
                       height={80}
-                      className="w-[80px] h-[80px] 2xl:w-[120px] 2xl:h-[120px] object-cover"
+                      className="w-[80px] h-[80px]  object-cover"
                     />
                   </SwiperSlide>
                 ))}
               </Swiper>
               <button
                 id="arrow-down"
-                className="text-black text-3xl 2xl:text-4xl"
+                className="text-black text-3xl "
               >
                 <IoIosArrowDown />
               </button>

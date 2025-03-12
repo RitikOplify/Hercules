@@ -19,13 +19,13 @@ const useGsap = (ref, options = {}) => {
           {
             opacity: 1,
             y: 0,
-            duration: options.duration || 1,
+            duration: options.stagger ? 0.8 : 1,
             ease: options.ease || "easeInOut",
             delay: options.stagger ? index * (options.staggerDelay || 0.2) : 0,
             scrollTrigger: {
               trigger: item,
-              start: options.start || "top 80%",
-              end: options.end || "top 70%",
+              start: options.start || "top 90%",
+              end: options.end || "top 80%",
               scrub: options.scrub || false,
             },
           }

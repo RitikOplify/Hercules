@@ -10,6 +10,10 @@ import Image from "next/image";
 import Button from "../Button";
 const ContactForm = () => {
   const contactRef = useRef([]);
+  const getInTouchRef = useRef([]);
+  useGsap(getInTouchRef, {
+    stagger: true,
+  });
   useGsap(contactRef);
   const {
     register,
@@ -54,29 +58,38 @@ const ContactForm = () => {
         </div>
       </div>
       <div className=" bg-white">
-        <div
-          ref={(el) => (contactRef.current[4] = el)}
-          className=" max-w-[1440px] mx-auto bg-white p-5 sm:px-10 py-[120px] grid grid-cols-1 md:grid-cols-2 gap-8"
-        >
+        <div className=" max-w-[1440px] mx-auto bg-white p-5 sm:px-10 py-[120px] grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Section - Contact Info */}
           <div>
-            <h2 className="text-2xl font-medium text-black tracking-[8%] mb-6  inline-block">
+            <h2
+              className="text-2xl font-medium text-black tracking-[8%] mb-6  inline-block"
+              ref={(el) => (getInTouchRef.current[0] = el)}
+            >
               <span className="border-b-2 border-black">GET IN</span> TOUCH
             </h2>
             <div className="space-y-4 text-black text-base font-medium tracking-[8%]">
-              <div className="flex items-center gap-3">
+              <div
+                className="flex items-center gap-3"
+                ref={(el) => (getInTouchRef.current[1] = el)}
+              >
                 <span className="text-black text-xl">
                   <MdOutlineEmail />
                 </span>
                 <span>hello@herculeswatch.com</span>
               </div>
-              <div className="flex items-center gap-3">
+              <div
+                className="flex items-center gap-3"
+                ref={(el) => (getInTouchRef.current[2] = el)}
+              >
                 <span className="text-black text-xl">
                   <IoCallOutline />
                 </span>
                 <span>+44-796-960-6568</span>
               </div>
-              <div className="flex items-start gap-3">
+              <div
+                className="flex items-start gap-3"
+                ref={(el) => (getInTouchRef.current[3] = el)}
+              >
                 <span className="text-black text-xl">
                   <HiOutlineLocationMarker />
                 </span>
@@ -92,7 +105,7 @@ const ContactForm = () => {
           </div>
 
           {/* Right Section - Contact Form */}
-          <div>
+          <div ref={(el) => (contactRef.current[4] = el)}>
             <h2 className="text-2xl font-medium text-black tracking-[8%] mb-6  inline-block">
               <span className="border-b-2 border-black">LET US</span> CONTACT
               YOU

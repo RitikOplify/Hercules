@@ -12,7 +12,7 @@ function ProductCard({ product, ref }) {
   return (
     <Link
       ref={(el) => (cardsRef.current[ref] = el)}
-      href={`collection/${product.id}`}
+      href={`/collection/${product.id}`}
       className="text-center flex flex-col justify-center gap-6"
     >
       <div className="relative w-full h-[350px]">

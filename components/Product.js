@@ -29,7 +29,7 @@ const Product = ({ product }) => {
   return (
     <div>
       <div className="bg-white">
-        <div className=" h-auto 2xl:h-screen 2xl:content-center mx-auto pt-10 sm:pt-[120px] 2xl:pt-0 px-5 sm:px-10 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 items-start">
+        <div className=" h-auto 2xl:h-screen 2xl:content-center mx-auto pt-10 sm:pt-[120px] px-5 sm:px-10 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 items-start">
           <div className="flex gap-0 lg:gap-5 justify-between relative">
             {/* Navigation Arrows for Main Swiper */}
             <button

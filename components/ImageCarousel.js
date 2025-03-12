@@ -89,17 +89,19 @@ export default function ResponsiveCarousel() {
 
         {/* Navigation Buttons */}
         <div className="flex space-x-4">
-          <button
+          <div
+            aria-label="prev-button"
             ref={rightBtnRef}
             id="slider-button-left"
             className="swiper-button-prev group  !hidden !p-2 justify-center items-center border border-solid border-indigo-600 !w-12 !h-12 transition-all duration-500 rounded-full hover:bg-indigo-600"
-          ></button>
+          ></div>
 
-          <button
+          <div
+            aria-label="next-button"
             ref={leftBtnRef}
             id="slider-button-right"
             className="swiper-button-next group !hidden  !p-2  justify-center items-center border border-solid border-indigo-600 !w-12 !h-12 transition-all duration-500 rounded-full hover:bg-indigo-600"
-          ></button>
+          ></div>
         </div>
       </div>
     </div>

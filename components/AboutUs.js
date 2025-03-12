@@ -14,7 +14,7 @@ function AboutUs() {
         height={400}
         width={1440}
         alt="banner"
-        layout="responsive"
+        className="w-full h-auto"
       />
 
       <div className=" py-[120px] bg-white flex justify-center px-5 sm:px-10">
@@ -33,15 +33,19 @@ function AboutUs() {
           ref={(el) => (aboutUsRef.current[1] = el)}
           className="w-full md:w-[55%] relative bg-white"
         >
-          <img
+          <Image
             src="/Watch/man-watch.jpg"
             alt="Rolex Watch"
+            width={1440}
+            height={900}
             className=" object-cover 2xl:h-screen w-full md:w-[90%]"
           />
-          <img
+          <Image
             src="/Watch/watch-close-look.jpg"
+            width={720}
+            height={480}
             className="absolute w-2/4 2xl:w-2/3 top-1/2 left-1/2 md:left-auto md:right-0 transform -translate-x-1/2 md:translate-x-0 -translate-y-1/2"
-            alt=""
+            alt="Watch close up"
           />
         </div>
 
@@ -103,11 +107,13 @@ function AboutUs() {
           </div>
 
           <div className="w-full md:w-1/2 h-[50vh] md:h-screen flex items-center bg-black">
-            <img
+            <Image
               ref={(el) => (aboutUsRef.current[8] = el)}
               src="/Watch/i9.png"
+              width={1440}
+              height={900}
               alt="Watch"
-              className=" h-[70%] w-full object-contain"
+              className="h-[70%] w-full object-contain"
             />
           </div>
         </div>

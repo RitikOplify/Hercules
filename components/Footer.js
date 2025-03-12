@@ -16,7 +16,7 @@ function Footer() {
         </div>
         <div className=" flex gap-10 justify-between flex-wrap">
           <div className=" flex flex-col gap-9">
-            <h4 className="text-base font-medium">ADDRESS</h4>
+            <p className="text-base font-medium">ADDRESS</p>
             <p className=" text-[#808080] text-sm font-normal">
               Hercules Watch Co Ltd, Hyde House,
               <br />
@@ -26,24 +26,24 @@ function Footer() {
             </p>
           </div>
           <div className=" flex flex-col gap-9">
-            <h4 className="text-base font-medium">EMAIL</h4>
+            <p className="text-base font-medium">EMAIL</p>
             <p className="text-[#808080] text-sm font-normal">
               hello@herculeswatch.com
             </p>
           </div>
 
           <div className=" flex flex-col gap-9">
-            <h4 className="text-base font-medium">CONTACT</h4>
+            <p className="text-base font-medium">CONTACT</p>
             <p className="text-[#808080] text-sm font-normal">+44-7969606568</p>
           </div>
           <div>
             <div className=" flex flex-col gap-9">
-              <h4 className="text-base font-medium">FOLLOW US</h4>
+              <p className="text-base font-medium">FOLLOW US</p>
               <div className="flex justify-start space-x-4">
-                <Link href="#" className="text-white hover:text-[#808080]">
+                <Link aria-label="x" href="#" className="text-white hover:text-[#808080]">
                   <FaXTwitter />
                 </Link>
-                <Link href="#" className="text-white hover:text-[#808080]">
+                <Link aria-label="facebook" href="#" className="text-white hover:text-[#808080]">
                   <FaFacebookF />
                 </Link>
               </div>

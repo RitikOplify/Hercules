@@ -33,12 +33,14 @@ const RolexProductCard = ({ product }) => {
           <div className="flex gap-0 lg:gap-5 justify-between relative">
             {/* Navigation Arrows for Main Swiper */}
             <button
+              aria-label="prev-buttom"
               id="arrow-left"
               className="hidden absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gradient-to-b from-gray-300 to-gray-500 text-white rounded-full p-2"
             >
               <IoIosArrowBack size={24} />
             </button>
             <button
+              aria-label="next-buttom"
               id="arrow-right"
               className=" hidden absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gradient-to-b from-gray-300 to-gray-500 text-white rounded-full p-2"
             >

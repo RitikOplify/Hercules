@@ -16,7 +16,7 @@ const OurCollection = () => {
         height={400}
         width={1440}
         alt="banner"
-        layout="responsive"
+        className="w-full h-auto"
       />
       <div className=" bg-white">
         <div className=" max-w-[1440px] mx-auto px-5 sm:px-10 bg-white py-[120px] text-black flex flex-col items-center">

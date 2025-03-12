@@ -1,5 +1,6 @@
 "use client";
 import useGsap from "@/useGsap";
+import Image from "next/image";
 import React, { useRef } from "react";
 import { FaAngleRight } from "react-icons/fa";
 
@@ -59,10 +60,13 @@ function Services() {
 
           {/* Image Section */}
           <div className="flex w-full  md:w-1/2 items-center justify-center">
-            <img
+            <Image
               ref={(el) => (servicesRef.current[8] = el)}
               src="/Services/decoating-restoration.webp"
               alt="DLC Watch Restoration"
+              width={800}
+              height={600}
+              priority
               className="w-full h-auto object-cover"
             />
           </div>
@@ -73,10 +77,11 @@ function Services() {
         <div className="max-w-[1440px] mx-auto px-5 py-[120px] sm:px-10 grid grid-cols-1 md:grid-cols-2 items-center gap-10 md:gap-0">
           {/* Left Section - Image */}
           <div className="flex justify-center">
-            <img
+            <Image
               ref={(el) => (servicesRef.current[9] = el)}
               src="/Services/grey-watch.png"
-              // Replace with actual image path
+              width={800}
+              height={600}
               alt="Watch Service"
               className="max-w-full h-auto"
             />
@@ -185,10 +190,12 @@ function Services() {
           </div>
 
           <div className="md:w-1/2">
-            <img
+            <Image
               ref={(el) => (servicesRef.current[24] = el)}
               src="/Services/rollex-shades.webp"
               alt="Watch Dial Restoration"
+              width={800}
+              height={600}
               className="w-full h-auto object-cover"
             />
           </div>
@@ -198,10 +205,13 @@ function Services() {
       <div className=" overflow-hidden">
         <div className="flex bg-black flex-col py-[60px] gap-10 md:gap-0 sm:py-[120px] md:flex-row max-w-[1440px] mx-auto text-white">
           <div className=" w-full md:w-1/2 flex justify-center items-center">
-            <img
+            <Image
               ref={(el) => (servicesRef.current[25] = el)}
               src="/Services/engrave_left.png"
               alt="Watch"
+              width={800}
+              height={600}
+              className="w-full h-auto object-cover"
             />
           </div>
 
@@ -257,10 +267,12 @@ function Services() {
           </div>
 
           <div className="md:w-1/2">
-            <img
+            <Image
               ref={(el) => (servicesRef.current[31] = el)}
               src="/Services/gtm_master2.webp"
               alt="Watch Dial Restoration"
+              width={800}
+              height={600}
               className="w-full h-auto object-cover"
             />
           </div>

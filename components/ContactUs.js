@@ -6,6 +6,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import { IoCallOutline } from "react-icons/io5";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import useGsap from "@/useGsap";
+import Image from "next/image";
 const ContactForm = () => {
   const contactRef = useRef([]);
   useGsap(contactRef);
@@ -24,10 +25,12 @@ const ContactForm = () => {
       <div className=" bg-black">
         <div className=" max-w-[1440px] mx-auto h-[650px] flex flex-col sm:flex-row">
           <div className="w-full sm:w-2/5 py-10 sm:py-0">
-            <img
+            <Image
               ref={(el) => (contactRef.current[0] = el)}
               src="/Images/watch7.png"
               alt="Luxury Watch"
+              width={500}
+              height={500}
               className=" w-full h-full object-contain"
             />
           </div>

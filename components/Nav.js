@@ -21,26 +21,44 @@ function Nav() {
 
   useEffect(() => {
     const nav = navRef.current;
+    let lastDirection = -1; // Track last scroll direction
 
-    gsap.to(nav, {
-      scrollTrigger: {
-        trigger: document.body,
-        start: "top top",
-        end: "bottom bottom",
-        onUpdate: (self) => {
-          if (!menuOpen) {
-            gsap.to(nav, {
-              y: self.direction === 1 ? -100 : 0,
-              duration: 0.2,
-              ease: "easeInOut",
-            });
-          }
-        },
+    const scrollTrigger = ScrollTrigger.create({
+      trigger: document.body,
+      start: "top top",
+      end: "bottom bottom",
+      onUpdate: (self) => {
+        if (!menuOpen && lastDirection !== self.direction) {
+          lastDirection = self.direction;
+          gsap.to(nav, {
+            y: self.direction === 1 ? -100 : 0,
+            duration: 0.3,
+            ease: "power2.out",
+          });
+        } else if (menuOpen) {
+          gsap.to(nav, {
+            y: 0,
+            duration: 0.3,
+            ease: "power2.out",
+          });
+        }
       },
     });
 
-    return () => ScrollTrigger.getAll().forEach((t) => t.kill());
+    return () => {
+      scrollTrigger.kill();
+    };
   }, [menuOpen]);
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+    return () => document.body.classList.remove("no-scroll");
+  }, [menuOpen]);
+  // if (!menuOpen) return null;
 
   return (
     <>
@@ -83,8 +101,18 @@ function Nav() {
           </div>
 
           {menuOpen && (
-            <div className=" py-5 pl-5 sm:pl-10  md:hidden border-t-[2px] absolute w-screen bg-black top-[76px]">
-              <div className="flex flex-col gap-4">
+            <div
+              className="  md:hidden absolute flex justify-end w-screen bg-black bg-opacity-15 top-[76px]"
+              onClick={() => {
+                setMenuOpen(false);
+              }}
+            >
+              <div
+                className="flex flex-col gap-4 w-4/5 h-screen p-5 sm:p-10 bg-white text-black"
+                onClick={(e) => {
+                  e.stopPropagation();
+                }}
+              >
                 <ul className=" space-y-4">
                   {navItems.map((item) => (
                     <li key={item.name} onClick={() => setMenuOpen(!menuOpen)}>
@@ -102,7 +130,7 @@ function Nav() {
                   ))}
                 </ul>
 
-                <div className="text-sm flex items-center gap-1 py-[2px] text-white">
+                <div className="text-sm flex items-center gap-1 py-[2px]">
                   <IoCallOutline className="text-xs" /> +44-7969606568
                 </div>
               </div>

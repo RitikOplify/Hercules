@@ -44,3 +44,7 @@ body::-webkit-scrollbar-thumb:hover {
     display: initial;
   }
 }
+
+.no-scroll {
+  overflow: hidden;
+}

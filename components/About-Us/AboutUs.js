@@ -3,6 +3,7 @@ import useGsap from "@/useGsap";
 import Image from "next/image";
 import React, { useRef } from "react";
 import { FaAngleRight } from "react-icons/fa";
+import Button from "../Button";
 
 function AboutUs() {
   const aboutUsRef = useRef([]);
@@ -67,12 +68,12 @@ function AboutUs() {
               individual as you are.
             </p>
 
-            <button
+            <Button
               ref={(el) => (aboutUsRef.current[4] = el)}
-              className="mt-10 bg-black flex items-center gap-3 2xl:leading-[1.4] 2xl:text-[1.2rem] text-base text-[#fff] font-normal rounded-xl py-3 px-6 shadow-[0_5px_20px_rgba(134,134,134,0.6)]"
-            >
-              Contact us <FaAngleRight />
-            </button>
+              color={"black"}
+              text={"Contact us"}
+              className={"mt-6"}
+            />
           </div>
         </div>
       </div>
@@ -97,12 +98,12 @@ function AboutUs() {
                 individual as you are.
               </p>
 
-              <button
+              <Button
                 ref={(el) => (aboutUsRef.current[7] = el)}
-                className="mt-10 bg-black flex items-center gap-3 2xl:leading-[1.4] 2xl:text-[1rem] text-base text-[#fff] font-normal rounded-xl py-3 px-6 shadow-[0_5px_20px_rgba(134,134,134,0.6)]"
-              >
-                Contact us <FaAngleRight />
-              </button>
+                color={"black"}
+                text={"Contact us"}
+                className={"mt-6"}
+              />
             </div>
           </div>
 

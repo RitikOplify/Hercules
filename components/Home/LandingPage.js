@@ -1,10 +1,11 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { FaAngleRight } from "react-icons/fa";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import useGsap from "@/useGsap";
+import Button from "../Button";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -31,12 +32,13 @@ const WatchLandingPage = () => {
               <br className="hidden sm:visible" /> For those who prefer to be
               different.
             </p>
-            <button
+
+            <Button
               ref={(el) => (landingPageRef.current[3] = el)}
-              className="mt-6 flex font-medium items-center gap-3 text-base text-black bg-white rounded-xl py-3 px-6 shadow-[0_5px_20px_rgba(255,255,255,0.6)]"
-            >
-              DISCOVER <FaAngleRight />
-            </button>
+              color={"white"}
+              text={"DISCOVER"}
+              className={'mt-6'}
+            />
           </div>
         </div>
         <Image

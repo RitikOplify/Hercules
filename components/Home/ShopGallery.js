@@ -8,7 +8,8 @@ import useGsap from "@/useGsap";
 import { FaAngleRight } from "react-icons/fa";
 import collections from "@/collections";
 import Link from "next/link";
-import ProductCard from "./ProductCard";
+import ProductCard from "@/components/ProductCard";
+import Button from "../Button";
 
 export default function ShopGallery({ title }) {
   const shopRef = useRef([]);
@@ -21,19 +22,19 @@ export default function ShopGallery({ title }) {
   return (
     <div className=" bg-white">
       <div className="max-w-[1440px] mx-auto bg-[#fff] py-[120px] px-5 sm:px-10">
-        <h1
+        <p
           ref={(el) => (shopRef.current[0] = el)}
           className=" text-center font-medium text-black text-2xl"
         >
           {title}
-        </h1>
+        </p>
         <div className=" py-[80px]">
           <Swiper
             slidesPerView={3}
             spaceBetween={20}
             loop={true}
             autoplay={{
-              delay: 4000, // Adjust timing (5s per slide)
+              delay: 4000, // Adjust timing (4s per slide)
               disableOnInteraction: false, // Keeps autoplay running even after user interaction
             }}
             pagination={{ clickable: true, el: ".custom-pagination" }}
@@ -60,17 +61,13 @@ export default function ShopGallery({ title }) {
           className="custom-pagination flex justify-center"
         ></div>
 
-        <div
+        <Link
+          href={"/collection"}
           ref={(el) => (shopRef.current[2] = el)}
           className="flex justify-center mt-[60px]"
         >
-          <Link
-            href={"/collection"}
-            className="bg-black flex items-center gap-3 text-base text-[#fff] font-normal rounded-xl py-3 px-6 shadow-[0_5px_20px_rgba(134,134,134,0.6)]"
-          >
-            DISCOVER <FaAngleRight />
-          </Link>
-        </div>
+          <Button color={"black"} text={"DISCOVER"} />
+        </Link>
 
         {/* Custom Pagination Styling */}
         <style jsx global>{`

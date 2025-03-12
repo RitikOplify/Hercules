@@ -27,12 +27,6 @@ export default function ResponsiveCarousel() {
   const leftClick = () => {
     leftBtnRef.current.click();
   };
-  const images = [
-    "/Images/watch1.jpg",
-    "/Images/watch7.png",
-    "/Images/watch6.png",
-    "/Images/watch5.png",
-  ];
 
   return (
     <div className=" bg-white pb-[120px]">

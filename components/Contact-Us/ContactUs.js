@@ -7,6 +7,7 @@ import { IoCallOutline } from "react-icons/io5";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import useGsap from "@/useGsap";
 import Image from "next/image";
+import Button from "../Button";
 const ContactForm = () => {
   const contactRef = useRef([]);
   useGsap(contactRef);
@@ -170,12 +171,18 @@ const ContactForm = () => {
                 )}
               </div>
 
-              <button
+              <Button
+                text={"SEND MY MESSAGE"}
+                className={"mt-6"}
+                color={"black"}
+                type="submit"
+              />
+              {/* <button
                 type="submit"
                 className="mt-6 bg-black flex items-center gap-3 text-base text-[#fff] font-normal rounded-xl py-3 px-6 shadow-[0_5px_20px_rgba(134,134,134,0.6)]"
               >
                 SEND MY MESSAGE <FaAngleRight />
-              </button>
+              </button> */}
             </form>
           </div>
         </div>

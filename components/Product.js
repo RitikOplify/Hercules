@@ -15,10 +15,10 @@ import {
   IoIosArrowBack,
   IoIosArrowForward,
 } from "react-icons/io";
-import ShopGallery from "./ShopGallery";
+import ShopGallery from "./Home/ShopGallery";
 import { TiShoppingCart } from "react-icons/ti";
 
-const RolexProductCard = ({ product }) => {
+const Product = ({ product }) => {
   const productRef = useRef([]);
   const sCardRef = useRef([]);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -185,4 +185,4 @@ const RolexProductCard = ({ product }) => {
   );
 };
 
-export default RolexProductCard;
+export default Product;

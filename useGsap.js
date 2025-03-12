@@ -44,7 +44,7 @@ const useGsap = (ref, options = {}) => {
         animation.kill(); // Clean GSAP animation
       });
     };
-  }, [ref, options]);
+  }, []);
 };
 
 export default useGsap;

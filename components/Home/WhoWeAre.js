@@ -1,84 +1,74 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import { FaAngleRight } from "react-icons/fa6";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import useGsap from "@/useGsap";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const WhoWeAre = () => {
   const whoWeAreRef = useRef([]);
+  const videoRef = useRef(null);
 
+  useGsap(whoWeAreRef, { stagger: true });
+  // #121417
   useEffect(() => {
-    if (!whoWeAreRef.current) return;
+    const video = videoRef.current;
 
-    let ctx = gsap.context(() => {
-      const elements = whoWeAreRef.current;
+    // Make sure video is paused initially
+    if (video) {
+      video.pause();
+    }
 
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: elements[0], // Image triggers animation
-            start: "top 80%",
-            toggleActions: "play none none none",
-          },
-        })
-        .fromTo(
-          elements[0], // Image
-          { opacity: 0, scale: 0.9 },
-          { opacity: 1, scale: 1, duration: 0.8, ease: "easeInOut" }
-        )
-        .fromTo(
-          elements[1], // Heading
-          { opacity: 0, y: 50 },
-          { opacity: 1, y: 0, duration: 0.6, ease: "easeInOut" },
-          "-=0.4"
-        )
-        .fromTo(
-          elements[2], // First paragraph
-          { opacity: 0, y: 50 },
-          { opacity: 1, y: 0, duration: 0.6, ease: "easeInOut" },
-          "-=0.3"
-        )
-        .fromTo(
-          elements[3], // Second paragraph
-          { opacity: 0, y: 50 },
-          { opacity: 1, y: 0, duration: 0.6, ease: "easeInOut" },
-          "-=0.3"
-        )
-        .fromTo(
-          elements[4], // Discover Button
-          { opacity: 0, y: 50 },
-          { opacity: 1, y: 0, duration: 0.5, ease: "easeInOut" },
-          "-=0.3"
-        );
+    const scrollTrigger = ScrollTrigger.create({
+      trigger: video,
+      start: "top 80%", // start when top of video is 80% from viewport top
+      end: "bottom 20%", // end when bottom of video is 20% from viewport top
+      onEnter: () => {
+        video.play();
+      },
+      onLeave: () => {
+        video.pause();
+      },
+      onEnterBack: () => {
+        video.play();
+      },
+      onLeaveBack: () => {
+        video.pause();
+      },
+      markers: false, // set to true for debugging
     });
 
-    return () => ctx.revert(); // Cleanup on unmount
+    return () => {
+      if (video) {
+        video.pause();
+      }
+      scrollTrigger.kill();
+    };
   }, []);
-  // #121417
-  // 
+
   return (
     <div className="bg-black">
       <div className="flex flex-col gap-10 py-[100px] lg:py-0 md:gap-0 md:flex-row max-w-[1440px] mx-auto text-white">
         <div className="w-full md:w-1/2 flex justify-center items-center">
           <video
-            ref={(el) => (whoWeAreRef.current[0] = el)}
+            ref={videoRef}
             src="/video/video1.mp4"
-            autoPlay={true}
             muted={true}
             loop={true}
-            className=" w-full h-4/5 md:w-3/4 lg:w-4/5"
+            playsInline
+            className="w-full h-4/5 md:w-3/4 lg:w-4/5"
           />
         </div>
 
         <div className="w-full md:w-1/2 flex flex-col justify-center gap-6 items-start px-5 md:pr-10 text-[#fff]">
-          <h1
+          <p
             ref={(el) => (whoWeAreRef.current[1] = el)}
             className="text-2xl font-medium"
           >
             WHO WE ARE
-          </h1>
+          </p>
           <p
             ref={(el) => (whoWeAreRef.current[2] = el)}
             className="text-base font-normal"

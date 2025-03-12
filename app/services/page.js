@@ -1,4 +1,4 @@
-import Services from "@/components/Services";
+import Services from "@/components/Services/Services";
 import React from "react";
 
 function page() {

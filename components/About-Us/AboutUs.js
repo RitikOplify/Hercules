@@ -60,7 +60,7 @@ function AboutUs() {
             </h1>
             <p
               ref={(el) => (aboutUsRef.current[3] = el)}
-              className="text-base text-[#808080] max-w-sm font-normal 2xl:leading-[1.4rem] 2xl:text-[1.2rem]"
+              className="text-base text-[#808080] max-w-sm font-normal 2xl:leading-[1.4] 2xl:text-[1.2rem]"
             >
               We are the first company to be able to offer a selection of 2
               colour combination watches, unique to the industry. Our closely

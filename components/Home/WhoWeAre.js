@@ -12,7 +12,7 @@ const WhoWeAre = () => {
   const videoRef = useRef(null);
 
   useGsap(whoWeAreRef, { stagger: true });
-  // #121417
+ 
   useEffect(() => {
     const video = videoRef.current;
 

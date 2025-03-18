@@ -5,12 +5,14 @@ import React, { useEffect, useRef, useState } from "react";
 import { IoCallOutline } from "react-icons/io5";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 function Nav() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const navRef = useRef(null);
+  const logoRef = useRef(null);
   const navItems = [
     { name: "HOME", href: "/" },
     { name: "ABOUT US", href: "/about-us" },
@@ -66,12 +68,18 @@ function Nav() {
         ref={navRef}
         className="bg-black z-20 fixed w-full border-b-[2px] text-white "
       >
-        <div className="flex bg-black relative justify-between mx-auto items-center py-[18px]">
-          <Link href={"/"}>
-            <img
+        <div className="flex px-5 sm:px-10 bg-black relative justify-between mx-auto items-center py-[18px]">
+          <div className=" hidden md:flex"></div>
+          <Link
+            href={"/"}
+            className="static md:absolute h-6 overflow-hidden top-5 sm:left-10 md:h-20 md:w-20 sm:bg-black md:rounded-full flex items-center justify-center"
+          >
+            <Image
               src="/Images/Logo.jpg"
               alt="Logo"
-              className="mb-4 h-6 pl-5 sm:pl-10 object-center"
+              height={50}
+              width={50}
+              className="object-contain h-6 md:h-[50px]"
             />
           </Link>
           {/* <div></div> */}
@@ -96,13 +104,13 @@ function Nav() {
               </li>
             ))}
           </ul>
-          <div className="text-sm hidden pr-5 sm:pr-10 md:flex items-center gap-1 text-white">
+          <div className="text-sm hidden md:flex items-center gap-1 text-white">
             <IoCallOutline className="text-lg" /> +44-7969606568
           </div>
 
           {menuOpen && (
             <div
-              className="  md:hidden absolute flex justify-end w-screen bg-black bg-opacity-15 top-[76px]"
+              className="  md:hidden absolute flex justify-end w-screen bg-black bg-opacity-15 top-[60px]"
               onClick={() => {
                 setMenuOpen(false);
               }}
@@ -139,7 +147,7 @@ function Nav() {
 
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden focus:outline-none pr-5 sm:pr-10 text-white"
+            className="md:hidden focus:outline-none text-white"
             aria-label="Toggle Navigation Menu"
           >
             <div
@@ -160,7 +168,7 @@ function Nav() {
           </button>
         </div>
       </nav>
-      <div className=" h-[76px] w-full bg-black -z-10"></div>
+      <div className=" h-[60px] w-full bg-black -z-10"></div>
     </>
   );
 }

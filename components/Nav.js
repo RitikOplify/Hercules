@@ -60,7 +60,6 @@ function Nav() {
     }
     return () => document.body.classList.remove("no-scroll");
   }, [menuOpen]);
-  // if (!menuOpen) return null;
 
   return (
     <>
@@ -82,14 +81,6 @@ function Nav() {
               className="object-contain h-6 md:h-[50px]"
             />
           </Link>
-          {/* <div></div> */}
-          {/* <div className=" flex items-center justify-center h-[100px] w-[100px] absolute top-[18px] left-5 sm:left-10 z-20 rounded-full bg-black">
-            <img
-              src="/Images/Logo.jpg"
-              alt="logo"
-              className=" h-20 w-20 object-contain"
-            />
-          </div> */}
           <ul className="hidden md:flex space-x-6 text-[#fff]">
             {navItems.map((item) => (
               <li key={item.name}>

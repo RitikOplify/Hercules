@@ -190,12 +190,7 @@ const ContactForm = () => {
                 color={"black"}
                 type="submit"
               />
-              {/* <button
-                type="submit"
-                className="mt-6 bg-black flex items-center gap-3 text-base text-[#fff] font-normal rounded-xl py-3 px-6 shadow-[0_5px_20px_rgba(134,134,134,0.6)]"
-              >
-                SEND MY MESSAGE <FaAngleRight />
-              </button> */}
+              
             </form>
           </div>
         </div>

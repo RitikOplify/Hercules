@@ -2,7 +2,6 @@
 import useGsap from "@/useGsap";
 import Image from "next/image";
 import React, { useRef } from "react";
-import { FaAngleRight } from "react-icons/fa";
 
 function Services() {
   const servicesRef = useRef([]);
@@ -13,13 +12,13 @@ function Services() {
         {/* Text Section */}
         <div className=" max-w-[1440px] mx-auto gap-10 md:gap-0 flex flex-col-reverse md:flex-row  w-full">
           <div className=" w-full md:w-1/2 my-auto py-[120px] px-5 sm:px-10">
-            <h2
+            <p
               ref={(el) => (servicesRef.current[0] = el)}
               className="text-2xl font-medium text-black tracking-[8%] mb-6"
             >
               DLC Watch De-Coating and Restoration
-            </h2>
-            <p
+            </p>
+            <h1
               ref={(el) => (servicesRef.current[1] = el)}
               className="text-[#808080] leading-6 text-base font-normal mb-4"
             >
@@ -27,7 +26,7 @@ function Services() {
               have a worn and damaged DLC coated watch, Hercules Watch Co are
               able to both restore the watch to the original finish or, if
               required, de-coat the watch and then re-coat it.
-            </p>
+            </h1>
             <p
               ref={(el) => (servicesRef.current[2] = el)}
               className="text-[#808080] leading-6 text-base font-normal mb-4"
@@ -216,12 +215,12 @@ function Services() {
           </div>
 
           <div className="w-full md:w-1/2 flex flex-col justify-center gap-6 items-start px-5 sm:px-10 text-[#fff]">
-            <h2
+            <p
               ref={(el) => (servicesRef.current[26] = el)}
               className="text-2xl font-medium"
             >
               Engraving and Hand engraving
-            </h2>
+            </p>
             <p
               ref={(el) => (servicesRef.current[27] = el)}
               className="text-base font-normal"
@@ -241,12 +240,12 @@ function Services() {
         <div className="max-w-[1440px] mx-auto flex flex-col-reverse md:flex-row items-center md:items-start gap-10 md:gap-0  py-[120px]">
           <div className="md:w-1/2 space-y-6 my-auto px-5 sm:px-10">
             <div className=" space-y-6">
-              <h2
+              <p
                 ref={(el) => (servicesRef.current[28] = el)}
                 className=" text-base tracking-[8%] font-normal text-black"
               >
                 Watch Customisation and DLC Coatings
-              </h2>
+              </p>
               <p
                 ref={(el) => (servicesRef.current[29] = el)}
                 className="text-[#808080] font-normal"

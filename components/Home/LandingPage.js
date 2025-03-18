@@ -37,7 +37,7 @@ const WatchLandingPage = () => {
               ref={(el) => (landingPageRef.current[3] = el)}
               color={"white"}
               text={"DISCOVER"}
-              className={'mt-6'}
+              className={"mt-6"}
             />
           </div>
         </div>

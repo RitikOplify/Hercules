@@ -1,6 +1,5 @@
-import Link from "next/link";
 import React from "react";
-import { FaAngleRight } from "react-icons/fa";
+import { IoIosArrowForward  } from "react-icons/io";
 
 function Button({ color, text, ref, className, type }) {
   return (
@@ -13,7 +12,7 @@ function Button({ color, text, ref, className, type }) {
           : "text-white bg-black shadow-[0_5px_20px_rgba(134,134,134,0.6)]"
       } `}
     >
-      {text} <FaAngleRight />
+      {text} <IoIosArrowForward size={20} />
     </button>
   );
 }

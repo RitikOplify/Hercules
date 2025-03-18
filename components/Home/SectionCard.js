@@ -1,6 +1,7 @@
 "use client";
-import React, { useEffect, useRef } from "react";
-import { FaAngleRight } from "react-icons/fa";
+import React, { useRef } from "react";
+import { IoIosArrowForward } from "react-icons/io";
+
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
@@ -11,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 const SectionCard = ({ title, description, imageSrc, reverseLayout }) => {
   const sectionRef = useRef([]);
   useGsap(sectionRef, { stagger: true });
- 
+
   return (
     <div className="relative w-full flex justify-center">
       <div
@@ -48,7 +49,7 @@ const SectionCard = ({ title, description, imageSrc, reverseLayout }) => {
               className="flex gap-2 items-center text-black text-[13px] font-semibold 2xl:leading-[1.4] 2xl:text-[1rem] "
               aria-label={`Explore more about ${title}`}
             >
-              <FaAngleRight /> EXPLORE MORE
+              <IoIosArrowForward /> EXPLORE MORE
             </button>
           </div>
         </div>

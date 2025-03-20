@@ -40,7 +40,9 @@ const SectionCard = ({ title, description, imageSrc, reverseLayout }) => {
             </p>
             <p
               ref={(el) => (sectionRef.current[2] = el)}
-              className="text-[#808080] text-base font-normal max-w-sm 2xl:leading-[1.4] 2xl:text-[1.2rem]"
+              className={`${
+                reverseLayout === true ? "text-white" : "text-[#808080]"
+              } text-base font-normal max-w-sm 2xl:leading-[1.4] 2xl:text-[1.2rem]`}
             >
               {description}
             </p>

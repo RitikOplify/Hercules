@@ -65,9 +65,9 @@ function Nav() {
     <>
       <nav
         ref={navRef}
-        className="bg-black z-20 fixed w-full border-b-[2px] text-white "
+        className="bg-white z-20 fixed w-full border-b-[2px] text-lightblack "
       >
-        <div className="flex px-5 sm:px-10 bg-black relative justify-between mx-auto items-center py-[18px]">
+        <div className="flex px-5 sm:px-10 bg-white relative justify-between mx-auto items-center py-[18px]">
           <div className=" hidden md:flex"></div>
           <Link
             href={"/"}
@@ -81,13 +81,15 @@ function Nav() {
               className="object-contain h-6 md:h-[50px]"
             />
           </Link>
-          <ul className="hidden md:flex space-x-6 text-[#fff]">
+          <ul className="hidden md:flex space-x-6 text-lightblack">
             {navItems.map((item) => (
               <li key={item.name}>
                 <Link
                   href={item.href}
                   className={`${
-                    pathname === item.href ? "border-b-2 border-gold text-gold pb-1" : ""
+                    pathname === item.href
+                      ? "border-b-2 border-gold text-gold pb-1"
+                      : ""
                   } text-xs py-4 font-medium`}
                 >
                   {item.name}
@@ -95,19 +97,19 @@ function Nav() {
               </li>
             ))}
           </ul>
-          <div className="text-sm hidden md:flex items-center gap-1 text-white">
+          <div className="text-sm hidden md:flex items-center gap-1 text-lightblack">
             <IoCallOutline className="text-lg" /> +44-7969606568
           </div>
 
           {menuOpen && (
             <div
-              className="  md:hidden absolute flex justify-end w-screen bg-black bg-opacity-15 top-[60px]"
+              className="md:hidden absolute left-0 flex justify-end w-screen bg-black bg-opacity-15 top-[60px]"
               onClick={() => {
                 setMenuOpen(false);
               }}
             >
               <div
-                className="flex flex-col gap-4 w-4/5 h-screen p-5 sm:p-10 bg-white text-black"
+                className="flex flex-col gap-4 w-4/5 h-screen p-5 sm:p-10 bg-white text-lightblack"
                 onClick={(e) => {
                   e.stopPropagation();
                 }}
@@ -119,9 +121,9 @@ function Nav() {
                         href={item.href}
                         className={`${
                           pathname === item.href
-                            ? "border-b-2 border-white pb-1"
+                            ? "border-b-2 border-gold text-gold pb-1"
                             : ""
-                        } text-xs`}
+                        } text-xs font-medium`}
                       >
                         {item.name}
                       </Link>
@@ -138,7 +140,7 @@ function Nav() {
 
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden focus:outline-none text-white"
+            className="md:hidden focus:outline-none text-lightblack"
             aria-label="Toggle Navigation Menu"
           >
             <div

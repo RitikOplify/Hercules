@@ -12,11 +12,11 @@ function History() {
     stagger: true,
   });
   return (
-    <section className="bg-gray-50 text-black text-center py-[120px] px-5 sm:px-10">
+    <section className="bg-white text-center py-[120px] px-5 sm:px-10">
       <div className=" max-w-[1440px] mx-auto">
         <p
           ref={(el) => (historyRef.current[0] = el)}
-          className="text-2xl font-medium text-black"
+          className="text-2xl font-medium text-gold"
         >
           HISTORY OF HERITAGE
         </p>
@@ -40,7 +40,7 @@ function History() {
           ref={(el) => (historyRef.current[3] = el)}
           className=" w-full flex justify-center"
         >
-          <Button color={"black"} text={"DISCOVER"} className={'mt-6'} />
+          <Button color={"black"} text={"DISCOVER"} className={'mt-6 bg-gold'} />
         </div>
       </div>
     </section>

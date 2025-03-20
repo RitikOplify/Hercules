@@ -62,10 +62,10 @@ const ContactForm = () => {
           {/* Left Section - Contact Info */}
           <div>
             <h2
-              className="text-2xl font-medium text-black tracking-[8%] mb-6  inline-block"
+              className="text-2xl font-medium text-gold tracking-[8%] mb-6  inline-block"
               ref={(el) => (getInTouchRef.current[0] = el)}
             >
-              <span className="border-b-2 border-black">GET IN</span> TOUCH
+              <span className="border-b-2 border-gold">GET IN</span> TOUCH
             </h2>
             <div className="space-y-4 text-black text-base font-medium tracking-[8%]">
               <div
@@ -106,8 +106,8 @@ const ContactForm = () => {
 
           {/* Right Section - Contact Form */}
           <div ref={(el) => (contactRef.current[4] = el)}>
-            <h2 className="text-2xl font-medium text-black tracking-[8%] mb-6  inline-block">
-              <span className="border-b-2 border-black">LET US</span> CONTACT
+            <h2 className="text-2xl font-medium text-gold tracking-[8%] mb-6  inline-block">
+              <span className="border-b-2 border-gold">LET US</span> CONTACT
               YOU
             </h2>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">

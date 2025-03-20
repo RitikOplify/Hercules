@@ -15,12 +15,12 @@ const WatchLandingPage = () => {
 
   return (
     <section className=" bg-black">
-      <div className="mx-auto flex-col-reverse flex md:flex-row items-center md:h-[650px] 2xl:h-screen justify-center px-5 sm:px-10 py-20 bg-black text-white">
+      <div className="mx-auto flex-col-reverse flex md:flex-row items-center md:h-[650px] 2xl:h-screen justify-center px-5 sm:px-10 py-20 bg-black">
         <div className="w-full md:w-1/2 flex flex-col items-start md:items-center">
           <div className="mt-10 md:mt-0">
             <h1
               ref={(el) => (landingPageRef.current[1] = el)}
-              className="text-4xl sm:text-5xl font-bold"
+              className="text-4xl sm:text-5xl text-gold font-bold"
             >
               Custom DLC <br className="hidden sm:visible" /> build to last
             </h1>

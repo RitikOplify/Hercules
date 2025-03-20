@@ -14,7 +14,7 @@ function Services() {
           <div className=" w-full md:w-1/2 my-auto py-[120px] px-5 sm:px-10">
             <p
               ref={(el) => (servicesRef.current[0] = el)}
-              className="text-2xl font-medium text-black tracking-[8%] mb-6"
+              className="text-2xl font-medium text-gold tracking-[8%] mb-6"
             >
               DLC Watch De-Coating and Restoration
             </p>
@@ -137,7 +137,7 @@ function Services() {
             <div>
               <h2
                 ref={(el) => (servicesRef.current[18] = el)}
-                className=" text-base tracking-[8%] font-normal text-black"
+                className=" text-base tracking-[8%] font-normal text-gold"
               >
                 Dial restoration:
               </h2>
@@ -157,7 +157,7 @@ function Services() {
             <div>
               <h2
                 ref={(el) => (servicesRef.current[20] = el)}
-                className="text-base tracking-[8%] font-normal text-black"
+                className="text-base tracking-[8%] font-normal text-gold"
               >
                 Bracelet repairs:
               </h2>
@@ -174,7 +174,7 @@ function Services() {
             <div>
               <h2
                 ref={(el) => (servicesRef.current[22] = el)}
-                className="text-base tracking-[8%] font-normal text-black"
+                className="text-base tracking-[8%] font-normal text-gold"
               >
                 Movements:
               </h2>
@@ -202,7 +202,7 @@ function Services() {
       </div>
 
       <div className=" overflow-hidden">
-        <div className="flex bg-black flex-col py-[60px] gap-10 md:gap-0 sm:py-[120px] md:flex-row max-w-[1440px] mx-auto text-white">
+        <div className="flex bg-black flex-col py-[60px] gap-10 md:gap-0 sm:py-[120px] md:flex-row max-w-[1440px] mx-auto">
           <div className=" w-full md:w-1/2 flex justify-center items-center">
             <Image
               ref={(el) => (servicesRef.current[25] = el)}
@@ -214,7 +214,7 @@ function Services() {
             />
           </div>
 
-          <div className="w-full md:w-1/2 flex flex-col justify-center gap-6 items-start px-5 sm:px-10 text-[#fff]">
+          <div className="w-full md:w-1/2 flex flex-col justify-center gap-6 items-start px-5 sm:px-10 text-gold">
             <p
               ref={(el) => (servicesRef.current[26] = el)}
               className="text-2xl font-medium"
@@ -223,7 +223,7 @@ function Services() {
             </p>
             <p
               ref={(el) => (servicesRef.current[27] = el)}
-              className="text-base font-normal"
+              className="text-base font-normal text-white"
             >
               We have a passion for creating the unique. Our engravers are able
               to both engrave by hand and also we use the latest technology to
@@ -242,7 +242,7 @@ function Services() {
             <div className=" space-y-6">
               <p
                 ref={(el) => (servicesRef.current[28] = el)}
-                className=" text-base tracking-[8%] font-normal text-black"
+                className=" text-base tracking-[8%] font-normal text-gold"
               >
                 Watch Customisation and DLC Coatings
               </p>

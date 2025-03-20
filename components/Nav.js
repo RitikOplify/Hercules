@@ -87,8 +87,8 @@ function Nav() {
                 <Link
                   href={item.href}
                   className={`${
-                    pathname === item.href ? "border-b-2 border-white pb-1" : ""
-                  } text-xs py-4`}
+                    pathname === item.href ? "border-b-2 border-gold text-gold pb-1" : ""
+                  } text-xs py-4 font-medium`}
                 >
                   {item.name}
                 </Link>

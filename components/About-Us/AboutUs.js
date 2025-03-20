@@ -53,7 +53,7 @@ function AboutUs() {
           <div>
             <p
               ref={(el) => (aboutUsRef.current[2] = el)}
-              className="text-2xl tracking-[8%] font-medium mb-6 text-black 2xl:text-[1.6rem] 2xl:leading-[1.5rem] 2xl:tracking-[1px]"
+              className="text-2xl tracking-[8%] font-medium mb-6 text-gold 2xl:text-[1.6rem] 2xl:leading-[1.5rem] 2xl:tracking-[1px]"
             >
               WE GOT SOMETHING FOR EVERYONE
             </p>
@@ -83,7 +83,7 @@ function AboutUs() {
             <div>
               <p
                 ref={(el) => (aboutUsRef.current[5] = el)}
-                className="text-2xl tracking-[8%] text-start font-medium mb-6 text-black 2xl:text-[1.6rem] 2xl:leading-[1.5] 2xl:tracking-[1px]"
+                className="text-2xl tracking-[8%] text-start font-medium mb-6 text-gold 2xl:text-[1.6rem] 2xl:leading-[1.5] 2xl:tracking-[1px]"
               >
                 WE GOT SOMETHING FOR EVERYONE
               </p>

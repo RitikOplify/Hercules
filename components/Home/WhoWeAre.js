@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import { FaAngleRight } from "react-icons/fa6";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import useGsap from "@/useGsap";
+import Button from "../Button";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,7 +12,7 @@ const WhoWeAre = () => {
   const videoRef = useRef(null);
 
   useGsap(whoWeAreRef, { stagger: true });
- 
+
   useEffect(() => {
     const video = videoRef.current;
 
@@ -87,12 +87,14 @@ const WhoWeAre = () => {
             generations to admire and aspire to.
           </p>
 
-          <button
+          <Button
             ref={(el) => (whoWeAreRef.current[4] = el)}
-            className="mt-6 bg-white w-fit flex items-center gap-3 text-base text-black font-normal rounded-xl py-3 px-6 shadow-[0_5px_20px_rgba(255,255,255,0.6)]"
-          >
-            DISCOVER <FaAngleRight />
-          </button>
+            color={"white"}
+            text={"DISCOVER"}
+            className={
+              "mt-6 shadow-[0_5px_20px_rgba(191,141,103,0.6)] text-white"
+            }
+          />
         </div>
       </div>
     </div>

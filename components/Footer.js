@@ -5,7 +5,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 function Footer() {
   return (
-    <footer className="bg-black text-[#fff] border-t-[2px] py-20 pb-10">
+    <footer className="bg-[#262521] border-t-[2px] py-20 pb-10">
       <div className=" max-w-[1440px] mx-auto px-5 sm:px-10">
         <div className="flex flex-col items-center mb-6">
           <img
@@ -16,8 +16,8 @@ function Footer() {
         </div>
         <div className=" flex gap-10 justify-between flex-wrap">
           <div className=" flex flex-col gap-9">
-            <p className="text-base font-medium">ADDRESS</p>
-            <p className=" text-[#808080] text-sm font-normal">
+            <p className="text-base text-gold font-medium">ADDRESS</p>
+            <p className=" text-white text-sm font-normal">
               Hercules Watch Co Ltd, Hyde House,
               <br />
               The Hyde, Edgware Road, London,
@@ -26,31 +26,39 @@ function Footer() {
             </p>
           </div>
           <div className=" flex flex-col gap-9">
-            <p className="text-base font-medium">EMAIL</p>
-            <p className="text-[#808080] text-sm font-normal">
+            <p className="text-base text-gold font-medium">EMAIL</p>
+            <p className="text-white text-sm font-normal">
               hello@herculeswatch.com
             </p>
           </div>
 
           <div className=" flex flex-col gap-9">
-            <p className="text-base font-medium">CONTACT</p>
-            <p className="text-[#808080] text-sm font-normal">+44-7969606568</p>
+            <p className="text-base text-gold font-medium">CONTACT</p>
+            <p className="text-white text-sm font-normal">+44-7969606568</p>
           </div>
           <div>
             <div className=" flex flex-col gap-9">
-              <p className="text-base font-medium">FOLLOW US</p>
+              <p className="text-base text-gold font-medium">FOLLOW US</p>
               <div className="flex justify-start space-x-4">
-                <Link aria-label="x" href="#" className="text-white hover:text-[#808080]">
+                <Link
+                  aria-label="x"
+                  href="#"
+                  className="text-white hover:text-gold"
+                >
                   <FaXTwitter />
                 </Link>
-                <Link aria-label="facebook" href="#" className="text-white hover:text-[#808080]">
+                <Link
+                  aria-label="facebook"
+                  href="#"
+                  className="text-white hover:text-gold"
+                >
                   <FaFacebookF />
                 </Link>
               </div>
             </div>
           </div>
         </div>
-        <div className="text-[#808080] text-sm font-normal mt-[80px] text-start">
+        <div className="text-white text-sm font-normal mt-[80px] text-start">
           <p>Copyright © 2025 Hercules Watch Co | Terms & Condition</p>
         </div>
       </div>

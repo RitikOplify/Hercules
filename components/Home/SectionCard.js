@@ -34,9 +34,7 @@ const SectionCard = ({ title, description, imageSrc, reverseLayout }) => {
           <div className="flex flex-col gap-6 2xl:gap-[1vw] justify-center items-start px-5 py-10 2xl:py-[1vw] sm:p-10">
             <p
               ref={(el) => (sectionRef.current[1] = el)}
-              className={`text-2xl font-medium ${
-                reverseLayout === true ? "text-gold" : "text-black"
-              } 2xl:text-[1.6rem] 2xl:leading-[1.5] 2xl:tracking-[1px]`}
+              className={`text-2xl font-medium text-gold 2xl:text-[1.6rem] 2xl:leading-[1.5] 2xl:tracking-[1px]`}
             >
               {title}
             </p>
@@ -48,9 +46,7 @@ const SectionCard = ({ title, description, imageSrc, reverseLayout }) => {
             </p>
             <button
               ref={(el) => (sectionRef.current[3] = el)}
-              className={`flex gap-2 items-center ${
-                reverseLayout === true ? "text-gold" : "text-black"
-              } text-[13px] font-semibold 2xl:leading-[1.4] 2xl:text-[1rem]`}
+              className={`flex gap-2 items-center text-gold text-[13px] font-semibold 2xl:leading-[1.4] 2xl:text-[1rem]`}
               aria-label={`Explore more about ${title}`}
             >
               <IoIosArrowForward /> EXPLORE MORE

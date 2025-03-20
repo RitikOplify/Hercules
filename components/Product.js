@@ -120,7 +120,7 @@ const Product = ({ product }) => {
             <div className="space-y-6">
               <h1
                 ref={(el) => (productRef.current[1] = el)}
-                className="font-medium text-xl text-[#000] uppercase tracking-wide leading-5"
+                className="font-medium text-xl text-gold uppercase tracking-wide leading-5"
               >
                 {product.name}
               </h1>
@@ -141,7 +141,7 @@ const Product = ({ product }) => {
                   href={product.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-black w-fit flex items-center gap-3 text-base text-[#fff] font-normal rounded-xl py-3 px-6 shadow-[0_5px_20px_rgba(134,134,134,0.6)]"
+                  className="bg-gold w-fit flex items-center gap-3 text-base text-[#fff]  font-normal rounded-xl py-3 px-6 shadow-[0_5px_20px_rgba(134,134,134,0.6)]"
                 >
                   <TiShoppingCart size={24} />
                   BUY PRODUCT

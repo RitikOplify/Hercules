@@ -24,7 +24,7 @@ export default function ShopGallery({ title }) {
       <div className="max-w-[1440px] mx-auto bg-[#fff] py-[120px] px-5 sm:px-10">
         <p
           ref={(el) => (shopRef.current[0] = el)}
-          className=" text-center font-medium text-black text-2xl"
+          className=" text-center font-medium text-gold text-2xl"
         >
           {title}
         </p>

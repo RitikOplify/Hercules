@@ -42,7 +42,7 @@ const ContactForm = () => {
           <div className=" w-full sm:w-3/5 px-5 sm:px-10 h-full flex items-center justify-center text-white">
             <div className=" flex flex-col gap-1">
               <p ref={(el) => (contactRef.current[1] = el)}>
-                Have a question about TAG Heuer products or services?
+                Have a question about Hercules products or services?
               </p>
               <p ref={(el) => (contactRef.current[2] = el)}>
                 We're here to help!

@@ -7,12 +7,14 @@ function Footer() {
   return (
     <footer className="bg-lightblack border-t-[2px] py-20 pb-10">
       <div className=" max-w-[1440px] mx-auto px-5 sm:px-10">
-        <div className="flex flex-col items-center mb-6">
-          <img
-            src="/Images/Logo.jpg"
-            alt="Logo"
-            className="mb-10 h-20 w-auto"
-          />
+        <div className="flex flex-col items-center mb-10">
+          <div className=" p-5 bg-black rounded-full">
+            <img
+              src="/Images/Logo.jpg"
+              alt="Logo"
+              className="h-20 w-20 object-contain"
+            />
+          </div>
         </div>
         <div className=" flex gap-10 justify-between flex-wrap">
           <div className=" flex flex-col gap-9">

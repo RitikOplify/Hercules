@@ -54,7 +54,7 @@ const WhoWeAre = () => {
         <div className="w-full md:w-1/2 flex justify-center items-center">
           <video
             ref={videoRef}
-            src="/video/watch.mkv"
+            src="/video/Sample Black 0001-0270.mp4"
             muted={true}
             loop={true}
             playsInline

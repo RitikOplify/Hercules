@@ -24,23 +24,24 @@ function History() {
           ref={(el) => (historyRef.current[1] = el)}
           className="mt-4 max-w-2xl mx-auto text-start sm:text-center font-light text-base text-[#808080]"
         >
-          At Hercules Watch Co, we aspire to make something legendary that would
-          stand out not only in its unique form and design but also in its
-          exceptional quality and durability. Our passion for quality timepieces
-          leads us to push the industry's standards.
+          Welcome to Hercules Watch Co., where time meets intention. We’re not
+          in the business of mass production — we’re in the art of individual
+          expression. Every watch we touch is built around your story, your
+          vision, and your style.From design to finish, each timepiece is a
+          unique creation, made with precision, patience, and purpose. We
+          believe the most meaningful things in life are made, not bought — and
+          your watch should be no exception.
         </p>
-        <p
-          ref={(el) => (historyRef.current[2] = el)}
-          className="mt-4 text-start sm:text-center font-light text-base text-[#808080]"
-        >
-          HWC believes that the endurance of a watch should be coupled with
-          aesthetic beauty.
-        </p>
+       
         <div
-          ref={(el) => (historyRef.current[3] = el)}
+          ref={(el) => (historyRef.current[2] = el)}
           className=" w-full flex justify-center"
         >
-          <Button color={"black"} text={"DISCOVER"} className={'mt-6 bg-gold'} />
+          <Button
+            color={"black"}
+            text={"DISCOVER"}
+            className={"mt-6 bg-gold"}
+          />
         </div>
       </div>
     </section>

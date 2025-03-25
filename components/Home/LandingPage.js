@@ -1,6 +1,5 @@
 "use client";
 import { useRef } from "react";
-import { FaAngleRight } from "react-icons/fa";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
@@ -22,15 +21,16 @@ const WatchLandingPage = () => {
               ref={(el) => (landingPageRef.current[1] = el)}
               className="text-4xl sm:text-5xl text-gold font-bold"
             >
-              Custom DLC <br className="hidden sm:visible" /> build to last
+              Time, Reimagined. Just for You.
             </h1>
             <p
               ref={(el) => (landingPageRef.current[2] = el)}
               className="mt-4 text-gray-400 opacity-0"
             >
-              Bespoke timepieces to suit the individual.
-              <br className="hidden sm:visible" /> For those who prefer to be
-              different.
+              crafted by hand, built with soul, and made to reflect you. No
+              replicas. No repeats. Just handcrafted, custom watches as unique
+              as their wearer. We take iconic timepieces and turn them into
+              bold, custom expressions of who you are.
             </p>
 
             <Button

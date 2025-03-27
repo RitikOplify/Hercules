@@ -51,12 +51,12 @@ function AboutUs() {
 
         <div className="w-full md:w-[45%] bg-white flex flex-col justify-center gap-6 items-center px-5 py-10 sm:p-10">
           <div>
-            <p
+            <h2
               ref={(el) => (aboutUsRef.current[2] = el)}
               className="text-2xl tracking-[8%] font-medium mb-6 text-gold 2xl:text-[1.6rem] 2xl:leading-[1.5rem] 2xl:tracking-[1px]"
             >
               WE GOT SOMETHING FOR EVERYONE
-            </p>
+            </h2>
             <h2
               ref={(el) => (aboutUsRef.current[3] = el)}
               className="text-base text-[#808080] max-w-sm font-normal 2xl:leading-[1.4] 2xl:text-[1.2rem]"
@@ -81,12 +81,12 @@ function AboutUs() {
         <div className="w-full h-full flex-col-reverse flex md:flex-row">
           <div className="w-full md:w-[50%] bg-white flex flex-col justify-center gap-6 items-center px-5 py-10 sm:p-10">
             <div>
-              <p
+              <h2
                 ref={(el) => (aboutUsRef.current[5] = el)}
                 className="text-2xl tracking-[8%] text-start font-medium mb-6 text-gold 2xl:text-[1.6rem] 2xl:leading-[1.5] 2xl:tracking-[1px]"
               >
                 WE GOT SOMETHING FOR EVERYONE
-              </p>
+              </h2>
               <h2
                 ref={(el) => (aboutUsRef.current[6] = el)}
                 className="text-base text-[#808080] font-normal 2xl:leading-[1.4] 2xl:text-[1.2rem] max-w-sm"

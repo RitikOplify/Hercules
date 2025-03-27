@@ -12,13 +12,13 @@ function Services() {
         {/* Text Section */}
         <div className=" max-w-[1440px] mx-auto gap-10 md:gap-0 flex flex-col-reverse md:flex-row  w-full">
           <div className=" w-full md:w-1/2 my-auto py-[120px] px-5 sm:px-10">
-            <p
+            <h1
               ref={(el) => (servicesRef.current[0] = el)}
               className="text-2xl font-medium text-gold tracking-[8%] mb-6"
             >
               DLC Watch De-Coating and Restoration
-            </p>
-            <h1
+            </h1>
+            <p
               ref={(el) => (servicesRef.current[1] = el)}
               className="text-[#808080] leading-6 text-base font-normal mb-4"
             >
@@ -26,7 +26,7 @@ function Services() {
               have a worn and damaged DLC coated watch, Hercules Watch Co are
               able to both restore the watch to the original finish or, if
               required, de-coat the watch and then re-coat it.
-            </h1>
+            </p>
             <p
               ref={(el) => (servicesRef.current[2] = el)}
               className="text-[#808080] leading-6 text-base font-normal mb-4"
@@ -88,14 +88,14 @@ function Services() {
 
           {/* Right Section - Text */}
           <div>
-            <p
+            <h2
               ref={(el) => (servicesRef.current[10] = el)}
               className="text-base leading-6 mb-4 text-white"
             >
               Hercules Watch Co have some of the finest watch technicians in the
               UK today. We are able to offer a complete service to almost all
               brands of watches by our qualified technicians.
-            </p>
+            </h2>
 
             <p
               ref={(el) => (servicesRef.current[11] = el)}
@@ -135,12 +135,12 @@ function Services() {
         <div className="max-w-[1440px] mx-auto flex flex-col-reverse md:flex-row items-center md:items-start gap-10 md:gap-0  py-[120px]">
           <div className="md:w-1/2 space-y-6 my-auto px-5 sm:px-10">
             <div>
-              <h2
+              <h3
                 ref={(el) => (servicesRef.current[18] = el)}
                 className=" text-base tracking-[8%] font-normal text-gold"
               >
                 Dial restoration:
-              </h2>
+              </h3>
               <p
                 ref={(el) => (servicesRef.current[19] = el)}
                 className="text-[#808080] mt-2 font-normal"
@@ -155,12 +155,12 @@ function Services() {
             </div>
 
             <div>
-              <h2
+              <h3
                 ref={(el) => (servicesRef.current[20] = el)}
                 className="text-base tracking-[8%] font-normal text-gold"
               >
                 Bracelet repairs:
-              </h2>
+              </h3>
               <p
                 ref={(el) => (servicesRef.current[21] = el)}
                 className="text-[#808080] mt-2 font-normal"
@@ -172,12 +172,12 @@ function Services() {
             </div>
 
             <div>
-              <h2
+              <h3
                 ref={(el) => (servicesRef.current[22] = el)}
                 className="text-base tracking-[8%] font-normal text-gold"
               >
                 Movements:
-              </h2>
+              </h3>
               <p
                 ref={(el) => (servicesRef.current[23] = el)}
                 className="text-[#808080] mt-2 font-normal"
@@ -215,12 +215,12 @@ function Services() {
           </div>
 
           <div className="w-full md:w-1/2 flex flex-col justify-center gap-6 items-start px-5 sm:px-10 text-gold">
-            <p
+            <h2
               ref={(el) => (servicesRef.current[26] = el)}
               className="text-2xl font-medium"
             >
               Engraving and Hand engraving
-            </p>
+            </h2>
             <p
               ref={(el) => (servicesRef.current[27] = el)}
               className="text-base font-normal text-white"
@@ -240,12 +240,12 @@ function Services() {
         <div className="max-w-[1440px] mx-auto flex flex-col-reverse md:flex-row items-center md:items-start gap-10 md:gap-0  py-[120px]">
           <div className="md:w-1/2 space-y-6 my-auto px-5 sm:px-10">
             <div className=" space-y-6">
-              <p
+              <h2
                 ref={(el) => (servicesRef.current[28] = el)}
                 className=" text-base tracking-[8%] font-normal text-gold"
               >
                 Watch Customisation and DLC Coatings
-              </p>
+              </h2>
               <p
                 ref={(el) => (servicesRef.current[29] = el)}
                 className="text-[#808080] font-normal"

@@ -22,12 +22,12 @@ export default function ShopGallery({ title }) {
   return (
     <div className=" bg-white">
       <div className="max-w-[1440px] mx-auto bg-[#fff] py-[120px] px-5 sm:px-10">
-        <p
+        <h2
           ref={(el) => (shopRef.current[0] = el)}
           className=" text-center font-medium text-gold text-2xl"
         >
           {title}
-        </p>
+        </h2>
         <div className=" py-[80px]">
           <Swiper
             slidesPerView={3}

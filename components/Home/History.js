@@ -14,15 +14,15 @@ function History() {
   return (
     <section className="bg-white text-center py-[120px] px-5 sm:px-10">
       <div className=" max-w-[1440px] mx-auto">
-        <p
+        <h2
           ref={(el) => (historyRef.current[0] = el)}
           className="text-2xl font-medium text-gold"
         >
           HISTORY OF HERITAGE
-        </p>
+        </h2>
         <p
           ref={(el) => (historyRef.current[1] = el)}
-          className="mt-4 max-w-2xl mx-auto text-start sm:text-center font-light text-base text-[#808080]"
+          className="mt-4 max-w-2xl mx-auto text-start sm:text-center font-light text-base text-[#808080] 2xl:leading-[1.4] 2xl:text-[1rem]"
         >
           Welcome to Hercules Watch Co., where time meets intention. We’re not
           in the business of mass production — we’re in the art of individual

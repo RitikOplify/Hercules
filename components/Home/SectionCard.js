@@ -32,12 +32,12 @@ const SectionCard = ({ title, description, imageSrc, reverseLayout }) => {
         </div>
         <div className={`w-full md:w-1/2 flex justify-start sm:justify-center`}>
           <div className="flex flex-col gap-6 2xl:gap-[1vw] justify-center items-start px-5 py-10 2xl:py-[1vw] sm:p-10">
-            <p
+            <h3
               ref={(el) => (sectionRef.current[1] = el)}
               className={`text-2xl font-medium text-gold 2xl:text-[1.6rem] 2xl:leading-[1.5] 2xl:tracking-[1px]`}
             >
               {title}
-            </p>
+            </h3>
             <p
               ref={(el) => (sectionRef.current[2] = el)}
               className={`${

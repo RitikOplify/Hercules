@@ -63,12 +63,12 @@ const WhoWeAre = () => {
         </div>
 
         <div className="w-full md:w-1/2 flex flex-col justify-center gap-6 items-start px-5 md:pr-10 text-[#fff]">
-          <p
+          <h2
             ref={(el) => (whoWeAreRef.current[1] = el)}
             className="text-2xl font-medium"
           >
             WHO WE ARE
-          </p>
+          </h2>
           <p
             ref={(el) => (whoWeAreRef.current[2] = el)}
             className="text-base font-normal"

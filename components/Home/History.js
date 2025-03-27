@@ -16,7 +16,7 @@ function History() {
       <div className=" max-w-[1440px] mx-auto">
         <h2
           ref={(el) => (historyRef.current[0] = el)}
-          className="text-2xl font-medium text-gold"
+          className="text-2xl font-medium text-gold 2xl:leading-[1.5] 2xl:tracking-[1px]"
         >
           HISTORY OF HERITAGE
         </h2>

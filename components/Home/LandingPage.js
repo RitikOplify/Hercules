@@ -14,7 +14,10 @@ const WatchLandingPage = () => {
 
   return (
     <section className=" bg-black">
-      <div className="mx-auto flex-col-reverse flex lg:flex-row items-center 2xl:h-screen justify-center px-5 gap-10 sm:px-10 py-20 bg-black">
+      <div
+        className="mx-auto flex-col-reverse flex lg:flex-row items-center 2xl:h-[calc(100vh-60px)]
+ justify-center px-5 gap-10 sm:px-10 py-20 bg-black"
+      >
         <div className="w-full lg:w-1/2 flex flex-col items-start md:items-center">
           <div className="mt-10 md:mt-0 mx-auto">
             <h1

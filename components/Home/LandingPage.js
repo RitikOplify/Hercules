@@ -14,9 +14,9 @@ const WatchLandingPage = () => {
 
   return (
     <section className=" bg-black">
-      <div className="mx-auto flex-col-reverse flex md:flex-row items-center md:h-[650px] 2xl:h-screen justify-center px-5 sm:px-10 py-20 bg-black">
-        <div className="w-full md:w-1/2 flex flex-col items-start md:items-center">
-          <div className="mt-10 md:mt-0">
+      <div className="mx-auto flex-col-reverse flex lg:flex-row items-center 2xl:h-screen justify-center px-5 gap-10 sm:px-10 py-20 bg-black">
+        <div className="w-full lg:w-1/2 flex flex-col items-start md:items-center">
+          <div className="mt-10 md:mt-0 mx-auto">
             <h1
               ref={(el) => (landingPageRef.current[1] = el)}
               className="text-4xl sm:text-5xl text-gold font-bold"
@@ -25,7 +25,7 @@ const WatchLandingPage = () => {
             </h1>
             <p
               ref={(el) => (landingPageRef.current[2] = el)}
-              className="mt-4 text-gray-400 opacity-0"
+              className="mt-4 text-gray-400 opacity-0 max-w-2xl"
             >
               crafted by hand, built with soul, and made to reflect you. No
               replicas. No repeats. Just handcrafted, custom watches as unique
@@ -41,15 +41,17 @@ const WatchLandingPage = () => {
             />
           </div>
         </div>
-        <Image
-          ref={(el) => (landingPageRef.current[0] = el)}
-          src="/Images/prestige.png"
-          alt="Luxury Watch"
-          width={800}
-          height={600}
-          priority
-          className="w-full sm:w-1/2 object-contain scale-75"
-        />
+        <div className="w-full md:w-1/2">
+          <Image
+            ref={(el) => (landingPageRef.current[0] = el)}
+            src="/Images/prestige.png"
+            alt="Luxury Watch"
+            width={800}
+            height={600}
+            priority
+            className="object-contain"
+          />
+        </div>
       </div>
     </section>
   );

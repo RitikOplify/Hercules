@@ -9,7 +9,13 @@ import useGsap from "@/useGsap";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const SectionCard = ({ title, description, imageSrc, reverseLayout }) => {
+const SectionCard = ({
+  title,
+  description,
+  imageSrc,
+  reverseLayout,
+  description2,
+}) => {
   const sectionRef = useRef([]);
   useGsap(sectionRef, { stagger: true });
 
@@ -17,7 +23,7 @@ const SectionCard = ({ title, description, imageSrc, reverseLayout }) => {
     <div className="relative w-full flex justify-center">
       <div
         className={`w-full h-full flex flex-col md:flex-row ${
-          reverseLayout ? "md:flex-row-reverse" : ""
+          reverseLayout ? "" : "md:flex-row-reverse"
         } ${reverseLayout === true ? "bg-black" : "bg-white"}`}
       >
         <div className="w-full md:w-1/2 h-[50vh] md:h-screen flex items-center">
@@ -31,24 +37,34 @@ const SectionCard = ({ title, description, imageSrc, reverseLayout }) => {
           />
         </div>
         <div className={`w-full md:w-1/2 flex justify-start sm:justify-center`}>
-          <div className="flex flex-col gap-6 2xl:gap-[1vw] justify-center items-start px-5 py-10 2xl:py-[1vw] sm:p-10">
+          <div className="flex flex-col 2xl:gap-[1vw] justify-center items-start px-5 py-10 2xl:py-[1vw] sm:p-10">
             <h3
               ref={(el) => (sectionRef.current[1] = el)}
-              className={`text-2xl font-medium text-gold 2xl:text-[1.6rem] 2xl:leading-[1.5] 2xl:tracking-[1px]`}
+              className={`text-[32px] font-semibold mb-6 ${
+                reverseLayout === true ? "text-[#fff]" : "text-[#292321]"
+              } 2xl:text-[1.6rem] 2xl:leading-[1.5] 2xl:tracking-[1px]`}
             >
               {title}
             </h3>
-            <p
-              ref={(el) => (sectionRef.current[2] = el)}
-              className={`${
-                reverseLayout === true ? "text-white" : "text-[#808080]"
-              } text-base font-normal max-w-sm 2xl:leading-[1.4] 2xl:text-[1.2rem]`}
-            >
-              {description}
-            </p>
+            <div ref={(el) => (sectionRef.current[2] = el)}>
+              <p
+                className={`${
+                  reverseLayout === true ? " text-[#ccc]" : "text-[#292321]"
+                } text-base font-normal max-w-sm mb-4 2xl:leading-[1.4] 2xl:text-[1.2rem]`}
+              >
+                {description}
+              </p>
+              <p
+                className={`${
+                  reverseLayout === true ? " text-[#ccc]" : "text-[#292321]"
+                } text-base font-normal max-w-sm mb-8 2xl:leading-[1.4] 2xl:text-[1.2rem]`}
+              >
+                {description2}
+              </p>
+            </div>
             <button
               ref={(el) => (sectionRef.current[3] = el)}
-              className={`flex gap-2 items-center text-gold text-[13px] font-semibold 2xl:leading-[1.4] 2xl:text-[1rem]`}
+              className={`flex gap-2 items-center text-[#9B8959] text-xs tracking-[2px] font-semibold 2xl:leading-[1.4] 2xl:text-[1rem]`}
               aria-label={`Explore more about ${title}`}
             >
               <IoIosArrowForward /> EXPLORE MORE

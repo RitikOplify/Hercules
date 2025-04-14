@@ -161,7 +161,7 @@ function Nav() {
           </button>
         </div>
       </nav>
-      <div className=" h-[60px] w-full bg-black -z-10"></div>
+      <div className=" h-[60px] w-full bg-[#FBFCFC] -z-10"></div>
     </>
   );
 }

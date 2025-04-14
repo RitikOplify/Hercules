@@ -13,38 +13,36 @@ const WatchLandingPage = () => {
   useGsap(landingPageRef, { stagger: true });
 
   return (
-    <section className=" bg-black">
+    <section className=" bg-img">
       <div
-        className="mx-auto flex-col-reverse flex lg:flex-row items-center 2xl:h-[calc(100vh-60px)]
- justify-center px-5 gap-10 sm:px-10 py-20 bg-black"
+        className="mx-auto flex-col-reverse flex md:flex-row items-center 2xl:h-[calc(100vh-60px)]
+ justify-center px-5 gap-10 sm:px-10 py-20"
       >
-        <div className="w-full lg:w-1/2 flex flex-col items-start md:items-center">
+        <div className="w-full md:w-1/2 flex flex-col items-start :items-center">
           <div className="mt-10 md:mt-0 mx-auto">
             <h1
               ref={(el) => (landingPageRef.current[1] = el)}
-              className="text-4xl sm:text-5xl text-gold font-bold"
+              className=" text-[54px] font-gelasio text-[#111] font-normal"
             >
-              Time, Reimagined. Just for You.
+              Time, Reimagined. <br /> Just for You.
             </h1>
             <p
               ref={(el) => (landingPageRef.current[2] = el)}
-              className="mt-4 text-gray-400 opacity-0 max-w-2xl"
+              className="mt-6 text-base text-[#292321] leading-[140%] tracking-[0.6px] font-medium opacity-0 max-w-sm"
             >
-              crafted by hand, built with soul, and made to reflect you. No
-              replicas. No repeats. Just handcrafted, custom watches as unique
-              as their wearer. We take iconic timepieces and turn them into
-              bold, custom expressions of who you are.
+              We take iconic timepieces and turn them into bold, custom
+              expressions of who you are
             </p>
 
             <Button
               ref={(el) => (landingPageRef.current[3] = el)}
               color={"white"}
               text={"DISCOVER"}
-              className={"mt-6"}
+              className={"mt-8 bg-[#111]"}
             />
           </div>
         </div>
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-1/2 flex items-start justify-start">
           <Image
             ref={(el) => (landingPageRef.current[0] = el)}
             src="/Images/prestige.png"

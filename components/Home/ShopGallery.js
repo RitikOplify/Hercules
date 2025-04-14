@@ -28,7 +28,7 @@ export default function ShopGallery({ title }) {
         >
           {title}
         </h2>
-        <div className=" py-[80px]">
+        <div className=" pt-[80px]">
           <Swiper
             slidesPerView={3}
             spaceBetween={20}
@@ -58,7 +58,7 @@ export default function ShopGallery({ title }) {
         {/* Custom Pagination Below */}
         <div
           ref={(el) => (shopRef.current[1] = el)}
-          className="custom-pagination flex justify-center"
+          className="custom-pagination flex justify-center mt-10"
         ></div>
 
         <Link

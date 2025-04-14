@@ -11,7 +11,7 @@ export default function Home() {
       <WatchLandingPage />
       <History />
       <Section />
-      <WhoWeAre />
+      {/* <WhoWeAre /> */}
       <ShopGallery title={"SHOP GALLARY"} />
       <ImageCarousel />
     </>

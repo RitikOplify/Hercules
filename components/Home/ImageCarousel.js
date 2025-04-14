@@ -9,6 +9,7 @@ import { FaAngleRight, FaAngleLeft } from "react-icons/fa6";
 import { useRef } from "react";
 import useGsap from "@/useGsap";
 import collections from "@/collections";
+import Image from "next/image";
 
 export default function ResponsiveCarousel() {
   const leftBtnRef = useRef(null);
@@ -29,7 +30,7 @@ export default function ResponsiveCarousel() {
   };
 
   return (
-    <div className=" bg-white pb-[120px]">
+    <div className=" bg-white pb-[80px]">
       <div className=" max-w-[1440px] mx-auto relative px-5 sm:px-10 ">
         <div
           ref={btnsRef}
@@ -73,9 +74,9 @@ export default function ResponsiveCarousel() {
             <SwiperSlide key={slide.image}>
               <div
                 ref={(el) => (imageRef.current[i] = el)}
-                className="bg-indigo-50 h-96 flex justify-center items-center"
+                className="flex justify-center items-center"
               >
-                <img src={slide.image} alt={`img-${i}`} />
+                <Image height={400} width={400} src={slide.image} alt={`img-${i}`} />
               </div>
             </SwiperSlide>
           ))}

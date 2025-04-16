@@ -8,8 +8,10 @@ const Footer = () => {
         <div className="max-w-[1440px] mx-auto  py-[60px] px-5 sm:px-10 flex flex-col items-center text-center gap-[60px]">
           <div className="flex flex-col md:flex-row justify-between items-center w-full gap-12">
             <div className="flex-1 flex flex-col items-center">
-              <h3 className="font-bold text-[#9B8959] mb-6">TALK TO US</h3>
-              <p className="text-white text-[18px] tracking-[2px] font-medium">
+              <h3 className="font-bold text-[#ccc] text-sm leading-[140%] tracking-[1px] mb-6">
+                TALK TO US
+              </h3>
+              <p className="text-[18px] tracking-[2px] text-[#ccc] leading-[140%] font-medium">
                 44–7969606568
               </p>
             </div>
@@ -25,10 +27,10 @@ const Footer = () => {
             </div>
 
             <div className="flex-1 flex flex-col items-center">
-              <h3 className="font-bold text-[#ccc] leading-[140%] tracking-[1px] mb-6">
+              <h3 className="font-bold text-[#ccc] leading-[140%] text-sm tracking-[1px] mb-6">
                 OPENING HOURS
               </h3>
-              <p className="text-[18px] tracking-[2px] leading-[140%] font-medium">
+              <p className="text-[18px] tracking-[2px] text-[#ccc] leading-[140%] font-medium">
                 9:30AM – 5:30PM | MON – FRI
               </p>
             </div>

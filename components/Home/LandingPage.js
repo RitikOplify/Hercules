@@ -15,7 +15,7 @@ const WatchLandingPage = () => {
   return (
     <section className=" bg-img">
       <div
-        className="mx-auto flex-col-reverse flex md:flex-row items-center 2xl:h-[calc(100vh-60px)]
+        className="mx-auto flex-col-reverse flex md:flex-row items-center md:h-[calc(100vh-56.67px)]
  justify-center px-5 gap-10 sm:px-10 py-20"
       >
         <div className="w-full md:w-1/2 flex flex-col items-start :items-center">
@@ -42,15 +42,15 @@ const WatchLandingPage = () => {
             />
           </div>
         </div>
-        <div className="w-full md:w-1/2 flex items-start justify-start">
+        <div className="w-full md:w-1/2 h-full flex justify-center md:justify-start">
           <Image
             ref={(el) => (landingPageRef.current[0] = el)}
-            src="/Images/prestige.png"
+            src="/Images/Omega Skull face.png"
             alt="Luxury Watch"
             width={800}
             height={600}
             priority
-            className="object-contain"
+            className="object-contain h-full w-fit"
           />
         </div>
       </div>

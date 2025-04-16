@@ -24,10 +24,10 @@ function ProductCard({ product, ref }) {
           className="object-contain"
         />
       </div>
-      <h2 className="w-full sm:w-[70%] mx-auto text-center font-semibold text-sm tracking-[0.6px] text-[#292321] uppercase leading-5">
+      <h2 className="w-full sm:w-[70%] mx-auto text-center font-semibold text-sm tracking-[0.6px] text-[#292321] uppercase">
         {product.name}
       </h2>
-      <p className="text-[#292321] font-semibold text-base">{product.price}</p>
+      <p className="text-[#292321] font-semibold text-base tracking-[0.6px]">{product.price}</p>
     </Link>
   );
 }

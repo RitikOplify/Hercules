@@ -29,12 +29,19 @@ export default function ResponsiveCarousel() {
     leftBtnRef.current.click();
   };
 
+  const Images = [
+    "/ImageCarousel/IMG_1286.png",
+    "/ImageCarousel/Img_268.png",
+    "/ImageCarousel/IMG_1324.png",
+    "/ImageCarousel/IMG_1185.png",
+  ];
+
   return (
     <div className=" bg-white pb-[80px]">
       <div className=" max-w-[1440px] mx-auto relative px-5 sm:px-10 ">
         <div
           ref={btnsRef}
-          className=" flex justify-end items-center gap-5 py-5"
+          className=" flex justify-end items-center gap-5 pb-10"
         >
           <button
             className=" bg-black flex items-center justify-center text-white h-14 w-14 rounded-xl"
@@ -70,13 +77,16 @@ export default function ResponsiveCarousel() {
           }}
           className="multiple-slide-carousel"
         >
-          {collections.map((slide, i) => (
-            <SwiperSlide key={slide.image}>
-              <div
-                ref={(el) => (imageRef.current[i] = el)}
-                className="flex justify-center items-center"
-              >
-                <Image height={400} width={400} src={slide.image} alt={`img-${i}`} />
+          {Images.map((slide, i) => (
+            <SwiperSlide key={slide}>
+              <div className="flex justify-center items-center">
+                <Image
+                  ref={(el) => (imageRef.current[i] = el)}
+                  height={400}
+                  width={400}
+                  src={slide}
+                  alt={`img-${i}`}
+                />
               </div>
             </SwiperSlide>
           ))}

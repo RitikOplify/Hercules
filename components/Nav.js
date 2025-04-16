@@ -63,11 +63,8 @@ function Nav() {
 
   return (
     <>
-      <nav
-        ref={navRef}
-        className="bg-white z-20 fixed w-full border-b-[2px] text-lightblack "
-      >
-        <div className="flex px-5 sm:px-10 bg-white relative justify-between mx-auto items-center py-[18px]">
+      <nav ref={navRef} className="bg-white z-20 fixed w-full border-b-[1px]">
+        <div className="flex px-5 sm:px-10 bg-white relative justify-between mx-auto items-center py-4 ">
           <div className=" hidden md:flex"></div>
           <Link
             href={"/"}
@@ -81,7 +78,7 @@ function Nav() {
               className="object-contain h-6 md:h-[50px]"
             />
           </Link>
-          <ul className="hidden md:flex space-x-6 text-lightblack">
+          <ul className="hidden md:flex space-x-6 tracking-[1px] text-[#111]">
             {navItems.map((item) => (
               <li key={item.name}>
                 <Link
@@ -90,26 +87,26 @@ function Nav() {
                     pathname === item.href
                       ? "border-b-2 border-gold text-gold pb-1"
                       : ""
-                  } text-xs py-4 font-medium`}
+                  } text-xs font-medium`}
                 >
                   {item.name}
                 </Link>
               </li>
             ))}
           </ul>
-          <div className="text-sm hidden md:flex items-center gap-1 text-lightblack">
+          <div className="text-sm hidden md:flex items-center gap-1 text-[#111]">
             <IoCallOutline className="text-lg" /> +44-7969606568
           </div>
 
           {menuOpen && (
             <div
-              className="md:hidden absolute left-0 flex justify-end w-screen bg-black bg-opacity-15 top-[60px]"
+              className="md:hidden absolute left-0 flex justify-end w-screen bg-black bg-opacity-15 top-[56.67px]"
               onClick={() => {
                 setMenuOpen(false);
               }}
             >
               <div
-                className="flex flex-col gap-4 w-4/5 h-screen p-5 sm:p-10 bg-white text-lightblack"
+                className="flex flex-col gap-4 w-4/5 h-screen p-5 sm:p-10 bg-white text-[#111]"
                 onClick={(e) => {
                   e.stopPropagation();
                 }}
@@ -123,7 +120,7 @@ function Nav() {
                           pathname === item.href
                             ? "border-b-2 border-gold text-gold pb-1"
                             : ""
-                        } text-xs font-medium`}
+                        } text-xs font-medium tracking-[1px]`}
                       >
                         {item.name}
                       </Link>
@@ -161,7 +158,7 @@ function Nav() {
           </button>
         </div>
       </nav>
-      <div className=" h-[60px] w-full bg-[#FBFCFC] -z-10"></div>
+      <div className=" h-[56.67px] w-full bg-white -z-10"></div>
     </>
   );
 }

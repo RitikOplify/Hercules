@@ -63,13 +63,13 @@ function History() {
         <div className=" w-full md:w-1/2">
           <h2
             ref={(el) => (historyRef.current[0] = el)}
-            className="text-4xl text-start font-medium text-[#9B8959] mb-6 2xl:leading-[1.5] 2xl:tracking-[1px]"
+            className="text-4xl text-start font-medium text-[#9B8959] mb-6"
           >
             HISTORY OF HERITAGE
           </h2>
           <p
             ref={(el) => (historyRef.current[1] = el)}
-            className="mb-8 max-w-2xl text-start  font-medium text-base text-[#ccc] leading-[140%] tracking-[0.6px] 2xl:leading-[1.4] 2xl:text-[1rem]"
+            className="mb-8 max-w-2xl text-start  font-medium text-base text-[#ccc] leading-[140%] tracking-[0.6px]"
           >
             Welcome to Hercules Watch Co., where time meets intention. We’re not
             in the business of mass production — we’re in the art of individual
@@ -84,7 +84,7 @@ function History() {
             ref={(el) => (historyRef.current[2] = el)}
             className=" w-full flex justify-start"
           >
-            <Button text={"DISCOVER"} bg={"#9B8959"} />
+            <Button text={"DISCOVER"} className={" bg-[#9B8959]"} />
           </div>
         </div>
       </div>

@@ -37,12 +37,12 @@ const SectionCard = ({
           />
         </div>
         <div className={`w-full md:w-1/2 flex justify-start sm:justify-center`}>
-          <div className="flex flex-col 2xl:gap-[1vw] justify-center items-start px-5 py-10 2xl:py-[1vw] sm:p-10">
+          <div className="flex flex-col justify-center items-start px-5 py-10 sm:p-10">
             <h3
               ref={(el) => (sectionRef.current[1] = el)}
               className={`text-[32px] font-semibold mb-6 ${
                 reverseLayout === true ? "text-[#fff]" : "text-[#292321]"
-              } 2xl:text-[1.6rem] 2xl:leading-[1.5] 2xl:tracking-[1px]`}
+              }`}
             >
               {title}
             </h3>
@@ -50,21 +50,21 @@ const SectionCard = ({
               <p
                 className={`${
                   reverseLayout === true ? " text-[#ccc]" : "text-[#292321]"
-                } text-base font-normal max-w-sm mb-4 2xl:leading-[1.4] 2xl:text-[1.2rem]`}
+                } text-base font-medium max-w-sm mb-4 leading-[140%] tracking-[0.6px]`}
               >
                 {description}
               </p>
               <p
                 className={`${
                   reverseLayout === true ? " text-[#ccc]" : "text-[#292321]"
-                } text-base font-normal max-w-sm mb-8 2xl:leading-[1.4] 2xl:text-[1.2rem]`}
+                } text-base font-medium max-w-sm mb-8 leading-[140%] tracking-[0.6px]`}
               >
                 {description2}
               </p>
             </div>
             <button
               ref={(el) => (sectionRef.current[3] = el)}
-              className={`flex gap-2 items-center text-[#9B8959] text-xs tracking-[2px] font-semibold 2xl:leading-[1.4] 2xl:text-[1rem]`}
+              className={`flex gap-2 items-center text-[#9B8959] text-xs tracking-[2px] font-semibold`}
               aria-label={`Explore more about ${title}`}
             >
               <IoIosArrowForward /> EXPLORE MORE

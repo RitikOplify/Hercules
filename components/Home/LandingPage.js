@@ -18,7 +18,7 @@ const WatchLandingPage = () => {
         className="mx-auto flex-col-reverse flex md:flex-row items-center md:h-[calc(100vh-56.67px)]
  justify-center px-5 gap-10 sm:px-10 py-20"
       >
-        <div className="w-full md:w-1/2 flex flex-col items-start :items-center">
+        <div className="w-full md:w-1/2 flex flex-col items-start">
           <div className="mt-10 md:mt-0 mx-auto">
             <h1
               ref={(el) => (landingPageRef.current[1] = el)}

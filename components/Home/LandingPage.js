@@ -28,7 +28,7 @@ const WatchLandingPage = () => {
             </h1>
             <p
               ref={(el) => (landingPageRef.current[2] = el)}
-              className="mt-6 text-base text-[#292321] leading-[140%] tracking-[0.6px] font-medium opacity-0 max-w-sm"
+              className="mt-6 text-base text-[#292321] leading-[140%] tracking-[0.6px] font-medium max-w-sm"
             >
               We take iconic timepieces and turn them into bold, custom
               expressions of who you are

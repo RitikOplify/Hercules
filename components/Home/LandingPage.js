@@ -19,7 +19,7 @@ const WatchLandingPage = () => {
  justify-center px-5 gap-10 sm:px-10 py-20"
       >
         <div className="w-full md:w-1/2 flex flex-col items-start">
-          <div className="mt-10 md:mt-0 mx-auto">
+          <div className="mt-10 md:mt-0 md:mx-auto">
             <h1
               ref={(el) => (landingPageRef.current[1] = el)}
               className=" text-[54px] font-gelasio text-[#111] font-normal"

@@ -79,21 +79,21 @@ const ContactForm = () => {
 
             {/* Right Side - Form */}
             <div className="flex-1">
-              <h2 className="text-[32px] font-semibold mb-10">
+              <h2 className="text-[28px] font-semibold mb-10 text-[#292321]">
                 Let Us Contact You
               </h2>
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 {/* Name */}
                 <div>
-                  <label className="block text-[13px] font-medium tracking-[1px] mb-3">
+                  <label className="block text-[13px] font-medium tracking-[1px] mb-2">
                     Your Name *
                   </label>
                   <input
                     type="text"
                     {...register("name", { required: "Name is required" })}
                     placeholder="Write your full name"
-                    className="w-full border border-[#EDEAE7] p-4 text-sm"
+                    className="w-full border border-[#EDEAE7] p-4 text-[14px] font-light tracking-[0.6px] text-[#808080]"
                   />
                   {errors.name && (
                     <p className="text-red-500 text-sm mt-1">
@@ -104,7 +104,7 @@ const ContactForm = () => {
 
                 {/* Email */}
                 <div>
-                  <label className="block text-[13px] font-medium tracking-[1px] mb-3">
+                  <label className="block text-[13px] font-medium tracking-[1px] mb-2">
                     Your Email *
                   </label>
                   <input
@@ -117,7 +117,7 @@ const ContactForm = () => {
                       },
                     })}
                     placeholder="Write your email address"
-                    className="w-full border border-[#EDEAE7] p-4 text-sm"
+                    className="w-full border border-[#EDEAE7] p-4 text-[14px] font-light tracking-[0.6px] text-[#808080]"
                   />
                   {errors.email && (
                     <p className="text-red-500 text-sm mt-1">
@@ -128,7 +128,7 @@ const ContactForm = () => {
 
                 {/* Subject */}
                 <div>
-                  <label className="block text-[13px] font-medium tracking-[1px] mb-3">
+                  <label className="block text-[13px] font-medium tracking-[1px] mb-2">
                     Subject *
                   </label>
                   <input
@@ -137,7 +137,7 @@ const ContactForm = () => {
                       required: "Subject is required",
                     })}
                     placeholder="Write subject"
-                    className="w-full border border-[#EDEAE7] p-4 text-sm"
+                    className="w-full border border-[#EDEAE7] p-4 text-[14px] font-light tracking-[0.6px] text-[#808080]"
                   />
                   {errors.subject && (
                     <p className="text-red-500 text-sm mt-1">
@@ -148,7 +148,7 @@ const ContactForm = () => {
 
                 {/* Message */}
                 <div>
-                  <label className="block text-[13px] font-medium tracking-[1px] mb-3">
+                  <label className="block text-[13px] font-medium tracking-[1px] mb-2">
                     Message *
                   </label>
                   <textarea

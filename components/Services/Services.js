@@ -43,7 +43,7 @@ function Services() {
   return (
     <div>
       <Image
-        src="/Images/about_banner.png"
+        src="/Services/service_banner.png"
         height={400}
         width={1440}
         alt="banner"

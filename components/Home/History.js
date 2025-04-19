@@ -68,7 +68,7 @@ function History() {
           </h2>
           <p
             ref={(el) => (historyRef.current[1] = el)}
-            className="mb-8 max-w-2xl text-start  font-medium text-base text-[#ccc] leading-[140%] tracking-[0.6px]"
+            className="mb-8 max-w-md text-start  font-medium text-base text-[#ccc] leading-[140%] tracking-[0.6px]"
           >
             Welcome to Hercules Watch Co., where time meets intention. We’re not
             in the business of mass production — we’re in the art of individual

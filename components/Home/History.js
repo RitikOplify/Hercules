@@ -50,7 +50,7 @@ function History() {
   return (
     <section className="bg-black text-center  px-5 sm:px-10">
       <div className=" max-w-[1440px] mx-auto flex flex-col md:flex-row">
-        <div className=" w-full md:w-1/2 flex items-center justify-center pt-20 md:pt-0">
+        <div className=" w-full md:w-1/2 flex items-center justify-center py-[60px]">
           <video
             ref={videoRef}
             src="/video/Sample Black 0001-0270.mp4"

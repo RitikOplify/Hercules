@@ -57,6 +57,7 @@ function History() {
             muted={true}
             loop={true}
             playsInline
+            className="h-[70%]"
           />
         </div>
         <div className=" w-full md:w-1/2 py-[120px] my-auto">

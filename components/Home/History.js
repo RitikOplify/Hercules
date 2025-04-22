@@ -60,7 +60,7 @@ function History() {
             className="h-[70%]"
           />
         </div>
-        <div className=" w-full md:w-1/2 py-[120px] my-auto">
+        <div className=" w-full md:w-1/2 pb-[120px] pt-0 md:pt-[120px] my-auto">
           <h2
             ref={(el) => (historyRef.current[0] = el)}
             className="text-4xl text-start font-medium text-[#9B8959] mb-6"

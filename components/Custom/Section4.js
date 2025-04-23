@@ -10,12 +10,12 @@ const features = [
   {
     title: "Engineered Protection",
     text: "Stronger than steel, darker than night. Our DLC finish resists time, wear, and compromise.",
-    image: "/Custom/engineered_protection.png",
+    image: "/Custom/engineered_protection.jpg",
   },
   {
     title: "Guaranteed Excellence",
     text: "Every HWC custom piece is backed by a comprehensive warranty— because excellence should never need disclaimers.",
-    image: "/Custom/guaranteed_excellence.png",
+    image: "/Custom/guaranteed_excellence.jpg",
   },
 ];
 

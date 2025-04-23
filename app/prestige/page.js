@@ -1,7 +1,7 @@
-import Section1 from "@/components/Custom/Section1";
-import Section2 from "@/components/Custom/Section2";
-import Section3 from "@/components/Custom/Section3";
-import Section4 from "@/components/Custom/Section4";
+import Section1 from "@/components/Prestige/Section1";
+import Section2 from "@/components/Prestige/Section2";
+import Section3 from "@/components/Prestige/Section3";
+import Section4 from "@/components/Prestige/Section4";
 import Image from "next/image";
 import React from "react";
 

@@ -10,12 +10,12 @@ const features = [
   {
     title: "Personal Expression",
     text: "From symbolic icons to sacred motifs, each engraving is a personal story—etched by hand, preserved in steel, and made timeless.",
-    image: "/Engraved/personal_expression.png",
+    image: "/Engraved/personal_expression.jpg",
   },
   {
     title: "Timeless Craft",
     text: "We use traditional hand-engraving techniques, refined for modern luxury watches—ensuring every detail endures through wear, time, and generations.",
-    image: "/Engraved/timeless_craft.png",
+    image: "/Engraved/timeless_craft.jpg",
   },
 ];
 
@@ -24,14 +24,14 @@ const Section4 = () => {
     <div className="bg-[#F0F0F0] px-5 sm:px-10">
       <div className="max-w-[1440px] mx-auto py-20 space-y-10 font-urbanist">
         {/* Header */}
-        <div className="text-start">
+        <div className="text-center">
           <h2 className="text-[32px] leading-[140%] font-semibold mb-2 text-[#292321]">
             Create Your Legacy
           </h2>
           <p className="text-[16px] font-semibold leading-[140%] text-[#9B8959]">
             Your vision. Our craftsmanship. One timeless creation.
           </p>
-          <p className="text-[16px] mt-6 leading-[140%] text-[#292321] max-w-3xl">
+          <p className="text-[16px] mt-6 leading-[140%] text-[#292321] mx-auto max-w-5xl">
             We offer full customization for your timepiece—whether you want
             meaningful imagery, intricate patterns, or something entirely your
             own. Our engravings can be done on the{" "}
@@ -43,7 +43,7 @@ const Section4 = () => {
         </div>
 
         {/* Cards */}
-        <div className=" flex flex-wrap justify-center gap-10 max-w-5xl mx-auto">
+        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-5xl mx-auto">
           {features.map((feature, index) => (
             <div
               key={index}
@@ -54,7 +54,7 @@ const Section4 = () => {
                 height={400}
                 src={feature.image}
                 alt={feature.title}
-                className="w-full max-w-md h-96 object-contain"
+                className="w-full max-w-md object-contain"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent px-4 py-6 transition-all duration-500 group-hover:py-8">
                 <h3 className="text-white font-semibold text-lg mb-2">

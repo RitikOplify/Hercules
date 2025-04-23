@@ -7,29 +7,38 @@ const Section1 = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         <div className=" max-w-sm mx-auto">
           <h2 className="text-[32px] leading-[140%] font-semibold text-[#292321]">
-            Engraved Art
+            Custom Coating
           </h2>
           <p className="text-[16px] font-semibold leading-[140%] mt-1 text-[#9B8959]">
-            Bespoke engraving for those who value rarity
+            Dark. Durable. Distinctive.
           </p>
           <p className="text-[16px] leading-[140%] mt-6 font-medium text-[#292321]">
-            At Hercules Watch Co., the pursuit of individuality led us to a
-            craft steeped in tradition—
-            <span className=" font-bold">hand engraving</span>.
+            At Hercules Watch Co., we harness the power of cutting-edge{" "}
+            <span className=" font-bold">DLC (Diamond-Like Carbon)</span>{" "}
+            coating technology, originally developed for military-grade
+            resilience. Today, we use it to transform luxury watches into sleek,
+            scratch-resistant masterpieces designed for everyday endurance and
+            timeless appeal
           </p>
           <p className="text-[16px] leading-[140%] mt-4 font-medium text-[#292321]">
-            Our very first creation? A challenge few dare to take on:
+            Our DLC coating forms a molecular armour—{" "}
+            <span className="font-bold">
+              7 to 8 times harder than steel and up to 12 times tougher than
+              gold.
+            </span>{" "}
+            Engineered to withstand the elements and designed to elevate
+            aesthetics, this is more than a coating—it’s a commitment to
+            durability with an undeniably dark edge.
           </p>
-          <span className="font-bold">Rolex’s 904L steel.</span>
         </div>
 
         <div className="flex justify-center">
           <Image
+            src="/Custom/custom_coating.png"
+            alt="Rolex watch"
             width={580}
             height={580}
             className="w-full max-w-[580px]"
-            src="/Engraved/rolex_904L.png"
-            alt="Rolex watch"
           />
         </div>
       </div>
@@ -40,25 +49,21 @@ const Section1 = () => {
             width={580}
             height={580}
             className="w-full max-w-[580px]"
-            src="/Engraved/rolex_316L.png"
+            src="/Custom/beyong_standard_finish.png"
             alt="Rolex watch"
           />
         </div>
 
         <div className="order-1 md:order-2  max-w-sm mx-auto">
           <h2 className="text-[32px] leading-[140%] font-semibold text-[#292321]">
-            Engineering Meets Art
+            Beyond Standard Finishes
           </h2>
           <p className="text-[16px] mt-6 leading-[140%] text-[#292321]">
-            Most luxury watches use 316L stainless steel—resilient,
-            skin-friendly, and built to resist corrosion from moisture and
-            sweat. But Rolex chose a different path:
-            <span className="font-semibold"> 904L steel</span>—harder, denser,
-            and significantly more challenging to work with. Even Rolex had to
-            reengineer its production line to accommodate this unique material.
-          </p>
-          <p className="text-[16px] leading-[140%] text-[#292321] mt-4">
-            So naturally, that’s where we began.
+            Where traditional finishes like PVD fall short,{" "}
+            <span className="font-bold">our DLC coatings excel.</span> They’re
+            entirely reversible, residue-free, and far more resilient. The
+            result? A bold, exotic black finish with exceptional longevity and
+            zero compromise on material integrity.
           </p>
         </div>
       </div>

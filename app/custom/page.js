@@ -1,7 +1,7 @@
-import Section1 from "@/components/Engrave/Section1";
-import Section2 from "@/components/Engrave/Section2";
-import Section3 from "@/components/Engrave/Section3";
-import Section4 from "@/components/Engrave/Section4";
+import Section1 from "@/components/Custom/Section1";
+import Section2 from "@/components/Custom/Section2";
+import Section3 from "@/components/Custom/Section3";
+import Section4 from "@/components/Custom/Section4";
 import Image from "next/image";
 import React from "react";
 
@@ -10,7 +10,7 @@ function page() {
     <>
       <div className=" relative">
         <Image
-          src="/Engraved/banner_engraved_art.png"
+          src="/Custom/banner_custom.png"
           height={400}
           width={1440}
           alt="banner"

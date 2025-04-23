@@ -7,22 +7,14 @@ const Section3 = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         <div className=" max-w-sm mx-auto">
           <h2 className="text-[32px] leading-[140%] font-semibold mb-6 text-[#292321]">
-            Introducing: King of Kings
+            Watches, Reimagined
           </h2>
           <p className="text-[16px] leading-[140%] text-[#292321]">
-            Our debut engraving piece,{" "}
-            <span className="italic">King of Kings</span>, took{" "}
-            <span className="font-semibold">eight months</span> from concept to
-            completion. The centerpiece? A striking, reverent image of{" "}
-            <span className="font-semibold">Christ crowned with thorns</span>,
-            gazing skyward — a symbol of sacrifice, divinity, and power.
-            Engraved entirely on{" "}
-            <span className="font-semibold">Rolex-hardened steel</span>, this
-            watch embodies what Hercules Watch Co. stands for:{" "}
-            <span className="font-semibold">
-              artistry, meaning, and mastery
-            </span>
-            .
+            We don’t just coat timepieces—we{" "}
+            <span className=" font-bold">redefine their identity.</span> Our
+            mission is to transform beautiful watches into striking, mysterious
+            statements. Every piece becomes a mirror of its wearer: bold,
+            timeless, and entirely one-of-a-kind.
           </p>
         </div>
 
@@ -32,7 +24,7 @@ const Section3 = () => {
             width={580}
             height={580}
             className="w-full max-w-[580px]"
-            src="/Engraved/king_of_kings.png"
+            src="/Custom/watches_reimagined.png"
             alt="Rolex watch"
           />
         </div>
@@ -46,7 +38,7 @@ const Section3 = () => {
             width={580}
             height={580}
             className="w-full max-w-[580px]"
-            src="/Engraved/crown_of_thorns.png"
+            src="/Custom/assurance_in_craft.png"
             alt="Rolex watch"
           />
         </div>
@@ -54,19 +46,21 @@ const Section3 = () => {
         {/* Text */}
         <div className="order-1 md:order-2 max-w-sm mx-auto ">
           <h2 className="text-[32px] leading-[140%] font-semibold text-[#292321]">
-            Create Your Legacy
+            Assurance in Craft
           </h2>
           <p className="text-[16px] mt-6 leading-[140%] text-[#292321]">
-            We offer full customization for your timepiece—whether you want
-            meaningful imagery, intricate patterns, or something entirely your
-            own. Our engravings can be done on the{" "}
-            <span className="font-semibold">
-              case, bracelet, clasp, and case back
-            </span>
-            .
-          </p>
-          <p className="text-[16px] font-semibold leading-[140%] mt-4 text-[#9B8959]">
-            Your vision. Our craftsmanship. One timeless creation.
+            Your investment deserves protection. Our comprehensive warranty
+            covers{" "}
+            <span className=" font-bold">
+              {" "}
+              materials, workmanship, and coating durability
+            </span>{" "}
+            under normal use. As we operate our own in-house workshop, your
+            custom piece comes with a{" "}
+            <span className=" font-bold">
+              guarantee that replaces the original manufacturer’s warranty
+            </span>{" "}
+            —with craftsmanship you can count on.
           </p>
         </div>
       </div>

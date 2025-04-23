@@ -3,19 +3,19 @@ import React from "react";
 
 const features = [
   {
-    title: "Steel Mastery",
-    text: "Engraving 904L steel demands skill, precision, and time—resulting in artwork that’s permanent, precise, and impossibly difficult to replicate.",
-    image: "/Engraved/steel_mastery.png",
+    title: "Tactical Elegance",
+    text: "Originally engineered for the military—now redefined for collectors. DLC is where performance meets luxury.",
+    image: "/Custom/tactical_elegance.png",
   },
   {
-    title: "Personal Expression",
-    text: "From symbolic icons to sacred motifs, each engraving is a personal story—etched by hand, preserved in steel, and made timeless.",
-    image: "/Engraved/personal_expression.png",
+    title: "Engineered Protection",
+    text: "Stronger than steel, darker than night. Our DLC finish resists time, wear, and compromise.",
+    image: "/Custom/engineered_protection.png",
   },
   {
-    title: "Timeless Craft",
-    text: "We use traditional hand-engraving techniques, refined for modern luxury watches—ensuring every detail endures through wear, time, and generations.",
-    image: "/Engraved/timeless_craft.png",
+    title: "Guaranteed Excellence",
+    text: "Every HWC custom piece is backed by a comprehensive warranty— because excellence should never need disclaimers.",
+    image: "/Custom/guaranteed_excellence.png",
   },
 ];
 
@@ -25,20 +25,23 @@ const Section4 = () => {
       <div className="max-w-[1440px] mx-auto py-20 space-y-10 font-urbanist">
         {/* Header */}
         <div className="text-start">
-          <h2 className="text-[32px] leading-[140%] font-semibold mb-2 text-[#292321]">
-            Create Your Legacy
+          <h2 className="text-[32px] leading-[140%] font-semibold mb-1 text-[#292321]">
+            Assurance in Craft
           </h2>
-          <p className="text-[16px] font-semibold leading-[140%] text-[#9B8959]">
-            Your vision. Our craftsmanship. One timeless creation.
-          </p>
-          <p className="text-[16px] mt-6 leading-[140%] text-[#292321] max-w-3xl">
-            We offer full customization for your timepiece—whether you want
-            meaningful imagery, intricate patterns, or something entirely your
-            own. Our engravings can be done on the{" "}
-            <span className="font-semibold">
-              case, bracelet, clasp, and case back
-            </span>
-            .
+
+          <p className="text-[16px] mt-6 leading-[140%] text-[#292321] max-w-5xl">
+            Your investment deserves protection. Our comprehensive warranty
+            covers{" "}
+            <span className=" font-bold">
+              {" "}
+              materials, workmanship, and coating durability
+            </span>{" "}
+            under normal use. As we operate our own in-house workshop, your
+            custom piece comes with a{" "}
+            <span className=" font-bold">
+              guarantee that replaces the original manufacturer’s warranty
+            </span>{" "}
+            —with craftsmanship you can count on
           </p>
         </div>
 

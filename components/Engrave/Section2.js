@@ -8,10 +8,9 @@ const Section2 = () => {
         alt="Engraved Watch"
         layout="fill"
         objectFit="cover"
-        className="brightness-[0.7]"
       />
 
-      <div className="absolute inset-0 flex flex-col items-center justify-end pb-20 text-center px-5 sm:px-10">
+      <div className="absolute bg-gradient-to-t from-black/30 to-transparent inset-0 flex flex-col items-center justify-end pb-20 text-center px-5 sm:px-10">
         <h2 className="text-[32px] leading-[140%] mb-6 font-semibold text-white">
           Dedicated to Perfection
         </h2>

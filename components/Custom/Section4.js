@@ -3,19 +3,19 @@ import React from "react";
 
 const features = [
   {
-    title: "Tactical Elegance",
-    text: "Originally engineered for the military—now redefined for collectors. DLC is where performance meets luxury.",
-    image: "/Custom/tactical_elegance.png",
+    title: "Material Alchemy",
+    text: "Exclusive two-tone DLC and metal combinations—precision engineered, artistically finished, and impossible to replicate.",
+    image: "/Prestige/material_alchemy.png",
   },
   {
-    title: "Engineered Protection",
-    text: "Stronger than steel, darker than night. Our DLC finish resists time, wear, and compromise.",
-    image: "/Custom/engineered_protection.png",
+    title: "Luxury Reimagined",
+    text: "We elevate iconic timepieces with subtle power, rich tones, and custom enhancements that speak louder than logos.",
+    image: "/Prestige/luxury_reimagined.png",
   },
   {
-    title: "Guaranteed Excellence",
-    text: "Every HWC custom piece is backed by a comprehensive warranty— because excellence should never need disclaimers.",
-    image: "/Custom/guaranteed_excellence.png",
+    title: "Flawless Execution",
+    text: "Every detail—date wheel to dial—is perfected to achieve balance, sophistication, and a deeply personal form of luxury.",
+    image: "/Prestige/flawless_execution.png",
   },
 ];
 
@@ -26,27 +26,20 @@ const Section4 = () => {
         {/* Header */}
         <div className="text-start">
           <h2 className="text-[32px] leading-[140%] font-semibold mb-1 text-[#292321]">
-            Assurance in Craft
+            Craft Your Contrast
           </h2>
 
           <p className="text-[16px] mt-6 leading-[140%] text-[#292321] max-w-5xl">
-            Your investment deserves protection. Our comprehensive warranty
-            covers{" "}
-            <span className=" font-bold">
-              {" "}
-              materials, workmanship, and coating durability
-            </span>{" "}
-            under normal use. As we operate our own in-house workshop, your
-            custom piece comes with a{" "}
-            <span className=" font-bold">
-              guarantee that replaces the original manufacturer’s warranty
-            </span>{" "}
-            —with craftsmanship you can count on
+            The Prestige Collection is not just about finishing—it’s about
+            <span className=" font-bold">visionary customisation.</span> Whether
+            you desire timeless elegance or striking modernity, we blend
+            materials, coatings, and craftsmanship to create watches that are
+            unmistakably yours.
           </p>
         </div>
 
         {/* Cards */}
-        <div className=" flex flex-wrap justify-center gap-10 max-w-5xl mx-auto">
+        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-5xl mx-auto">
           {features.map((feature, index) => (
             <div
               key={index}
@@ -57,7 +50,7 @@ const Section4 = () => {
                 height={400}
                 src={feature.image}
                 alt={feature.title}
-                className="w-full max-w-md h-96 object-contain"
+                className="w-full max-w-md object-contain"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent px-4 py-6 transition-all duration-500 group-hover:py-8">
                 <h3 className="text-white font-semibold text-lg mb-2">

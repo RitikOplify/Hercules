@@ -4,7 +4,7 @@ const Section2 = () => {
   return (
     <div className="relative w-full h-[600px] overflow-hidden text-white">
       <Image
-        src="/Custom/custom_perfection.png"
+        src="/Prestige/prestige_perfection.png"
         alt="Engraved Watch"
         layout="fill"
         objectFit="cover"
@@ -15,14 +15,16 @@ const Section2 = () => {
           Dedicated to Perfection
         </h2>
         <p className="max-w-3xl text-[16px] leading-[140%] text-gray-100">
-          Not all DLC is created equal. At HWC, we’ve spent years refining our
-          approach to achieve what we believe is{" "}
+          This collection is the result of{" "}
           <span className=" font-bold">
-            the highest grade of DLC coating available.
+            relentless innovation and precision engineering.
           </span>{" "}
-          Each watch we treat merges{" "}
-          <span className=" font-bold">endurance and elegance</span>, engineered
-          to last and designed to turn heads.
+          After years of development and testing, we’ve achieved what others
+          have not—{" "}
+          <span className=" font-bold">
+            a seamless fusion of DLC with dual-tone customisation
+          </span>
+          , setting a new benchmark in luxury watch aesthetics.
         </p>
       </div>
     </div>

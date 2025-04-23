@@ -119,7 +119,7 @@ function Nav() {
 
                 {item.subNavs && (
                   <ul className="absolute left-0 top-full pt-4 -z-10 bg-white opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200">
-                    <div className="pb-5 pt-1 pl-5 pr-10">
+                    <div className="pb-5 pt-1 pl-5 pr-10 shadow-md">
                       {item.subNavs.map((subItem) => (
                         <li key={subItem.name}>
                           <Link

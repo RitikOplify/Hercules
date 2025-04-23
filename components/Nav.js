@@ -17,7 +17,16 @@ function Nav() {
     { name: "HOME", href: "/" },
     { name: "ABOUT US", href: "/about-us" },
     { name: "COLLECTION", href: "/collection" },
-    { name: "SERVICES", href: "/services" },
+    {
+      name: "SERVICES",
+      href: "/services",
+      subNavs: [
+        { name: "CUSTOM", href: "/custom" },
+        { name: "PRESTIGE", href: "/prestige" },
+        { name: "ENGRAVED", href: "/engraved-art" },
+        { name: "CONCEPT", href: "/concept" },
+      ],
+    },
     { name: "CONTACT", href: "/contact-us" },
   ];
 
@@ -78,7 +87,7 @@ function Nav() {
               className="object-contain h-6 md:h-[50px]"
             />
           </Link>
-          <ul className="hidden md:flex space-x-6 tracking-[1px] text-[#111]">
+          {/* <ul className="hidden md:flex space-x-6 tracking-[1px] text-[#111]">
             {navItems.map((item) => (
               <li key={item.name}>
                 <Link
@@ -93,7 +102,45 @@ function Nav() {
                 </Link>
               </li>
             ))}
+          </ul> */}
+          <ul className="hidden md:flex space-x-6 tracking-[1px] text-[#111] relative z-50">
+            {navItems.map((item) => (
+              <li key={item.name} className="relative group">
+                <Link
+                  href={item.href}
+                  className={`${
+                    pathname === item.href
+                      ? "border-b-2 border-gold text-gold pb-1"
+                      : ""
+                  } text-xs font-medium`}
+                >
+                  {item.name}
+                </Link>
+
+                {item.subNavs && (
+                  <ul className="absolute left-0 top-full pt-4 -z-10 bg-white opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200">
+                    <div className="pb-5 pt-1 pl-5 pr-10">
+                      {item.subNavs.map((subItem) => (
+                        <li key={subItem.name}>
+                          <Link
+                            href={subItem.href}
+                            className={`text-xs block ${
+                              pathname === subItem.href
+                                ? "border-b-2 border-gold text-gold"
+                                : ""
+                            } py-2`}
+                          >
+                            {subItem.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </div>
+                  </ul>
+                )}
+              </li>
+            ))}
           </ul>
+
           <div className="text-sm hidden md:flex items-center gap-1 text-[#111]">
             <IoCallOutline className="text-lg" /> +44-7969606568
           </div>

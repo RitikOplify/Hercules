@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -14,11 +14,36 @@ import Button from "../Button";
 export default function ShopGallery({ title }) {
   const shopRef = useRef([]);
   const cardRef = useRef([]);
+  const swiperRef = useRef(null); // Ref to store Swiper instance
+  const swiperContainerRef = useRef(null); // Ref to observe visibility
   useGsap(cardRef, {
     stagger: true,
   });
   useGsap(shopRef);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          swiperRef.current?.autoplay?.start();
+        } else {
+          swiperRef.current?.autoplay?.stop();
+        }
+      },
+      {
+        threshold: 0.3, // trigger when 30% is in view
+      }
+    );
 
+    if (swiperContainerRef.current) {
+      observer.observe(swiperContainerRef.current);
+    }
+
+    return () => {
+      if (swiperContainerRef.current) {
+        observer.unobserve(swiperContainerRef.current);
+      }
+    };
+  }, []);
   return (
     <div className=" bg-white">
       <div className="max-w-[1440px] mx-auto bg-[#fff] py-[120px] px-5 sm:px-10">
@@ -28,8 +53,11 @@ export default function ShopGallery({ title }) {
         >
           {title}
         </h2>
-        <div className=" pt-[80px]">
+        <div className=" pt-[80px]" ref={swiperContainerRef}>
           <Swiper
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
+            }}
             slidesPerView={3}
             spaceBetween={20}
             loop={true}

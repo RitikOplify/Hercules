@@ -1,7 +1,9 @@
 import Link from "next/link";
-import { FaFacebook, FaInstagram, FaX } from "react-icons/fa6";
+import { FaFacebook, FaInstagram, FaX, FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-[#292321] text-[#ccc]">
       <div className="font-urbanist text-[14px] leading-[1.4] tracking-[1px]">
@@ -105,7 +107,7 @@ const Footer = () => {
               <h4 className="text-[#9B8959] font-bold mb-[24px]">FOLLOW</h4>
               <div className="flex space-x-6 text-white text-[20px]">
                 <Link href="">
-                  <FaX />
+                  <FaXTwitter />
                 </Link>
                 <Link href="">
                   <FaFacebook />
@@ -119,7 +121,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t-[0.4px] border-[#9B8959] py-6 text-center text-[#ccc] text-sm px-5 sm:px-10">
-          Copyright © 2025 Hercules Watch Co | Terms & Condition
+          Copyright © {currentYear} Hercules Watch Co | Terms & Condition
         </div>
       </div>
     </footer>

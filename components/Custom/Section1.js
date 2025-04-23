@@ -5,7 +5,7 @@ const Section1 = () => {
   return (
     <div className="max-w-[1440px] bg-white mx-auto px-5 sm:px-10 py-20 space-y-20 font-urbanist">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        <div className=" max-w-sm mx-auto">
+        <div className=" max-w-sm sm:mx-auto">
           <h2 className="text-[32px] leading-[140%] font-semibold text-[#292321]">
             Custom Coating
           </h2>

@@ -1,14 +1,31 @@
+"use client";
+import useGsap from "@/useGsap";
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 
 const Section3 = () => {
+  const section3P1Ref = useRef([]);
+  useGsap(section3P1Ref, {
+    stagger: true,
+  });
+
+  const section3P2Ref = useRef([]);
+  useGsap(section3P2Ref, {
+    stagger: true,
+  });
   return (
     <div className="max-w-5xl bg-white mx-auto px-5 sm:px-10 py-20 space-y-10 font-urbanist">
       <div className=" text-center">
-        <h2 className="text-[32px] leading-[140%] font-semibold mb-6 text-[#292321]">
+        <h2
+          className="text-[32px] leading-[140%] font-semibold mb-6 text-[#292321]"
+          ref={(el) => (section3P1Ref.current[0] = el)}
+        >
           Introducing: King of Kings
         </h2>
-        <p className="text-[16px] leading-[140%] text-[#292321]">
+        <p
+          className="text-[16px] leading-[140%] text-[#292321]"
+          ref={(el) => (section3P1Ref.current[1] = el)}
+        >
           Our debut engraving piece,{" "}
           <span className="italic">King of Kings</span>, took{" "}
           <span className="font-semibold">eight months</span> from concept to
@@ -30,6 +47,7 @@ const Section3 = () => {
           className="w-full max-w-[580px]"
           src="/Engraved/king_of_kings.png"
           alt="Rolex watch"
+          ref={(el) => (section3P2Ref.current[0] = el)}
         />
 
         <Image
@@ -38,6 +56,7 @@ const Section3 = () => {
           className="w-full max-w-[580px]"
           src="/Engraved/crown_of_thorns.png"
           alt="Rolex watch"
+          ref={(el) => (section3P2Ref.current[1] = el)}
         />
       </div>
     </div>

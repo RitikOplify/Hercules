@@ -1,5 +1,7 @@
+"use client";
+import useGsap from "@/useGsap";
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 
 const features = [
   {
@@ -20,18 +22,35 @@ const features = [
 ];
 
 const Section4 = () => {
+  const section4P1Ref = useRef([]);
+  useGsap(section4P1Ref, {
+    stagger: true,
+  });
+
+  const section4P2Ref = useRef([]);
+  useGsap(section4P2Ref, {
+    stagger: true,
+  });
   return (
     <div className="bg-[#F0F0F0] px-5 sm:px-10">
       <div className="max-w-[1440px] mx-auto py-20 space-y-10 font-urbanist">
-        {/* Header */}
         <div className="text-center">
-          <h2 className="text-[32px] leading-[140%] font-semibold mb-2 text-[#292321]">
+          <h2
+            className="text-[32px] leading-[140%] font-semibold mb-2 text-[#292321]"
+            ref={(el) => (section4P1Ref.current[0] = el)}
+          >
             Create Your Legacy
           </h2>
-          <p className="text-[16px] font-semibold leading-[140%] text-[#9B8959]">
+          <p
+            className="text-[16px] font-semibold leading-[140%] text-[#9B8959]"
+            ref={(el) => (section4P1Ref.current[1] = el)}
+          >
             Your vision. Our craftsmanship. One timeless creation.
           </p>
-          <p className="text-[16px] mt-6 leading-[140%] text-[#292321] mx-auto max-w-5xl">
+          <p
+            className="text-[16px] mt-6 leading-[140%] text-[#292321] mx-auto max-w-5xl"
+            ref={(el) => (section4P1Ref.current[2] = el)}
+          >
             We offer full customization for your timepiece—whether you want
             meaningful imagery, intricate patterns, or something entirely your
             own. Our engravings can be done on the{" "}
@@ -42,12 +61,12 @@ const Section4 = () => {
           </p>
         </div>
 
-        {/* Cards */}
         <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-5xl mx-auto">
           {features.map((feature, index) => (
             <div
               key={index}
               className="relative group overflow-hidden cursor-pointer"
+              ref={(el) => (section4P2Ref.current[index] = el)}
             >
               <Image
                 width={400}

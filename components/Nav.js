@@ -181,7 +181,7 @@ function Nav() {
                                   pathname === subItem.href
                                     ? "border-b-2 border-gold text-gold"
                                     : ""
-                                } text-xs mt-4 font-medium tracking-[1px]`}
+                                } text-xs mt-3 font-medium tracking-[1px]`}
                               >
                                 {subItem.name}
                               </Link>

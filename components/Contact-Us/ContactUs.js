@@ -10,11 +10,10 @@ import Image from "next/image";
 import Button from "../Button";
 const ContactForm = () => {
   const contactRef = useRef([]);
-  const getInTouchRef = useRef([]);
-  useGsap(getInTouchRef, {
+  useGsap(contactRef, {
     stagger: true,
   });
-  useGsap(contactRef);
+
   const {
     register,
     handleSubmit,
@@ -36,9 +35,10 @@ const ContactForm = () => {
       />
       <div className=" bg-white ">
         <div className="bg-white font-urbanist max-w-[1440px] mx-auto text-[#292321] py-[120px] px-5 sm:px-10 md:px-[60px] lg:px-[120px]">
-          {/* Top Section */}
-          <div className="flex flex-col lg:flex-row justify-between gap-16">
-            {/* Left Side - Info */}
+          <div
+            className="flex flex-col lg:flex-row justify-between gap-16"
+            ref={(el) => (contactRef.current[0] = el)}
+          >
             <div className="flex-1">
               <p className="text-[24px] font-regular leading-[140%] tracking-[0.6px] mb-20 text-[#292321]">
                 Have a question about <br /> Hercules products or services?
@@ -77,14 +77,12 @@ const ContactForm = () => {
               </div>
             </div>
 
-            {/* Right Side - Form */}
             <div className="flex-1">
               <h2 className="text-[28px] font-semibold mb-10 text-[#292321]">
                 Let Us Contact You
               </h2>
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-                {/* Name */}
                 <div>
                   <label className="block text-[13px] font-medium tracking-[1px] mb-2">
                     Your Name *
@@ -102,7 +100,6 @@ const ContactForm = () => {
                   )}
                 </div>
 
-                {/* Email */}
                 <div>
                   <label className="block text-[13px] font-medium tracking-[1px] mb-2">
                     Your Email *
@@ -126,7 +123,6 @@ const ContactForm = () => {
                   )}
                 </div>
 
-                {/* Subject */}
                 <div>
                   <label className="block text-[13px] font-medium tracking-[1px] mb-2">
                     Subject *
@@ -146,7 +142,6 @@ const ContactForm = () => {
                   )}
                 </div>
 
-                {/* Message */}
                 <div>
                   <label className="block text-[13px] font-medium tracking-[1px] mb-2">
                     Message *
@@ -165,7 +160,6 @@ const ContactForm = () => {
                     </p>
                   )}
                 </div>
-
                 <div className="pt-9">
                   <Button
                     text={"Send My Message"}
@@ -177,8 +171,9 @@ const ContactForm = () => {
             </div>
           </div>
         </div>
-        <div className="w-full">
+        <div className="w-full overflow-hidden">
           <Image
+            ref={(el) => (contactRef.current[1] = el)}
             src="/Images/location.png"
             width={1440}
             height={300}

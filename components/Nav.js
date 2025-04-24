@@ -112,7 +112,7 @@ function Nav() {
                     pathname === item.href
                       ? "border-b-2 border-gold text-gold pb-1"
                       : ""
-                  } text-xs font-medium`}
+                  } text-xs font-medium tracking-[1px]`}
                 >
                   {item.name}
                 </Link>
@@ -128,7 +128,7 @@ function Nav() {
                               pathname === subItem.href
                                 ? "border-b-2 border-gold text-gold"
                                 : ""
-                            } py-2`}
+                            } py-2 text-xs font-medium tracking-[1px]`}
                           >
                             {subItem.name}
                           </Link>
@@ -171,6 +171,24 @@ function Nav() {
                       >
                         {item.name}
                       </Link>
+                      {item.subNavs && (
+                        <ul className=" pl-4">
+                          {item.subNavs.map((subItem) => (
+                            <li key={subItem.name}>
+                              <Link
+                                href={subItem.href}
+                                className={`text-xs block w-fit ${
+                                  pathname === subItem.href
+                                    ? "border-b-2 border-gold text-gold"
+                                    : ""
+                                } text-xs mt-4 font-medium tracking-[1px]`}
+                              >
+                                {subItem.name}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </li>
                   ))}
                 </ul>

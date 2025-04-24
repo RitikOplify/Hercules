@@ -28,28 +28,55 @@ function Section2() {
         </div>
         <div className="w-full md:w-1/2 flex flex-col items-start">
           <div className="mt-10 md:mt-0 mx-auto">
-            <h3
-              className=" text-[32px] font-semibold mb-6 text-[#111]"
+            <h2
+              className="font-urbanist text-[32px] font-semibold text-[#292321]"
               ref={(el) => (section2Ref.current[1] = el)}
             >
-              We Got Something For Everyone
-            </h3>
+              Who We Create
+            </h2>
+
             <p
-              className="mb-8 text-base text-[#292321] leading-[140%] tracking-[0.6px] font-medium max-w-sm"
+              className="text-[16px] font-semibold leading-[140%] mt-2 text-[#9B8959]"
               ref={(el) => (section2Ref.current[2] = el)}
             >
-              We are the first company to be able to offer a selection of 2
-              colour combination watches, unique to the industry. Our closely
-              guarded production techniques allow us to create watches as
-              individual as you are.
+              Timepieces Reimagined. Uniquely Yours.
             </p>
 
-            <Button
-              color={"white"}
-              text={"DISCOVER"}
-              className={"mt-8 bg-[#111]"}
+            <p
+              className="font-urbanist text-[18px] font-medium text-[#292321] leading-[140%] tracking-[0.6px] mt-6"
               ref={(el) => (section2Ref.current[3] = el)}
-            />
+            >
+              At Hercules Watch Co., we are an independent company built on over
+              a century of combined watchmaking expertise. Our team of expert
+              technicians, skilled engravers, master dial artisans, and
+              specialists in high-end retail bring together the best of
+              horological tradition and contemporary creativity.
+            </p>
+
+            <p
+              className="font-urbanist text-[18px] font-medium text-[#292321] leading-[140%] tracking-[0.6px] mt-6"
+              ref={(el) => (section2Ref.current[4] = el)}
+            >
+              Every watch we create is more than a timekeeper — it’s a bespoke
+              piece of art. Whether it’s a full custom build or a carefully
+              restored classic, our in-house teams collaborate across
+              disciplines to ensure no two Hercules timepieces are ever the
+              same.
+            </p>
+            <p
+              className="font-urbanist text-[18px] font-medium text-[#292321] leading-[140%] tracking-[0.6px] mt-6"
+              ref={(el) => (section2Ref.current[5] = el)}
+            >
+              From textured dials hand-painted by artisans to precision
+              engraving and personalised modifications, each detail is crafted
+              to tell a story — yours.
+            </p>
+            <p
+              ref={(el) => (section2Ref.current[6] = el)}
+              className="text-[16px] font-semibold leading-[140%] mt-6 text-[#9B8959]"
+            >
+              One vision. One watch. One of a kind.
+            </p>
           </div>
         </div>
       </div>

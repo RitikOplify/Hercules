@@ -4,6 +4,7 @@ import React from "react";
 import Section1 from "./Section1";
 import Section2 from "./Section2";
 import Section3 from "./Section3";
+import OurValues from "./OurValues";
 
 function AboutUs() {
   return (
@@ -17,6 +18,7 @@ function AboutUs() {
       />
       <Section1 />
       <Section2 />
+      <OurValues />
       <Section3 />
     </>
   );

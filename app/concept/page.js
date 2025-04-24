@@ -10,7 +10,7 @@ function page() {
     <>
       <div className=" relative">
         <Image
-          src="/Prestige/banner_prestige.png"
+          src="/Concept/concept_banner.jpg"
           height={400}
           width={1440}
           alt="banner"

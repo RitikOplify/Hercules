@@ -24,7 +24,7 @@ const Section1 = () => {
 
         <div className="flex justify-center">
           <Image
-            src="/Prestige/prestige_collection.png"
+            src="/Concept/concept_01.jpg"
             alt="Rolex watch"
             width={580}
             height={580}
@@ -39,7 +39,7 @@ const Section1 = () => {
             width={580}
             height={580}
             className="w-full max-w-[580px]"
-            src="/Prestige/signature_fusion.png"
+            src="/Concept/ym_II_wrist_black.jpg"
             alt="Rolex watch"
           />
         </div>

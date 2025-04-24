@@ -4,7 +4,7 @@ const Section2 = () => {
   return (
     <div className="relative w-full h-[600px] overflow-hidden text-white">
       <Image
-        src="/Prestige/prestige_perfection.png"
+        src="/Concept/concept_perfection.jpg"
         alt="Engraved Watch"
         layout="fill"
         objectFit="cover"

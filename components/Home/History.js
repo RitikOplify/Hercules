@@ -63,9 +63,9 @@ function History() {
         <div className=" w-full md:w-1/2 pb-[120px] pt-0 md:pt-[120px] my-auto">
           <h2
             ref={(el) => (historyRef.current[0] = el)}
-            className="text-4xl text-start font-medium text-[#9B8959] mb-6"
+            className="text-[32px] font-semibold mb-6 text-start text-[#9B8959]"
           >
-            HISTORY OF HERITAGE
+            History of Heritage
           </h2>
           <p
             ref={(el) => (historyRef.current[1] = el)}

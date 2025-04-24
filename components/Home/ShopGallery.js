@@ -49,11 +49,11 @@ export default function ShopGallery({ title }) {
       <div className="max-w-[1440px] mx-auto bg-[#fff] py-[120px] px-5 sm:px-10">
         <h2
           ref={(el) => (shopRef.current[0] = el)}
-          className=" text-center font-medium text-gold text-2xl"
+          className=" text-[32px] font-semibold text-center text-gold"
         >
           {title}
         </h2>
-        <div className=" pt-[80px]" ref={swiperContainerRef}>
+        <div className=" pt-[60px]" ref={swiperContainerRef}>
           <Swiper
             onSwiper={(swiper) => {
               swiperRef.current = swiper;

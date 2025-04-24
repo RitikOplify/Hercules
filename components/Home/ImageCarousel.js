@@ -8,7 +8,6 @@ import "swiper/css/pagination";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa6";
 import { useRef } from "react";
 import useGsap from "@/useGsap";
-import collections from "@/collections";
 import Image from "next/image";
 
 export default function ResponsiveCarousel() {
@@ -34,6 +33,12 @@ export default function ResponsiveCarousel() {
     "/ImageCarousel/Img_268.png",
     "/ImageCarousel/IMG_1324.png",
     "/ImageCarousel/IMG_1185.png",
+    "/ImageCarousel/air_king_black.jpg",
+    "/ImageCarousel/air_king_purplue.jpg",
+    "/ImageCarousel/engraved_rolex.jpg",
+    "/ImageCarousel/hercules_3_watches.jpg",
+    "/ImageCarousel/hercules_concept.jpg",
+    "/ImageCarousel/perpetual.jpg",
   ];
 
   return (

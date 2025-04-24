@@ -12,21 +12,21 @@ function Section2() {
   return (
     <section className=" bg-img">
       <div
-        className="mx-auto flex-col flex md:flex-row items-center md:h-[calc(100vh-56.67px)]
+        className="mx-auto flex-col flex md:flex-row items-center 
      justify-center px-5 gap-10 sm:px-10 py-20"
       >
-        <div className="w-full md:w-1/2 h-full flex justify-center">
+        <div className="w-full md:w-2/5 h-full flex justify-center">
           <Image
             src="/Images/yatch_master_2.png"
             alt="Luxury Watch"
             width={800}
             height={600}
             priority
-            className="object-contain h-full"
+            className="object-contain md:h-[70vh]"
             ref={(el) => (section2Ref.current[0] = el)}
           />
         </div>
-        <div className="w-full md:w-1/2 flex flex-col items-start">
+        <div className="w-full md:w-3/5 flex flex-col items-start">
           <div className="mt-10 md:mt-0 mx-auto">
             <h2
               className="font-urbanist text-[32px] font-semibold text-[#292321]"
@@ -43,7 +43,7 @@ function Section2() {
             </p>
 
             <p
-              className="font-urbanist text-[18px] font-medium text-[#292321] leading-[140%] tracking-[0.6px] mt-6"
+              className="font-urbanist text-[16px] font-medium text-[#292321] leading-[140%] tracking-[0.6px] mt-6"
               ref={(el) => (section2Ref.current[3] = el)}
             >
               At Hercules Watch Co., we are an independent company built on over
@@ -54,7 +54,7 @@ function Section2() {
             </p>
 
             <p
-              className="font-urbanist text-[18px] font-medium text-[#292321] leading-[140%] tracking-[0.6px] mt-6"
+              className="font-urbanist text-[16px] font-medium text-[#292321] leading-[140%] tracking-[0.6px] mt-6"
               ref={(el) => (section2Ref.current[4] = el)}
             >
               Every watch we create is more than a timekeeper — it’s a bespoke
@@ -64,7 +64,7 @@ function Section2() {
               same.
             </p>
             <p
-              className="font-urbanist text-[18px] font-medium text-[#292321] leading-[140%] tracking-[0.6px] mt-6"
+              className="font-urbanist text-[16px] font-medium text-[#292321] leading-[140%] tracking-[0.6px] mt-6"
               ref={(el) => (section2Ref.current[5] = el)}
             >
               From textured dials hand-painted by artisans to precision

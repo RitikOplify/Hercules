@@ -11,7 +11,7 @@ function Section3() {
   return (
     <section className=" bg-white">
       <div
-        className="mx-auto flex-col-reverse flex md:flex-row items-center md:h-[calc(100vh-56.67px)]
+        className="mx-auto flex-col-reverse flex md:flex-row items-center
 justify-center px-5 gap-10 sm:px-10 py-20"
       >
         <div className="w-full md:w-1/2 flex flex-col items-start">
@@ -30,7 +30,10 @@ justify-center px-5 gap-10 sm:px-10 py-20"
               More Than Minutes. A Lifetime in Every Tick.
             </p>
 
-            <div className=" mt-6 max-w-lg" ref={(el) => (section3Ref.current[3] = el)}>
+            <div
+              className=" mt-6 max-w-lg"
+              ref={(el) => (section3Ref.current[3] = el)}
+            >
               <h4 className="text-md font-semibold text-gray-800 mb-2">
                 To us, a watch is:
               </h4>
@@ -53,7 +56,7 @@ justify-center px-5 gap-10 sm:px-10 py-20"
               </ul>
             </div>
             <p
-              className="font-urbanist text-[18px] font-medium text-[#292321] leading-[140%] tracking-[0.6px] mt-6"
+              className="font-urbanist text-[16px] font-medium text-[#292321] leading-[140%] tracking-[0.6px] mt-6 max-w-lg"
               ref={(el) => (section3Ref.current[4] = el)}
             >
               Every timepiece tells a story. We’re here to preserve it, enhance
@@ -63,12 +66,12 @@ justify-center px-5 gap-10 sm:px-10 py-20"
         </div>
         <div className="w-full md:w-1/2 h-full flex justify-center">
           <Image
-            src="/Images/Omega Skull face.png"
+            src="/Images/GMT Master II final 2.jpg"
             alt="Luxury Watch"
             width={800}
             height={600}
             priority
-            className="object-contain h-full"
+            className="object-contain"
             ref={(el) => (section3Ref.current[0] = el)}
           />
         </div>

@@ -46,7 +46,7 @@ function Section1() {
             </p>
 
             <p
-              className="font-urbanist text-[18px] font-medium text-[#292321] leading-[140%] tracking-[0.6px] mt-6"
+              className="font-urbanist text-[16px] font-medium text-[#292321] leading-[140%] tracking-[0.6px] mt-6"
               ref={(el) => (section1Ref.current[4] = el)}
             >
               At <span className=" font-bold">Hercules Watch Co.</span>, we
@@ -58,7 +58,7 @@ function Section1() {
             </p>
 
             <p
-              className="font-urbanist text-[18px] font-medium text-[#292321] leading-[140%] tracking-[0.6px] mt-6"
+              className="font-urbanist text-[16px] font-medium text-[#292321] leading-[140%] tracking-[0.6px] mt-6"
               ref={(el) => (section1Ref.current[5] = el)}
             >
               With a legacy of precision and passion, we specialise in high-end
@@ -68,7 +68,7 @@ function Section1() {
               watchmaking artistry with cutting-edge technology.
             </p>
             <p
-              className="font-urbanist text-[18px] font-medium text-[#292321] leading-[140%] tracking-[0.6px] mt-6"
+              className="font-urbanist text-[16px] font-medium text-[#292321] leading-[140%] tracking-[0.6px] mt-6"
               ref={(el) => (section1Ref.current[6] = el)}
             >
               From full overhauls to custom engravings, each service is carried

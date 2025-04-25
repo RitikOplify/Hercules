@@ -73,7 +73,7 @@ function Nav() {
   return (
     <>
       <nav ref={navRef} className="bg-white z-20 fixed w-full border-b-[1px]">
-        <div className="flex px-5 sm:px-10 bg-white relative justify-between mx-auto items-center py-4 ">
+        <div className="flex px-5 sm:px-10 bg-white relative justify-between mx-auto items-center py-2 md:py-4 ">
           <div className=" hidden md:flex"></div>
           <Link
             href={"/"}

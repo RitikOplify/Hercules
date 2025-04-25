@@ -9,13 +9,21 @@ import OurValues from "./OurValues";
 function AboutUs() {
   return (
     <>
-      <Image
-        src="/Images/about_banner.png"
-        height={400}
-        width={1440}
-        alt="banner"
-        className="w-full"
-      />
+      <div className=" relative">
+        <Image
+          src="/Images/about_banner.png"
+          height={400}
+          width={1440}
+          alt="banner"
+          className="w-full"
+        />
+        <div className="absolute left-5 md:left-10 lg:left-20 top-0 w-1/2 flex items-center h-full">
+          <h2 className="hidden md:block text-2xl lg:text-4xl font-gelasio text-white font-normal max-w-xs lg:max-w-sm">
+            Bespoke timepieces to suit the individual. For those who
+            prefer to be different.
+          </h2>
+        </div>
+      </div>
       <Section1 />
       <Section2 />
       <OurValues />

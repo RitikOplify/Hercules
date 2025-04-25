@@ -15,38 +15,52 @@ function History() {
 
   useEffect(() => {
     const video = videoRef.current;
+    if (!video) return;
 
-    // Make sure video is paused initially
-    if (video) {
-      video.pause();
-    }
+    video.pause();
 
-    const scrollTrigger = ScrollTrigger.create({
+    let isPlaying = false;
+    let playTimeout, pauseTimeout;
+
+    const safePlay = () => {
+      clearTimeout(pauseTimeout);
+      playTimeout = setTimeout(() => {
+        if (!isPlaying) {
+          video.play().catch((e) => console.warn("Play failed", e));
+          isPlaying = true;
+        }
+      }, 100);
+    };
+
+    const safePause = () => {
+      clearTimeout(playTimeout);
+      pauseTimeout = setTimeout(() => {
+        if (isPlaying) {
+          video.pause();
+          isPlaying = false;
+        }
+      }, 100);
+    };
+
+    const trigger = ScrollTrigger.create({
       trigger: video,
-      start: "top 80%", // start when top of video is 80% from viewport top
-      end: "bottom 20%", // end when bottom of video is 20% from viewport top
-      onEnter: () => {
-        video.play();
-      },
-      onLeave: () => {
-        video.pause();
-      },
-      onEnterBack: () => {
-        video.play();
-      },
-      onLeaveBack: () => {
-        video.pause();
-      },
-      markers: false, // set to true for debugging
+      start: "top 80%",
+      end: "bottom 20%",
+      onEnter: safePlay,
+      onLeave: safePause,
+      onEnterBack: safePlay,
+      onLeaveBack: safePause,
+      markers: false,
     });
 
     return () => {
-      if (video) {
-        video.pause();
-      }
-      scrollTrigger.kill();
+      clearTimeout(playTimeout);
+      clearTimeout(pauseTimeout);
+      video.pause();
+      trigger.kill();
     };
   }, []);
+
   return (
     <section className="bg-black text-center  px-5 sm:px-10">
       <div className=" max-w-[1440px] mx-auto flex flex-col md:flex-row">

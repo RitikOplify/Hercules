@@ -17,6 +17,7 @@ Hercules, custom isn’t a finish — it’s a philosophy. And
 every piece in this collection is a reflection of that belief."
         imageSrc="/Watch/i9.png"
         reverseLayout={false}
+        url={"/custom"}
       />
       <SectionCard
         title="The Prestige Collection"
@@ -29,10 +30,11 @@ signature Prestige Collection was born"
         }
         imageSrc="/Images/prestige.png"
         reverseLayout={true}
+        url={"/prestige"}
       />
 
       <SectionCard
-        title="The Custom Collection"
+        title="The Concept  Collection"
         description="At Hercules, nothing excites us more than a blank
 canvas. The Concept Collection is where imagination
 meets craftsmanship, offering you the freedom to
@@ -42,6 +44,7 @@ create something truly one of a kind."
         }
         imageSrc="/Watch/Concept.png"
         reverseLayout={false}
+        url={"/concept"}
       />
       <SectionCard
         title="The Engraved Collection"
@@ -56,6 +59,7 @@ they’re legacies on your wrist. This is watchmaking at its
 most personal."
         imageSrc="/Images/engraved_art.png"
         reverseLayout={true}
+        url={"/engraved-art"}
       />
     </>
   );

@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import useGsap from "@/useGsap";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,6 +16,7 @@ const SectionCard = ({
   imageSrc,
   reverseLayout,
   description2,
+  url,
 }) => {
   const sectionRef = useRef([]);
   useGsap(sectionRef, { stagger: true });
@@ -62,13 +64,14 @@ const SectionCard = ({
                 {description2}
               </p>
             </div>
-            <button
+            <Link
+              href={url}
               ref={(el) => (sectionRef.current[3] = el)}
               className={`flex gap-2 items-center text-[#9B8959] text-xs tracking-[2px] font-semibold`}
               aria-label={`Explore more about ${title}`}
             >
               <IoIosArrowForward /> EXPLORE MORE
-            </button>
+            </Link>
           </div>
         </div>
       </div>

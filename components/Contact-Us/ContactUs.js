@@ -18,6 +18,7 @@ const ContactForm = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
@@ -33,9 +34,10 @@ const ContactForm = () => {
     if (response.ok) {
       reset();
       toast.dismiss(loading);
-      toast.success("Email sent successfully!");
+      toast.success(
+        "Thank you for contacting us! We'll get back to you shortly."
+      );
     } else {
-      reset();
       toast.dismiss(loading);
       toast.error("Failed to send email.");
     }

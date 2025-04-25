@@ -15,7 +15,7 @@ const WatchLandingPage = () => {
   return (
     <section className=" bg-img">
       <div
-        className="mx-auto flex-col-reverse flex md:flex-row items-center md:h-[calc(100vh-56.67px)]
+        className="mx-auto flex-col-reverse flex md:flex-row items-center md:h-screen
  justify-center px-5 gap-10 sm:px-10 py-20"
       >
         <div className="w-full md:w-1/2 flex flex-col items-start">

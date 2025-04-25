@@ -12,7 +12,7 @@ function Nav() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const navRef = useRef(null);
-  const logoRef = useRef(null);
+
   const navItems = [
     { name: "HOME", href: "/" },
     { name: "ABOUT US", href: "/about-us" },
@@ -32,7 +32,7 @@ function Nav() {
 
   useEffect(() => {
     const nav = navRef.current;
-    let lastDirection = -1; // Track last scroll direction
+    let lastDirection = -1;
 
     const scrollTrigger = ScrollTrigger.create({
       trigger: document.body,
@@ -72,8 +72,11 @@ function Nav() {
 
   return (
     <>
-      <nav ref={navRef} className="bg-white z-20 fixed w-full border-b-[1px]">
-        <div className="flex px-5 sm:px-10 bg-white relative justify-between mx-auto items-center py-2 md:py-4 ">
+      <nav
+        ref={navRef}
+        className="fixed w-full z-20  backdrop-blur-[35px] bg-white/20"
+      >
+        <div className="flex px-5 sm:px-10 relative justify-between mx-auto items-center py-2 md:py-4 ">
           <div className=" hidden md:flex"></div>
           <Link
             href={"/"}
@@ -93,26 +96,22 @@ function Nav() {
                 <Link
                   href={item.href}
                   className={`${
-                    pathname === item.href
-                      ? "border-b-2 border-gold text-gold pb-1"
-                      : ""
+                    pathname === item.href ? " text-gold pb-1" : ""
                   } text-xs font-medium tracking-[1px]`}
                 >
                   {item.name}
                 </Link>
 
                 {item.subNavs && (
-                  <ul className="absolute left-0 top-full pt-4 -z-10 bg-white opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200">
-                    <div className="pb-5 pt-1 pl-5 pr-10 shadow-md">
+                  <ul className="absolute left-0 top-full -z-10 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200">
+                    <div className=" mt-4 pb-5 pt-1 pl-5 pr-10 shadow-md bg-white">
                       {item.subNavs.map((subItem) => (
                         <li key={subItem.name}>
                           <Link
                             href={subItem.href}
                             className={`text-xs block ${
-                              pathname === subItem.href
-                                ? "border-b-2 border-gold text-gold"
-                                : ""
-                            } py-2 text-xs font-medium tracking-[1px]`}
+                              pathname === subItem.href ? "text-gold" : ""
+                            } mt-4 text-xs font-medium tracking-[1px]`}
                           >
                             {subItem.name}
                           </Link>
@@ -131,7 +130,7 @@ function Nav() {
 
           {menuOpen && (
             <div
-              className="md:hidden absolute left-0 flex justify-end w-screen bg-black bg-opacity-15 top-[56.67px]"
+              className="md:hidden absolute left-0 flex justify-end w-screen bg-black bg-opacity-15 top-[56px]"
               onClick={() => {
                 setMenuOpen(false);
               }}
@@ -148,9 +147,7 @@ function Nav() {
                       <Link
                         href={item.href}
                         className={`${
-                          pathname === item.href
-                            ? "border-b-2 border-gold text-gold pb-1"
-                            : ""
+                          pathname === item.href ? "text-gold pb-1" : ""
                         } text-xs font-medium tracking-[1px]`}
                       >
                         {item.name}
@@ -207,7 +204,7 @@ function Nav() {
           </button>
         </div>
       </nav>
-      <div className=" h-[56.67px] w-full bg-white -z-10"></div>
+      {/* <div className=" h-[56.67px] w-full -z-10"></div> */}
     </>
   );
 }

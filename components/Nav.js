@@ -74,7 +74,7 @@ function Nav() {
     <>
       <nav
         ref={navRef}
-        className="fixed w-full z-20  backdrop-blur-[35px] bg-white/20"
+        className="fixed w-full z-20 backdrop-blur-[35px] bg-white/20"
       >
         <div className="flex px-5 sm:px-10 relative justify-between mx-auto items-center py-2 md:py-4 ">
           <div className=" hidden md:flex"></div>
@@ -96,7 +96,7 @@ function Nav() {
                 <Link
                   href={item.href}
                   className={`${
-                    pathname === item.href ? " font-bold pb-1" : ""
+                    pathname === item.href ? " font-semibold pb-1" : ""
                   } text-xs text-gold font-medium tracking-[1px]`}
                 >
                   {item.name}
@@ -110,7 +110,7 @@ function Nav() {
                           <Link
                             href={subItem.href}
                             className={`text-xs block ${
-                              pathname === subItem.href ? " font-bold" : ""
+                              pathname === subItem.href ? " font-semibold" : ""
                             } mt-4 text-xs text-gold font-medium tracking-[1px]`}
                           >
                             {subItem.name}
@@ -124,7 +124,7 @@ function Nav() {
             ))}
           </ul>
 
-          <div className="text-sm hidden md:flex items-center gap-1 text-[#111]">
+          <div className="text-sm hidden md:flex items-center gap-1 text-gold">
             <IoCallOutline className="text-lg" /> +44-7969606568
           </div>
 

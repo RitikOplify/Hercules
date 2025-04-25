@@ -2,16 +2,7 @@ import nodemailer from "nodemailer";
 
 export async function POST(req) {
   try {
-    const {
-      company,
-      email,
-      fullName,
-      location,
-      message,
-      phone,
-      subject,
-      customer,
-    } = await req.json();
+    const { name, email, subject, message } = await req.json();
 
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
@@ -24,100 +15,36 @@ export async function POST(req) {
     });
 
     const mailOptions = {
-      from: process.env.EMAIL_USER,
+      from: `"${name}" <${email}>`,
       to: process.env.EMAIL_USER,
-      subject: `
-          Contact Us Inquiry: ${subject}`,
+      subject: `Contact Us Inquiry: ${subject}`,
       html: `
-   <!DOCTYPE html>
-      <html>
-      <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Contact Form Submission</title>
-          <style>
-              body {
-                  font-family: Arial, sans-serif;
-                  background-color: #f4f4f4;
-                  padding: 20px;
-              }
-              .container {
-                  max-width: 600px;
-                  margin: auto;
-                  background: #ffffff;
-                  padding: 20px;
-                  border-radius: 8px;
-                  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-              }
-              h2 {
-                  color: #333;
-                  text-align: start;
-              }
-              .field {
-                  margin-bottom: 15px;
-              }
-              .field strong {
-                  color: #555;
-              }
-              .footer {
-                  text-align: center;
-                  margin-top: 20px;
-                  font-size: 12px;
-                  color: #888;
-              }
-          </style>
-      </head>
-      <body>
-          <div class="container">
-              <h2>${
-                customer
-                  ? "New Request A Quote Form Submission"
-                  : "New Contact Form Submission"
-              }</h2>
-              
-              <div class="field"><strong>Full Name:</strong> ${fullName}</div>
-              <div class="field"><strong>Email:</strong> ${email}</div>
-              <div class="field"><strong>Phone Number:</strong> ${phone}</div>
-              <div class="field"><strong>Company Name:</strong> ${
-                company || "N/A"
-              }</div>
-
-              ${
-                location
-                  ? `<div class="field"><strong>Location:</strong> ${location}</div>`
-                  : ""
-              }
-              
-              <div class="field"><strong>Subject:</strong> ${subject}</div>
-
-              ${
-                customer
-                  ? `<div class="field"><strong>Are You a Current Customer?:</strong> ${customer}</div>`
-                  : ""
-              }
-<div class="field"><strong>Message:</strong> ${message}</div>
-             
-
-              <div class="footer">This is an automated email. Please do not reply.</div>
-          </div>
-      </body>
-      </html>
-    `,
+        <h2>New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Subject:</strong> ${subject}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
+      `,
     };
 
     await transporter.sendMail(mailOptions);
 
     return new Response(
-      JSON.stringify({ message: "Email Sent Successfully" }),
-      {
-        status: 200,
-      }
+      JSON.stringify({
+        message: "Thank you for contacting us! We'll get back to you shortly.",
+      }),
+      { status: 200 }
     );
   } catch (error) {
-    console.error("Error Sending Email:", error);
+    console.error("Error sending email:", error);
 
-    return new Response(JSON.stringify({ error: "Failed To Send Email" }), {
-      status: 500,
-    });
+    return new Response(
+      JSON.stringify({
+        error:
+          "Something went wrong while sending your message. Please try again later.",
+      }),
+      { status: 500 }
+    );
   }
 }

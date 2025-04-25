@@ -8,6 +8,7 @@ import { HiOutlineLocationMarker } from "react-icons/hi";
 import useGsap from "@/useGsap";
 import Image from "next/image";
 import Button from "../Button";
+import toast from "react-hot-toast";
 const ContactForm = () => {
   const contactRef = useRef([]);
   useGsap(contactRef, {
@@ -20,8 +21,24 @@ const ContactForm = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    const loading = toast.loading("Sending Mail");
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    if (response.ok) {
+      reset();
+      toast.dismiss(loading);
+      toast.success("Email sent successfully!");
+    } else {
+      reset();
+      toast.dismiss(loading);
+      toast.error("Failed to send email.");
+    }
   };
 
   return (

@@ -2,6 +2,7 @@ import { Gelasio, Urbanist } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { Toaster } from "react-hot-toast";
 
 const gelasio = Gelasio({
   variable: "--font-gelasio",
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
       >
         <Nav />
         {children}
+        <Toaster />
         <Footer />
       </body>
     </html>

@@ -77,32 +77,16 @@ function Nav() {
           <div className=" hidden md:flex"></div>
           <Link
             href={"/"}
-            className="static md:absolute h-6 overflow-hidden top-5 sm:left-10 md:h-20 md:w-20 sm:bg-black md:rounded-full flex items-center justify-center"
+            className="static md:absolute overflow-hidden top-4 left-5 sm:left-10 h-10 md:h-20 flex items-center justify-center"
           >
             <Image
-              src="/Images/Logo.jpg"
+              src="/Images/Hercules-Logo.png"
               alt="Logo"
-              height={50}
-              width={50}
-              className="object-contain h-6 md:h-[50px]"
+              height={80}
+              width={80}
+              className="object-contain h-10 md:h-20 w-10 md:w-auto"
             />
           </Link>
-          {/* <ul className="hidden md:flex space-x-6 tracking-[1px] text-[#111]">
-            {navItems.map((item) => (
-              <li key={item.name}>
-                <Link
-                  href={item.href}
-                  className={`${
-                    pathname === item.href
-                      ? "border-b-2 border-gold text-gold pb-1"
-                      : ""
-                  } text-xs font-medium`}
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul> */}
           <ul className="hidden md:flex space-x-6 tracking-[1px] text-[#111] relative z-50">
             {navItems.map((item) => (
               <li key={item.name} className="relative group">

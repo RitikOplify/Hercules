@@ -63,7 +63,7 @@ export default function ResponsiveCarousel() {
         </div>
         <Swiper
           modules={[Navigation]}
-          slidesPerView={3}
+          slidesPerView={4}
           spaceBetween={20}
           navigation={{
             nextEl: "#slider-button-right",
@@ -76,8 +76,11 @@ export default function ResponsiveCarousel() {
             640: {
               slidesPerView: 2, // Tablet
             },
+            768: {
+              slidesPerView: 3, // Tablet
+            },
             1024: {
-              slidesPerView: 3, // Desktop
+              slidesPerView: 4, // Desktop
             },
           }}
           className="multiple-slide-carousel"

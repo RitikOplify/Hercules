@@ -96,8 +96,8 @@ function Nav() {
                 <Link
                   href={item.href}
                   className={`${
-                    pathname === item.href ? " text-gold pb-1" : ""
-                  } text-xs font-medium tracking-[1px]`}
+                    pathname === item.href ? " font-bold pb-1" : ""
+                  } text-xs text-gold font-medium tracking-[1px]`}
                 >
                   {item.name}
                 </Link>
@@ -110,8 +110,8 @@ function Nav() {
                           <Link
                             href={subItem.href}
                             className={`text-xs block ${
-                              pathname === subItem.href ? "text-gold" : ""
-                            } mt-4 text-xs font-medium tracking-[1px]`}
+                              pathname === subItem.href ? " font-bold" : ""
+                            } mt-4 text-xs text-gold font-medium tracking-[1px]`}
                           >
                             {subItem.name}
                           </Link>

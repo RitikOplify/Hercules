@@ -204,7 +204,7 @@ function Nav() {
           </button>
         </div>
       </nav>
-      {/* <div className=" h-[56.67px] w-full -z-10"></div> */}
+      <div className=" h-[56px] w-full -z-10 backdrop-blur-[35px] bg-white/20"></div>
     </>
   );
 }

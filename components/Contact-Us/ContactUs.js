@@ -45,13 +45,21 @@ const ContactForm = () => {
 
   return (
     <>
-      <Image
-        src="/Images/contact_img.png"
-        height={400}
-        width={1440}
-        alt="banner"
-        className="w-full"
-      />
+      <div className="relative">
+        <Image
+          src="/Images/contact_img.png"
+          height={400}
+          width={1440}
+          alt="banner"
+          className="w-full"
+        />
+        <div className="absolute bottom-0 h-24 sm:h-36 lg:h-64 w-full bg-gradient-to-t from-black to-transparent flex justify-center items-center">
+          <h2 className=" text-white font-normal text-center text-base sm:text-xl">
+            Begin Your Journey with Hercules — Precision Crafted for You.
+          </h2>
+        </div>
+      </div>
+
       <div className=" bg-white ">
         <div className="bg-white font-urbanist max-w-[1440px] mx-auto text-[#292321] py-[120px] px-5 sm:px-10 md:px-[60px] lg:px-[120px]">
           <div

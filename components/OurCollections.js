@@ -11,13 +11,20 @@ const OurCollection = () => {
 
   return (
     <>
-      <Image
-        src="/Images/banner.png"
-        height={400}
-        width={1440}
-        alt="banner"
-        className="w-full h-auto"
-      />
+      <div className="relative">
+        <Image
+          src="/Images/banner.png"
+          height={400}
+          width={1440}
+          alt="banner"
+          className="w-full h-auto"
+        />
+        <div className="absolute bottom-0 h-24 sm:h-36 lg:h-64 w-full bg-gradient-to-t from-black to-transparent flex justify-center items-center">
+          <h2 className=" text-white font-normal text-center text-base sm:text-xl">
+            A Curated Legacy of Timeless Watches, Crafted to Inspire.
+          </h2>
+        </div>
+      </div>
       <div className=" bg-white">
         <div className=" max-w-[1440px] mx-auto px-5 sm:px-10 bg-white py-[120px] text-black flex flex-col items-center">
           <h2

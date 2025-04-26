@@ -19,8 +19,7 @@ function AboutUs() {
         />
         <div className="absolute left-5 md:left-10 lg:left-20 top-0 w-1/2 flex items-center h-full">
           <h2 className="hidden md:block text-2xl lg:text-4xl font-gelasio text-white font-normal max-w-xs lg:max-w-sm">
-            Bespoke timepieces to suit the individual. For those who
-            prefer to be different.
+            A Legacy of Innovation, Crafting Timepieces Beyond Generations.
           </h2>
         </div>
       </div>

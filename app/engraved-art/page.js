@@ -18,8 +18,7 @@ function page() {
         />
         <div className="absolute bottom-0 h-24 sm:h-36 lg:h-64 w-full bg-gradient-to-t from-black to-transparent flex justify-center items-center">
           <h2 className=" text-white font-normal text-center text-base sm:text-xl">
-            Bespoke timepieces to suit the individual. <br /> For those who
-            prefer to be different.
+            Where Every Mark, Every Line, Tells a Story of Eternity.
           </h2>
         </div>
       </div>

@@ -30,8 +30,8 @@ const WatchLandingPage = () => {
               ref={(el) => (landingPageRef.current[2] = el)}
               className="mt-6 text-base text-[#292321] leading-[140%] tracking-[0.6px] font-medium max-w-sm"
             >
-              We take iconic timepieces and turn them into bold, custom
-              expressions of who you are
+              Where Precision Engineering and Timeless Craftsmanship Come to
+              Life.
             </p>
 
             <Button

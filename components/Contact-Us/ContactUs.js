@@ -9,6 +9,7 @@ import useGsap from "@/useGsap";
 import Image from "next/image";
 import Button from "../Button";
 import toast from "react-hot-toast";
+import Link from "next/link";
 const ContactForm = () => {
   const contactRef = useRef([]);
   useGsap(contactRef, {
@@ -53,10 +54,17 @@ const ContactForm = () => {
           alt="banner"
           className="w-full"
         />
-        <div className="absolute bottom-0 h-24 sm:h-36 lg:h-64 w-full bg-gradient-to-t from-black to-transparent flex justify-center items-center">
-          <h2 className=" text-white font-normal text-center text-base sm:text-xl">
+        <div className="absolute bottom-0 h-24 sm:h-36 lg:h-64 w-full bg-gradient-to-t from-black to-transparent hidden md:flex justify-center items-center flex-col">
+          <h2 className="hidden md:inline text-2xl lg:text-4xl font-gelasio text-white font-normal lg:leading-[140%]">
             Begin Your Journey with Hercules — Precision Crafted for You.
           </h2>
+
+          <Button
+            // ref={(el) => (landingPageRef.current[3] = el)}
+            color={"white"}
+            text={"DISCOVER"}
+            className={"mt-8 bg-[#9b8959]"}
+          />
         </div>
       </div>
 

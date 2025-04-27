@@ -1,3 +1,4 @@
+import Button from "@/components/Button";
 import Section1 from "@/components/Custom/Section1";
 import Section2 from "@/components/Custom/Section2";
 import Section3 from "@/components/Custom/Section3";
@@ -16,12 +17,16 @@ function page() {
           alt="banner"
           className="w-full"
         />
-        <div className="absolute bottom-0 h-24 sm:h-36 lg:h-64 w-full bg-gradient-to-t from-black to-transparent flex justify-center items-center">
-          <h2 className=" text-white font-normal text-center text-base sm:text-xl">
-            Design a Watch That Reflects
-            <br />
-            Your Legacy, Your Story, Your Vision.
+        <div className="absolute bottom-0 h-24 sm:h-36 lg:h-64 w-full bg-gradient-to-t from-black to-transparent hidden md:flex flex-col justify-center items-center">
+          <h2 className="hidden md:inline text-2xl lg:text-4xl font-gelasio text-white font-normal lg:leading-[140%] text-center">
+            Design a Watch That Reflects Your Legacy, Your Story, Your Vision.
           </h2>
+          <Button
+            // ref={(el) => (landingPageRef.current[3] = el)}
+            color={"white"}
+            text={"DISCOVER"}
+            className={"mt-8 bg-[#9b8959]"}
+          />
         </div>
       </div>
       <Section1 />

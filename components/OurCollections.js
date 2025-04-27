@@ -4,6 +4,7 @@ import React, { useRef } from "react";
 import ProductCard from "./ProductCard";
 import useGsap from "@/useGsap";
 import collections from "@/collections";
+import Button from "./Button";
 
 const OurCollection = () => {
   const headingRef = useRef(null);
@@ -19,10 +20,16 @@ const OurCollection = () => {
           alt="banner"
           className="w-full h-auto"
         />
-        <div className="absolute bottom-0 h-24 sm:h-36 lg:h-64 w-full bg-gradient-to-t from-black to-transparent flex justify-center items-center">
-          <h2 className=" text-white font-normal text-center text-base sm:text-xl">
+        <div className="absolute bottom-0 h-24 sm:h-36 lg:h-64 w-full bg-gradient-to-t from-black to-transparent flex justify-center flex-col items-center">
+          <h2 className="hidden md:inline text-2xl lg:text-4xl font-gelasio text-white font-normal lg:leading-[140%]">
             A Curated Legacy of Timeless Watches, Crafted to Inspire.
           </h2>
+          <Button
+            // ref={(el) => (landingPageRef.current[3] = el)}
+            color={"white"}
+            text={"DISCOVER"}
+            className={"mt-8 bg-[#9b8959]"}
+          />
         </div>
       </div>
       <div className=" bg-white">

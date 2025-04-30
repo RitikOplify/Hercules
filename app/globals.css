@@ -32,6 +32,10 @@ body::-webkit-scrollbar-thumb:hover {
   background-position: center;
 }
 
+.d-border {
+  border: 1px solid red;
+}
+
 /* .swiper-vertical */
 
 @media (max-width: 1024px) {

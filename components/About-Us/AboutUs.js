@@ -1,13 +1,13 @@
 "use client";
 import Image from "next/image";
 import React, { useRef } from "react";
-import gsap from "gsap";
 import Section1 from "./Section1";
 import Section2 from "./Section2";
 import Section3 from "./Section3";
 import OurValues from "./OurValues";
 import Button from "../Button";
 import Link from "next/link";
+import gsap from "gsap";
 import useGsap from "@/useGsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 

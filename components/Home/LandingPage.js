@@ -15,10 +15,10 @@ const WatchLandingPage = () => {
   return (
     <section className="bg-[url(../public/Images/home-banner-mobile-bg.png)] md:bg-[url(../public/Images/background.jpg)] bg-cover bg-center">
       <div
-        className="mx-auto flex-col flex md:flex-row items-center min-h-[75vh] md:min-h-[100vh]
- justify-center px-5 gap-10 sm:px-10 pt-20 pb-0 md:pb-20"
+        className="mx-auto flex-col flex md:flex-row items-center min-h-[75vh] md:h-[90vh]
+ justify-center px-5 gap-10 sm:px-10 pt-20 md:pt-0 pb-0 md:pb-0"
       >
-        <div className="w-full md:w-1/2 flex flex-col items-start ">
+        <div className="w-full md:w-1/2 flex flex-col items-start">
           <div className="mt-0 md:mt-0 md:mx-auto flex flex-col items-center md:items-start ">
             <h1
               ref={(el) => (landingPageRef.current[2] = el)}
@@ -41,15 +41,15 @@ const WatchLandingPage = () => {
             />
           </div>
         </div>
-        <div className="w-full md:w-1/2 h-full hidden md:flex justify-center md:justify-start">
+        <div className="w-full md:w-1/2 h-full hidden md:flex justify-center md:justify-start items-end">
           <Image
             ref={(el) => (landingPageRef.current[0] = el)}
-            src="/Images/Omega Skull face.png"
+            src="/Images/hero_sec_large_watch.png"
             alt="Luxury Watch"
-            width={800}
-            height={600}
+            width={427}
+            height={569}
             priority
-            className="object-contain h-full w-fit"
+            className="object-contain w-[60%]"
           />
         </div>
         <div className="w-full md:w-1/2 h-full flex md:hidden justify-center">

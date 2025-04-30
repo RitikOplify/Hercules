@@ -34,8 +34,9 @@ function page() {
             className="hidden md:flex text-2xl leading-[140%] md:text-4xl text-center font-gelasio text-white font-normal items-center justify-center w-full md:leading-[140%] px-5 md:px-0"
             ref={(el) => (prestigeServiceRef.current[0] = el)}
           >
-            Defining Excellence Through Timepieces Crafted for the Distinguished
-            Few.
+            Defining Excellence Through Timepieces
+            <br />
+            Crafted for the Distinguished Few.
           </h2>
           <Button
             ref={(el) => (prestigeServiceRef.current[1] = el)}

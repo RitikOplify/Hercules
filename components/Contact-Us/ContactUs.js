@@ -59,12 +59,13 @@ const ContactForm = () => {
             Begin Your Journey with Hercules — Precision Crafted for You.
           </h2> 
         </div> */}
-        <div className="hidden md:flex flex-col w-full items-center justify-center bg-gradient-to-t from-black to-transparent  h-64 ">
+        <div className="hidden md:flex flex-col w-full items-center justify-center bg-gradient-to-t from-black to-transparent h-64 pb-4">
           <h2
             className="hidden md:flex text-2xl leading-[140%] md:text-4xl text-center font-gelasio text-white font-normal items-center justify-center w-full md:leading-[140%] px-5 md:px-0"
             ref={(el) => (contactRef.current[0] = el)}
           >
-            Begin Your Journey with Hercules — Precision Crafted for You.
+            Begin Your Journey with Hercules —<br />
+            Precision Crafted for You.
           </h2>
           <Button
             ref={(el) => (contactRef.current[1] = el)}

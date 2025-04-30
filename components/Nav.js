@@ -76,8 +76,11 @@ function Nav() {
         ref={navRef}
         className="fixed w-full z-20 backdrop-blur-[35px] bg-white/20"
       >
-        <div className="flex px-5 sm:px-10 relative justify-between mx-auto items-center py-2 md:py-4 ">
-          <div className=" hidden md:flex"></div>
+        <div className="flex px-5 sm:px-10 relative justify-between mx-auto items-center py-2 md:py-4">
+          <div className="text-sm hidden md:flex items-center gap-1 text-transparent">
+            <IoCallOutline className="text-lg" />
+            +44-7969606568
+          </div>
           <Link
             href={"/"}
             className="static md:absolute overflow-hidden top-4 left-5 sm:left-10 h-10 md:h-20 flex items-center justify-center"
@@ -90,7 +93,7 @@ function Nav() {
               className="object-contain h-10 md:h-20 w-10 md:w-auto"
             />
           </Link>
-          <ul className="hidden md:flex space-x-6 tracking-[1px] text-[#111] relative z-50">
+          <ul className="hidden md:flex md:gap-8 lg:gap-12 tracking-[1px] text-[#111] relative z-50">
             {navItems.map((item) => (
               <li key={item.name} className="relative group">
                 <Link
@@ -125,7 +128,8 @@ function Nav() {
           </ul>
 
           <div className="text-sm hidden md:flex items-center gap-1 text-gold">
-            <IoCallOutline className="text-lg" /> +44-7969606568
+            <IoCallOutline className="text-lg" />
+            +44-7969606568
           </div>
 
           {menuOpen && (

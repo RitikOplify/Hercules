@@ -34,7 +34,9 @@ function page() {
             className="hidden md:flex text-2xl leading-[140%] md:text-4xl text-center font-gelasio text-white font-normal items-center justify-center w-full md:leading-[140%] px-5 md:px-0"
             ref={(el) => (customServiceRef.current[0] = el)}
           >
-            Design a Watch That Reflects Your Legacy, Your Story, Your Vision.
+            Design a Watch That Reflects Your Legacy,
+            <br />
+            Your Story, Your Vision.
           </h2>
           <Button
             ref={(el) => (customServiceRef.current[1] = el)}

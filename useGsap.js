@@ -24,7 +24,7 @@ const useGsap = (ref, options = {}) => {
             delay: options.stagger ? index * (options.staggerDelay || 0.2) : 0,
             scrollTrigger: {
               trigger: item,
-              start: options.start || "top 90%",
+              start: options.start || "top 95%",
               end: options.end || "top 80%",
               scrub: options.scrub || false,
             },

@@ -46,24 +46,43 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className="relative">
-        <Image
+      <div className="relative md:h-[90vh] bg-[url(../public/Images/home-banner-mobile-bg.png)]  md:bg-[url(../public/Images/contact_img.png)] bg-cover bg-center  flex items-center md:items-end justify-start pt-20 md:pt-0 overflow-hidden">
+        {/* <Image
           src="/Images/contact_img.png"
           height={400}
           width={1440}
           alt="banner"
           className="w-full"
-        />
-        <div className="absolute bottom-0 h-24 sm:h-36 lg:h-64 w-full bg-gradient-to-t from-black to-transparent hidden md:flex justify-center items-center flex-col">
+        /> */}
+        {/* <div className="absolute bottom-0 h-24 sm:h-36 lg:h-64 w-full bg-gradient-to-t from-black to-transparent hidden md:flex justify-center items-center flex-col">
           <h2 className="hidden md:inline text-2xl lg:text-4xl font-gelasio text-white font-normal lg:leading-[140%]">
             Begin Your Journey with Hercules — Precision Crafted for You.
+          </h2> 
+        </div> */}
+        <h2
+          className="hidden md:flex text-2xl leading-[140%] md:text-4xl text-center font-gelasio text-white font-normal items-center justify-center w-full md:leading-[140%] px-5 md:px-0 h-64 bg-gradient-to-t from-black to-transparent"
+          // ref={(el) => (aboutPageRef.current[1] = el)}
+          ref={(el) => (contactRef.current[0] = el)}
+        >
+          Begin Your Journey with Hercules — Precision Crafted for You.
+        </h2>
+        <div className="w-full md:w-1/2 flex md:hidden flex-col justify-center items-center md:items-start ps-0 md:ps-20">
+          <h2
+            className="text-2xl leading-[140%] md:text-4xl text-center md:text-left font-gelasio text-[#111] font-normal w-full lg:max-w-sm md:leading-[140%] px-5 md:px-0"
+            // ref={(el) => (aboutPageRef.current[1] = el)}
+            ref={(el) => (contactRef.current[1] = el)}
+          >
+            Begin Your Journey with Hercules — Precision Crafted for You.
           </h2>
-
-          <Button
-            // ref={(el) => (landingPageRef.current[3] = el)}
-            color={"white"}
-            text={"DISCOVER"}
-            className={"mt-8 bg-[#9b8959]"}
+          <Image
+            // ref={(el) => (aboutPageRef.current[0] = el)}
+            ref={(el) => (contactRef.current[2] = el)}
+            src="/Images/contact_sec_watch.png"
+            alt="Luxury Watch"
+            width={799}
+            height={586}
+            priority
+            className="object-contain h-full w-fit inline md:hidden mt-10"
           />
         </div>
       </div>
@@ -72,7 +91,7 @@ const ContactForm = () => {
         <div className="bg-white font-urbanist max-w-[1440px] mx-auto text-[#292321] py-[120px] px-5 sm:px-10 md:px-[60px] lg:px-[120px]">
           <div
             className="flex flex-col lg:flex-row justify-between gap-16"
-            ref={(el) => (contactRef.current[0] = el)}
+            ref={(el) => (contactRef.current[3] = el)}
           >
             <div className="flex-1">
               <p className="text-[24px] font-regular leading-[140%] tracking-[0.6px] mb-20 text-[#292321]">
@@ -208,7 +227,7 @@ const ContactForm = () => {
         </div>
         <div className="w-full overflow-hidden">
           <Image
-            ref={(el) => (contactRef.current[1] = el)}
+            ref={(el) => (contactRef.current[4] = el)}
             src="/Images/location.png"
             width={1440}
             height={300}

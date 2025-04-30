@@ -3,10 +3,10 @@ import { useRouter } from "next/navigation";
 import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 
-function Button({ text, ref, className, type, bg }) {
+function Button({ text, ref, className, type, bg, url }) {
   const router = useRouter();
   const onclickHandler = () => {
-    router.push("/contact-us");
+    url ? router.push(url) : router.push("/contact-us");
   };
   return (
     <button

@@ -46,7 +46,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className="relative md:h-[90vh] bg-[url(../public/Images/home-banner-mobile-bg.png)]  md:bg-[url(../public/Images/contact_img.png)] bg-cover bg-center  flex items-center md:items-end justify-start pt-20 md:pt-0 overflow-hidden">
+      <div className="relative min-h-[75vh] md:min-h-[90vh] bg-[url(../public/Images/home-banner-mobile-bg.png)]  md:bg-[url(../public/Images/contact_img.png)] bg-cover bg-center  flex pt-20 md:pt-0 items-end justify-start overflow-hidden">
         {/* <Image
           src="/Images/contact_img.png"
           height={400}
@@ -61,7 +61,6 @@ const ContactForm = () => {
         </div> */}
         <h2
           className="hidden md:flex text-2xl leading-[140%] md:text-4xl text-center font-gelasio text-white font-normal items-center justify-center w-full md:leading-[140%] px-5 md:px-0 h-64 bg-gradient-to-t from-black to-transparent"
-          // ref={(el) => (aboutPageRef.current[1] = el)}
           ref={(el) => (contactRef.current[0] = el)}
         >
           Begin Your Journey with Hercules — Precision Crafted for You.
@@ -69,13 +68,11 @@ const ContactForm = () => {
         <div className="w-full md:w-1/2 flex md:hidden flex-col justify-center items-center md:items-start ps-0 md:ps-20">
           <h2
             className="text-2xl leading-[140%] md:text-4xl text-center md:text-left font-gelasio text-[#111] font-normal w-full lg:max-w-sm md:leading-[140%] px-5 md:px-0"
-            // ref={(el) => (aboutPageRef.current[1] = el)}
             ref={(el) => (contactRef.current[1] = el)}
           >
             Begin Your Journey with Hercules — Precision Crafted for You.
           </h2>
           <Image
-            // ref={(el) => (aboutPageRef.current[0] = el)}
             ref={(el) => (contactRef.current[2] = el)}
             src="/Images/contact_sec_watch.png"
             alt="Luxury Watch"

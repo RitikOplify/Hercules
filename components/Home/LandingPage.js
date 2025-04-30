@@ -15,7 +15,7 @@ const WatchLandingPage = () => {
   return (
     <section className="bg-[url(../public/Images/home-banner-mobile-bg.png)] md:bg-[url(../public/Images/background.jpg)] bg-cover bg-center">
       <div
-        className="mx-auto flex-col flex md:flex-row items-center md:h-screen
+        className="mx-auto flex-col flex md:flex-row items-center min-h-[75vh] md:min-h-[100vh]
  justify-center px-5 gap-10 sm:px-10 pt-20 pb-0 md:pb-20"
       >
         <div className="w-full md:w-1/2 flex flex-col items-start ">

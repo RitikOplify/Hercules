@@ -20,7 +20,7 @@ function Services() {
   useGsap(servicePageRef, { stagger: true });
   return (
     <>
-      <div className="relative md:h-[90vh] bg-[url(../public/Services/service_mob_banner.png)]  md:bg-[url(../public/Services/service_banner.png)] bg-cover bg-center  flex items-center justify-start pt-20 md:pt-0 px-5 md:px-0 overflow-hidden">
+      <div className="relative min-h-[75vh] md:min-h-[90vh] bg-[url(../public/Services/service_mob_banner.png)]  md:bg-[url(../public/Services/service_banner.png)] bg-cover bg-center  flex items-end md:items-center justify-start pt-20 md:pt-0 px-5 md:px-0 overflow-hidden">
         {/* <Image
           src="/Services/service_banner.png"
           height={400}
